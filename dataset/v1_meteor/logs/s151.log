@@ -1,0 +1,1360 @@
+[INFO] [launch]: All log files can be found below /home/youssefsfeihi/.ros/log/2026-10-11-02-17-40-188840-youssefsfeihi-Thin-GF63-12UCX-143449
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [gazebo-1]: process started with pid [143466]
+[INFO] [static_transform_publisher-2]: process started with pid [143467]
+[INFO] [static_transform_publisher-3]: process started with pid [143469]
+[INFO] [static_transform_publisher-4]: process started with pid [143470]
+[INFO] [static_transform_publisher-5]: process started with pid [143471]
+[INFO] [static_transform_publisher-6]: process started with pid [143472]
+[INFO] [static_transform_publisher-7]: process started with pid [143473]
+[static_transform_publisher-6] [INFO] [1791681461.281185714] [tf_odom]: Spinning until stopped - publishing transform
+[static_transform_publisher-6] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-6] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-6] from 'map' to 'odom'
+[static_transform_publisher-5] [INFO] [1791681461.361440020] [tf_camera_optical]: Spinning until stopped - publishing transform
+[static_transform_publisher-5] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-5] rotation: ('-0.500000', '0.500000', '-0.500000', '0.500000')
+[static_transform_publisher-5] from 'camera_link' to 'camera_optical'
+[static_transform_publisher-3] [INFO] [1791681461.386681487] [tf_camera_link]: Spinning until stopped - publishing transform
+[static_transform_publisher-3] translation: ('0.350000', '0.000000', '0.500000')
+[static_transform_publisher-3] rotation: ('0.000000', '-0.099833', '0.000000', '0.995004')
+[static_transform_publisher-3] from 'base_link' to 'camera_link'
+[static_transform_publisher-4] [INFO] [1791681461.386777341] [tf_base_footprint]: Spinning until stopped - publishing transform
+[static_transform_publisher-4] translation: ('0.000000', '0.000000', '-0.230000')
+[static_transform_publisher-4] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-4] from 'base_link' to 'base_footprint'
+[static_transform_publisher-2] [INFO] [1791681461.491531101] [tf_lidar]: Spinning until stopped - publishing transform
+[static_transform_publisher-2] translation: ('0.300000', '0.000000', '0.350000')
+[static_transform_publisher-2] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-2] from 'base_link' to 'lidar'
+[static_transform_publisher-7] [INFO] [1791681461.507488014] [tf_station]: Spinning until stopped - publishing transform
+[static_transform_publisher-7] translation: ('-2.600000', '0.000000', '0.000000')
+[static_transform_publisher-7] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-7] from 'map' to 'station'
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="crater_rover"]/link[@name="base_link"]/sensor[@name="lidar"]/gz_frame_id:/home/youssefsfeihi/crater_ws/install/crater_sim/share/crater_sim/models/rover/model.sdf:L45]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="crater_rover"]/link[@name="base_link"]/sensor[@name="rgbd_camera"]/gz_frame_id:/home/youssefsfeihi/crater_ws/install/crater_sim/share/crater_sim/models/rover/model.sdf:L62]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="crater_rover"]/link[@name="base_link"]/sensor[@name="bbox_camera"]/gz_frame_id:/home/youssefsfeihi/crater_ws/install/crater_sim/share/crater_sim/models/rover/model.sdf:L81]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="crater_rover"]/link[@name="base_link"]/sensor[@name="imu"]/gz_frame_id:/home/youssefsfeihi/crater_ws/install/crater_sim/share/crater_sim/models/rover/model.sdf:L94]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[INFO] [parameter_bridge-8]: process started with pid [143689]
+[parameter_bridge-8] [INFO] [1791681466.267004121] [gz_bridge]: Creating ROS->GZ Bridge: [/cmd_vel (geometry_msgs/msg/Twist) -> /cmd_vel (gz.msgs.Twist)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791681466.272612490] [gz_bridge]: Creating GZ->ROS Bridge: [/scan (gz.msgs.LaserScan) -> /scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791681466.276425754] [gz_bridge]: Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791681466.277893077] [gz_bridge]: Creating GZ->ROS Bridge: [/wheel/odom (gz.msgs.Odometry) -> /wheel/odom (nav_msgs/msg/Odometry)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791681466.284807796] [gz_bridge]: Creating GZ->ROS Bridge: [/imu (gz.msgs.IMU) -> /imu (sensor_msgs/msg/Imu)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791681466.290738122] [gz_bridge]: Creating GZ->ROS Bridge: [/camera/image (gz.msgs.Image) -> /camera/image (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791681466.299167612] [gz_bridge]: Creating GZ->ROS Bridge: [/camera/depth_image (gz.msgs.Image) -> /camera/depth_image (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791681466.304473916] [gz_bridge]: Creating GZ->ROS Bridge: [/camera/camera_info (gz.msgs.CameraInfo) -> /camera/camera_info (sensor_msgs/msg/CameraInfo)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791681466.310630799] [gz_bridge]: Creating ROS->GZ Bridge: [/camera/ai_overlay (sensor_msgs/msg/Image) -> /camera/ai_overlay (gz.msgs.Image)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791681466.313894164] [gz_bridge]: Creating GZ->ROS Bridge: [/camera/bbox (gz.msgs.AnnotatedAxisAligned2DBox_V) -> /camera/bbox (vision_msgs/msg/Detection2DArray)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791681466.319346590] [gz_bridge]: Creating GZ->ROS Bridge: [/ground_truth/odom (gz.msgs.Odometry) -> /ground_truth/odom (nav_msgs/msg/Odometry)] (Lazy 0)
+[INFO] [ekf_node-9]: process started with pid [143730]
+[ekf_node-9] [INFO] [1791681467.275270451] [ekf_odom]: Waiting for clock to start...
+[INFO] [meteor_spawner.py-10]: process started with pid [143752]
+[INFO] [controller_server-11]: process started with pid [143791]
+[INFO] [smoother_server-12]: process started with pid [143792]
+[INFO] [planner_server-13]: process started with pid [143793]
+[INFO] [behavior_server-14]: process started with pid [143794]
+[INFO] [bt_navigator-15]: process started with pid [143795]
+[INFO] [velocity_smoother-16]: process started with pid [143796]
+[INFO] [collision_monitor-17]: process started with pid [143797]
+[planner_server-13] [INFO] [1791681471.370726007] [planner_server]: 
+[planner_server-13] 	planner_server lifecycle node launched. 
+[planner_server-13] 	Waiting on external lifecycle transitions to activate
+[planner_server-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-13] [INFO] [1791681471.375578167] [planner_server]: Creating
+[velocity_smoother-16] [INFO] [1791681471.449516335] [velocity_smoother]: 
+[velocity_smoother-16] 	velocity_smoother lifecycle node launched. 
+[velocity_smoother-16] 	Waiting on external lifecycle transitions to activate
+[velocity_smoother-16] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[behavior_server-14] [INFO] [1791681471.811643906] [behavior_server]: 
+[behavior_server-14] 	behavior_server lifecycle node launched. 
+[behavior_server-14] 	Waiting on external lifecycle transitions to activate
+[behavior_server-14] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-13] [INFO] [1791681471.826218609] [global_costmap.global_costmap]: 
+[planner_server-13] 	global_costmap lifecycle node launched. 
+[planner_server-13] 	Waiting on external lifecycle transitions to activate
+[planner_server-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-13] [INFO] [1791681471.833117610] [global_costmap.global_costmap]: Creating Costmap
+[collision_monitor-17] [INFO] [1791681471.913684617] [collision_monitor]: 
+[collision_monitor-17] 	collision_monitor lifecycle node launched. 
+[collision_monitor-17] 	Waiting on external lifecycle transitions to activate
+[collision_monitor-17] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[smoother_server-12] [INFO] [1791681471.954242405] [smoother_server]: 
+[smoother_server-12] 	smoother_server lifecycle node launched. 
+[smoother_server-12] 	Waiting on external lifecycle transitions to activate
+[smoother_server-12] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[smoother_server-12] [INFO] [1791681471.956137862] [smoother_server]: Creating smoother server
+[bt_navigator-15] [INFO] [1791681471.965005261] [bt_navigator]: 
+[bt_navigator-15] 	bt_navigator lifecycle node launched. 
+[bt_navigator-15] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-15] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-15] [INFO] [1791681471.967824123] [bt_navigator]: Creating
+[controller_server-11] [INFO] [1791681471.970457717] [controller_server]: 
+[controller_server-11] 	controller_server lifecycle node launched. 
+[controller_server-11] 	Waiting on external lifecycle transitions to activate
+[controller_server-11] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-11] [INFO] [1791681471.976667768] [controller_server]: Creating controller server
+[controller_server-11] [INFO] [1791681472.129685715] [local_costmap.local_costmap]: 
+[controller_server-11] 	local_costmap lifecycle node launched. 
+[controller_server-11] 	Waiting on external lifecycle transitions to activate
+[controller_server-11] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-11] [INFO] [1791681472.130506103] [local_costmap.local_costmap]: Creating Costmap
+[INFO] [meteor_tracker-18]: process started with pid [143905]
+[INFO] [mission_controller-19]: process started with pid [143906]
+[meteor_tracker-18] [INFO] [1791681476.094890115] [meteor_tracker]: RGB-D intrinsics fx=268.6; processing 320x240 px
+[INFO] [lifecycle_manager-20]: process started with pid [143953]
+[lifecycle_manager-20] [INFO] [1791681477.773163246] [lifecycle_manager_navigation]: Creating
+[lifecycle_manager-20] [INFO] [1791681477.800627348] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[mission_controller-19] [t=    6.0s] Rover rel. station: x=  +2.60 m  y=  +0.00 m  dist=  2.60 m  bearing=   +0°  heading=   -0° | WAIT_NAV2 | objects tracked: 0, threats: 0 | nav error vs truth 0.00 m
+[lifecycle_manager-20] [INFO] [1791681478.766061383] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-20] [INFO] [1791681478.766199246] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[controller_server-11] [INFO] [1791681478.768184800] [controller_server]: Configuring controller interface
+[controller_server-11] [INFO] [1791681478.768237627] [controller_server]: getting progress checker plugins..
+[controller_server-11] [INFO] [1791681478.771088373] [controller_server]: getting goal checker plugins..
+[controller_server-11] [INFO] [1791681478.771226332] [controller_server]: Controller frequency set to 10.0000Hz
+[controller_server-11] [INFO] [1791681478.771286681] [local_costmap.local_costmap]: Configuring
+[controller_server-11] [INFO] [1791681478.871283163] [local_costmap.local_costmap]: Using plugin "voxel_layer"
+[controller_server-11] [INFO] [1791681478.898373059] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[controller_server-11] [INFO] [1791681478.927153538] [local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+[controller_server-11] [INFO] [1791681478.929202370] [local_costmap.local_costmap]: Using plugin "hazard_layer"
+[controller_server-11] [INFO] [1791681478.938428664] [local_costmap.local_costmap]: Subscribed to Topics: hazards
+[controller_server-11] [INFO] [1791681478.946412673] [local_costmap.local_costmap]: Initialized plugin "hazard_layer"
+[controller_server-11] [INFO] [1791681478.946498902] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[controller_server-11] [INFO] [1791681478.951026115] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[controller_server-11] [INFO] [1791681479.129018560] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[controller_server-11] [INFO] [1791681479.130217802] [controller_server]: Controller Server has progress_checker  progress checkers available.
+[controller_server-11] [INFO] [1791681479.132285012] [controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+[controller_server-11] [INFO] [1791681479.134304147] [controller_server]: Controller Server has general_goal_checker  goal checkers available.
+[controller_server-11] [INFO] [1791681479.138818660] [controller_server]: Created controller : FollowPath of type nav2_mppi_controller::MPPIController
+[controller_server-11] [INFO] [1791681479.159340327] [controller_server]: Controller period is equal to model dt. Control sequence shifting is ON
+[controller_server-11] [INFO] [1791681479.161786639] [controller_server]: ConstraintCritic instantiated with 1 power and 4.000000 weight.
+[controller_server-11] [INFO] [1791681479.161828042] [controller_server]: Critic loaded : mppi::critics::ConstraintCritic
+[controller_server-11] [INFO] [1791681479.168475521] [controller_server]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.013780 weights. Critic will collision check based on footprint cost.
+[controller_server-11] [INFO] [1791681479.168535625] [controller_server]: Critic loaded : mppi::critics::CostCritic
+[controller_server-11] [INFO] [1791681479.168813282] [controller_server]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[controller_server-11] [INFO] [1791681479.168834011] [controller_server]: Critic loaded : mppi::critics::GoalCritic
+[controller_server-11] [INFO] [1791681479.169212822] [controller_server]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, 0.500000 angular threshold and symmetric_yaw_tolerance disabled
+[controller_server-11] [INFO] [1791681479.169239431] [controller_server]: Critic loaded : mppi::critics::GoalAngleCritic
+[controller_server-11] [INFO] [1791681479.169777264] [controller_server]: ReferenceTrajectoryCritic instantiated with 1 power and 14.000000 weight
+[controller_server-11] [INFO] [1791681479.169807916] [controller_server]: Critic loaded : mppi::critics::PathAlignCritic
+[controller_server-11] [INFO] [1791681479.171621816] [controller_server]: Critic loaded : mppi::critics::PathFollowCritic
+[controller_server-11] [INFO] [1791681479.173289320] [controller_server]: PathAngleCritic instantiated with 1 power and 2.000000 weight. Mode set to: Forward Preference
+[controller_server-11] [INFO] [1791681479.173332927] [controller_server]: Critic loaded : mppi::critics::PathAngleCritic
+[controller_server-11] [INFO] [1791681479.174317211] [controller_server]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[controller_server-11] [INFO] [1791681479.174357227] [controller_server]: Critic loaded : mppi::critics::PreferForwardCritic
+[controller_server-11] [INFO] [1791681479.175102115] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681479.196530864] [MPPIController]: Configured MPPI Controller: FollowPath
+[controller_server-11] [INFO] [1791681479.196576645] [controller_server]: Controller Server has FollowPath  controllers available.
+[lifecycle_manager-20] [INFO] [1791681479.219675721] [lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[smoother_server-12] [INFO] [1791681479.220119189] [smoother_server]: Configuring smoother server
+[smoother_server-12] [INFO] [1791681479.290272623] [smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+[smoother_server-12] [INFO] [1791681479.290871906] [smoother_server]: Smoother Server has simple_smoother  smoothers available.
+[lifecycle_manager-20] [INFO] [1791681479.334814466] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[planner_server-13] [INFO] [1791681479.335466382] [planner_server]: Configuring
+[planner_server-13] [INFO] [1791681479.335539342] [global_costmap.global_costmap]: Configuring
+[planner_server-13] [INFO] [1791681479.382801274] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[planner_server-13] [INFO] [1791681479.400240150] [global_costmap.global_costmap]: Subscribed to Topics: scan
+[planner_server-13] [INFO] [1791681479.414765755] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[planner_server-13] [INFO] [1791681479.414863221] [global_costmap.global_costmap]: Using plugin "hazard_layer"
+[planner_server-13] [INFO] [1791681479.418706624] [global_costmap.global_costmap]: Subscribed to Topics: hazards
+[planner_server-13] [INFO] [1791681479.439082187] [global_costmap.global_costmap]: Initialized plugin "hazard_layer"
+[planner_server-13] [INFO] [1791681479.439260420] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[planner_server-13] [INFO] [1791681479.442893187] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[planner_server-13] [INFO] [1791681479.558700153] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+[planner_server-13] [INFO] [1791681479.558789515] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[planner_server-13] [INFO] [1791681479.568114117] [planner_server]: Planner Server has GridBased  planners available.
+[mission_controller-19] [t=    6.5s] Rover rel. station: x=  +2.60 m  y=  +0.00 m  dist=  2.60 m  bearing=   +0°  heading=   -0° | WAIT_NAV2 | objects tracked: 0, threats: 0 | nav error vs truth 0.00 m
+[lifecycle_manager-20] [INFO] [1791681479.627280868] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[behavior_server-14] [INFO] [1791681479.629449783] [behavior_server]: Configuring
+[behavior_server-14] [INFO] [1791681479.678546806] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors::Spin
+[behavior_server-14] [INFO] [1791681479.680354903] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors::BackUp
+[behavior_server-14] [INFO] [1791681479.684151062] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors::DriveOnHeading
+[behavior_server-14] [INFO] [1791681479.686288139] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors::Wait
+[behavior_server-14] [INFO] [1791681479.721142947] [behavior_server]: Configuring spin
+[behavior_server-14] [INFO] [1791681479.770193697] [behavior_server]: Configuring backup
+[behavior_server-14] [INFO] [1791681479.785415598] [behavior_server]: Configuring drive_on_heading
+[behavior_server-14] [INFO] [1791681479.797219126] [behavior_server]: Configuring wait
+[lifecycle_manager-20] [INFO] [1791681479.819858674] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[bt_navigator-15] [INFO] [1791681479.820652098] [bt_navigator]: Configuring
+[bt_navigator-15] [INFO] [1791681479.847583437] [bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+[bt_navigator-15] [INFO] [1791681480.159794049] [bt_navigator]: Creating navigator id navigate_through_poses of type nav2_bt_navigator::NavigateThroughPosesNavigator
+[lifecycle_manager-20] [INFO] [1791681480.299149598] [lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+[velocity_smoother-16] [INFO] [1791681480.299822555] [velocity_smoother]: Configuring velocity smoother
+[lifecycle_manager-20] [INFO] [1791681480.313479800] [lifecycle_manager_navigation]: [34m[1mConfiguring collision_monitor[0m[0m
+[collision_monitor-17] [INFO] [1791681480.317351902] [collision_monitor]: Configuring
+[collision_monitor-17] [INFO] [1791681480.340758222] [collision_monitor]: [scan]: Creating Scan
+[collision_monitor-17] [INFO] [1791681480.351780520] [collision_monitor]: [FootprintApproach]: Creating Polygon
+[collision_monitor-17] [INFO] [1791681480.352088708] [collision_monitor]: [FootprintApproach]: Polygon points are not defined. Using dynamic subscription instead.
+[collision_monitor-17] [INFO] [1791681480.358988429] [collision_monitor]: [FootprintApproach]: Making footprint subscriber on /local_costmap/published_footprint topic
+[lifecycle_manager-20] [INFO] [1791681480.432828373] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[controller_server-11] [INFO] [1791681480.434779903] [controller_server]: Activating
+[controller_server-11] [INFO] [1791681480.434840596] [local_costmap.local_costmap]: Activating
+[controller_server-11] [INFO] [1791681480.434848954] [local_costmap.local_costmap]: Checking transform
+[controller_server-11] [INFO] [1791681480.436157599] [local_costmap.local_costmap]: start
+[controller_server-11] [WARN] [1791681480.669222440] [controller_server]: Parameter controller_server.verbose not found
+[controller_server-11] [INFO] [1791681480.670098575] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681480.671835910] [MPPIController]: Activated MPPI Controller: FollowPath
+[controller_server-11] [INFO] [1791681480.671956307] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+[lifecycle_manager-20] [INFO] [1791681480.801480361] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+[lifecycle_manager-20] [INFO] [1791681480.801584504] [lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+[smoother_server-12] [INFO] [1791681480.813112446] [smoother_server]: Activating
+[smoother_server-12] [INFO] [1791681480.813678091] [smoother_server]: Creating bond (smoother_server) to lifecycle manager.
+[lifecycle_manager-20] [INFO] [1791681480.940485215] [lifecycle_manager_navigation]: Server smoother_server connected with bond.
+[lifecycle_manager-20] [INFO] [1791681480.940575555] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[planner_server-13] [INFO] [1791681480.941493769] [planner_server]: Activating
+[planner_server-13] [INFO] [1791681480.941565114] [global_costmap.global_costmap]: Activating
+[planner_server-13] [INFO] [1791681480.941576665] [global_costmap.global_costmap]: Checking transform
+[planner_server-13] [INFO] [1791681480.941808676] [global_costmap.global_costmap]: start
+[mission_controller-19] [t=    7.0s] Rover rel. station: x=  +2.60 m  y=  +0.00 m  dist=  2.60 m  bearing=   +0°  heading=   -0° | WAIT_NAV2 | objects tracked: 0, threats: 0 | nav error vs truth 0.00 m
+[mission_controller-19] [INFO] [1791681481.021577149] [mission_controller]: Nav2 ready. Starting patrol around the station (4 waypoints).
+[bt_navigator-15] [INFO] [1791681481.029355689] [bt_navigator]: Action server is inactive. Rejecting the goal.
+[mission_controller-19] [WARN] [1791681481.042292396] [mission_controller]: patrol goal rejected; retrying in 2 s
+[planner_server-13] [INFO] [1791681481.457599114] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[planner_server-13] [INFO] [1791681481.466131798] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[lifecycle_manager-20] [INFO] [1791681481.610025836] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[lifecycle_manager-20] [INFO] [1791681481.610162380] [lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+[behavior_server-14] [INFO] [1791681481.611231221] [behavior_server]: Activating
+[behavior_server-14] [INFO] [1791681481.611273577] [behavior_server]: Activating spin
+[behavior_server-14] [INFO] [1791681481.611287417] [behavior_server]: Activating backup
+[behavior_server-14] [INFO] [1791681481.611298964] [behavior_server]: Activating drive_on_heading
+[behavior_server-14] [INFO] [1791681481.611312807] [behavior_server]: Activating wait
+[behavior_server-14] [INFO] [1791681481.611343129] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[lifecycle_manager-20] [INFO] [1791681481.740648757] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[lifecycle_manager-20] [INFO] [1791681481.740761362] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[bt_navigator-15] [INFO] [1791681481.742351415] [bt_navigator]: Activating
+[bt_navigator-15] [INFO] [1791681482.138087838] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[lifecycle_manager-20] [INFO] [1791681482.252407373] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[lifecycle_manager-20] [INFO] [1791681482.252610603] [lifecycle_manager_navigation]: [34m[1mActivating velocity_smoother[0m[0m
+[velocity_smoother-16] [INFO] [1791681482.254764452] [velocity_smoother]: Activating
+[velocity_smoother-16] [INFO] [1791681482.254907315] [velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+[mission_controller-19] [t=    7.5s] Rover rel. station: x=  +2.60 m  y=  +0.00 m  dist=  2.60 m  bearing=   +0°  heading=   -0° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 0.00 m
+[lifecycle_manager-20] [INFO] [1791681482.387446789] [lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+[lifecycle_manager-20] [INFO] [1791681482.387597902] [lifecycle_manager_navigation]: [34m[1mActivating collision_monitor[0m[0m
+[collision_monitor-17] [INFO] [1791681482.394158147] [collision_monitor]: Activating
+[collision_monitor-17] [INFO] [1791681482.394248845] [collision_monitor]: Creating bond (collision_monitor) to lifecycle manager.
+[lifecycle_manager-20] [INFO] [1791681482.521706831] [lifecycle_manager_navigation]: Server collision_monitor connected with bond.
+[lifecycle_manager-20] [INFO] [1791681482.521866611] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-20] [INFO] [1791681482.521894333] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[mission_controller-19] [t=    8.0s] Rover rel. station: x=  +2.60 m  y=  +0.00 m  dist=  2.60 m  bearing=   +0°  heading=   -0° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 0.00 m
+[meteor_spawner.py-10] [INFO] [1791681483.748238551] [meteor_spawner]: [SPACE] meteor_1 inbound: from (-20.4,2.5, h=15.0) m, speed 4.7 m/s, aimed 3.4 m from rover's predicted position, ETA 7.3 s
+[mission_controller-19] [t=    8.5s] Rover rel. station: x=  +2.60 m  y=  +0.00 m  dist=  2.60 m  bearing=   +0°  heading=   -0° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 0.00 m
+[mission_controller-19] [WARN] [1791681485.755668154] [mission_controller]: !!! INCOMING meteor #2: impact in 6.8 s at (0.6, 3.1) ±0.88 m, 3.1 m from rover -> EVADING to (-0.3, -1.3)
+[parameter_bridge-8] [INFO] [1791681485.810504488] [gz_bridge]: Passing message from ROS geometry_msgs/msg/Twist to Gazebo gz.msgs.Twist (showing msg only once per type)
+[meteor_tracker-18] [INFO] [1791681486.448485932] [meteor_tracker]: [RGB-D] object #2 detected: range 18.3 m, altitude 18.0 m, speed 3.6 m/s, impact in 6.4 s at (0.5,2.8) ±0.48 m, miss 2.9 m -> THREAT
+[mission_controller-19] [t=    9.0s] Rover rel. station: x=  +2.60 m  y=  -0.00 m  dist=  2.60 m  bearing=   -0°  heading=   +1° | EVADE (meteor #2, impact in +6.4 s) | objects tracked: 1, threats: 1 | nav error vs truth 0.00 m
+[mission_controller-19] [t=    9.5s] Rover rel. station: x=  +2.60 m  y=  -0.00 m  dist=  2.60 m  bearing=   -0°  heading=  +10° | EVADE (meteor #2, impact in +5.9 s) | objects tracked: 1, threats: 1 | nav error vs truth 0.00 m
+[meteor_tracker-18] [INFO] [1791681488.869698772] [meteor_tracker]: perf: 2.4 frames/s, 24.1 ms/frame (p95 48.9 ms), 2 blobs tracked
+[mission_controller-19] [t=   10.0s] Rover rel. station: x=  +2.60 m  y=  -0.00 m  dist=  2.60 m  bearing=   -0°  heading=  +27° | EVADE (meteor #2, impact in +5.4 s) | objects tracked: 1, threats: 1 | nav error vs truth 0.01 m
+[mission_controller-19] [t=   10.5s] Rover rel. station: x=  +2.60 m  y=  -0.00 m  dist=  2.60 m  bearing=   -0°  heading=  +48° | EVADE (meteor #2, impact in +4.9 s) | objects tracked: 1, threats: 1 | nav error vs truth 0.02 m
+[mission_controller-19] [t=   11.0s] Rover rel. station: x=  +2.43 m  y=  -0.24 m  dist=  2.44 m  bearing=   -6°  heading=  +63° | EVADE (meteor #2, impact in +4.4 s) | objects tracked: 1, threats: 1 | nav error vs truth 0.47 m
+[meteor_spawner.py-10] [INFO] [1791681492.198877853] [meteor_spawner]: [SPACE] meteor_2 inbound: from (-6.9,-20.9, h=16.6) m, speed 5.1 m/s, aimed 0.2 m from rover's predicted position, ETA 7.2 s
+[mission_controller-19] [t=   11.5s] Rover rel. station: x=  +2.32 m  y=  -0.53 m  dist=  2.38 m  bearing=  -13°  heading=  +74° | EVADE (meteor #2, impact in +3.8 s) | objects tracked: 1, threats: 0 | nav error vs truth 1.06 m
+[mission_controller-19] [t=   12.0s] Rover rel. station: x=  +2.27 m  y=  -0.79 m  dist=  2.40 m  bearing=  -19°  heading=  +84° | EVADE (meteor #2, impact in +3.4 s) | objects tracked: 1, threats: 0 | nav error vs truth 1.56 m
+[mission_controller-19] [WARN] [1791681493.935999537] [mission_controller]: !!! INCOMING meteor #4: impact in 6.6 s at (-0.7, -4.9) ±1.08 m, 1.1 m from rover -> EVADING to (-0.3, -0.4)
+[meteor_tracker-18] [INFO] [1791681494.759059478] [meteor_tracker]: [RGB-D] object #4 detected: range 19.6 m, altitude 19.2 m, speed 4.3 m/s, impact in 6.3 s at (-1.2,-4.7) ±0.57 m, miss 2.0 m -> THREAT
+[mission_controller-19] [t=   12.5s] Rover rel. station: x=  +2.26 m  y=  -0.97 m  dist=  2.46 m  bearing=  -23°  heading=  +86° | EVADE (meteor #4, impact in +6.2 s) | objects tracked: 2, threats: 1 | nav error vs truth 1.90 m
+[mission_controller-19] [t=   13.0s] Rover rel. station: x=  +2.26 m  y=  -1.02 m  dist=  2.47 m  bearing=  -24°  heading=  +86° | EVADE (meteor #4, impact in +5.7 s) | objects tracked: 2, threats: 0 | nav error vs truth 2.00 m
+[mission_controller-19] [t=   13.5s] Rover rel. station: x=  +2.26 m  y=  -0.94 m  dist=  2.45 m  bearing=  -23°  heading=  +86° | EVADE (meteor #4, impact in +5.2 s) | objects tracked: 2, threats: 0 | nav error vs truth 1.85 m
+[mission_controller-19] [WARN] [1791681498.007548453] [mission_controller]: !!! INCOMING meteor #2: impact in 1.6 s at (0.7, 2.9) ±0.16 m, 3.3 m from rover -> EVADING to (-0.5, -1.5)
+[mission_controller-19] [t=   14.0s] Rover rel. station: x=  +2.26 m  y=  -0.90 m  dist=  2.44 m  bearing=  -22°  heading=  +86° | EVADE (meteor #2, impact in +1.4 s) | objects tracked: 2, threats: 1 | nav error vs truth 1.66 m
+[mission_controller-19] [WARN] [1791681498.819464047] [mission_controller]: !!! INCOMING meteor #4: impact in 4.5 s at (-1.5, -4.3) ±0.15 m, 1.7 m from rover -> EVADING to (-0.0, -0.1)
+[mission_controller-19] [t=   14.5s] Rover rel. station: x=  +2.25 m  y=  -1.09 m  dist=  2.50 m  bearing=  -26°  heading=  +83° | EVADE (meteor #4, impact in +4.2 s) | objects tracked: 1, threats: 1 | nav error vs truth 1.92 m
+[meteor_spawner.py-10] [INFO] [1791681500.334366167] [meteor_spawner]: [SPACE] meteor_3 inbound: from (-1.2,-17.6, h=12.2) m, speed 5.1 m/s, aimed 3.7 m from rover's predicted position, ETA 7.5 s
+[mission_controller-19] [t=   15.0s] Rover rel. station: x=  +2.24 m  y=  -1.16 m  dist=  2.52 m  bearing=  -27°  heading=  +79° | EVADE (meteor #4, impact in +3.6 s) | objects tracked: 1, threats: 1 | nav error vs truth 2.05 m
+[meteor_spawner.py-10] [INFO] [1791681501.824317304] [meteor_spawner]: [SPACE] meteor_1 IMPACT at (-2.0,-2.7); rover 4.2 m away -> SAFE
+[mission_controller-19] [t=   15.5s] Rover rel. station: x=  +2.25 m  y=  -1.10 m  dist=  2.51 m  bearing=  -26°  heading=  +77° | EVADE (meteor #4, impact in +3.2 s) | objects tracked: 1, threats: 0 | nav error vs truth 1.94 m
+[mission_controller-19] [t=   16.0s] Rover rel. station: x=  +2.30 m  y=  -0.92 m  dist=  2.47 m  bearing=  -22°  heading=  +75° | EVADE (meteor #4, impact in +2.7 s) | objects tracked: 1, threats: 0 | nav error vs truth 1.59 m
+[mission_controller-19] [t=   16.5s] Rover rel. station: x=  +2.37 m  y=  -0.65 m  dist=  2.46 m  bearing=  -15°  heading=  +74° | EVADE (meteor #4, impact in +2.2 s) | objects tracked: 1, threats: 0 | nav error vs truth 1.04 m
+[mission_controller-19] [t=   17.0s] Rover rel. station: x=  +2.43 m  y=  -0.46 m  dist=  2.47 m  bearing=  -11°  heading=  +73° | EVADE (meteor #4, impact in +1.7 s) | objects tracked: 1, threats: 0 | nav error vs truth 0.65 m
+[mission_controller-19] [INFO] [1791681506.287786215] [mission_controller]: evasion manoeuvre complete: now 4.1 m from predicted impact; holding until meteor #4 lands
+[mission_controller-19] [t=   17.5s] Rover rel. station: x=  +2.44 m  y=  -0.41 m  dist=  2.47 m  bearing=  -10°  heading=  +73° | SHELTER (meteor #4, impact in +1.2 s) | objects tracked: 1, threats: 0 | nav error vs truth 0.53 m
+[meteor_spawner.py-10] [INFO] [1791681507.533833470] [meteor_spawner]: [SPACE] meteor_4 inbound: from (-6.9,-21.9, h=15.5) m, speed 5.6 m/s, aimed 0.9 m from rover's predicted position, ETA 8.2 s
+[mission_controller-19] [t=   18.0s] Rover rel. station: x=  +2.44 m  y=  -0.41 m  dist=  2.47 m  bearing=  -10°  heading=  +73° | SHELTER (meteor #4, impact in +0.7 s) | objects tracked: 0, threats: 0 | nav error vs truth 0.53 m
+[mission_controller-19] [t=   18.5s] Rover rel. station: x=  +2.44 m  y=  -0.41 m  dist=  2.47 m  bearing=  -10°  heading=  +73° | SHELTER (meteor #4, impact in +0.2 s) | objects tracked: 0, threats: 0 | nav error vs truth 0.53 m
+[meteor_spawner.py-10] [INFO] [1791681510.013303160] [meteor_spawner]: [SPACE] meteor_2 IMPACT at (3.0,3.4); rover 4.5 m away -> SAFE
+[mission_controller-19] [t=   19.0s] Rover rel. station: x=  +2.44 m  y=  -0.41 m  dist=  2.47 m  bearing=  -10°  heading=  +73° | SHELTER (meteor #4, impact in -0.3 s) | objects tracked: 0, threats: 0 | nav error vs truth 0.53 m
+[mission_controller-19] [WARN] [1791681511.297653810] [mission_controller]: !!! INCOMING meteor #9: impact in 6.7 s at (-0.3, -1.4) ±0.93 m, 1.0 m from rover -> EVADING to (0.2, 3.0)
+[meteor_tracker-18] [INFO] [1791681511.581058308] [meteor_tracker]: [RGB-D] object #9 detected: range 18.7 m, altitude 21.1 m, speed 3.7 m/s, impact in 6.6 s at (0.0,-1.2) ±0.64 m, miss 0.8 m -> THREAT
+[mission_controller-19] [t=   19.5s] Rover rel. station: x=  +2.45 m  y=  -0.39 m  dist=  2.48 m  bearing=   -9°  heading=  +75° | EVADE (meteor #9, impact in +6.3 s) | objects tracked: 1, threats: 1 | nav error vs truth 0.48 m
+[mission_controller-19] [t=   20.0s] Rover rel. station: x=  +2.47 m  y=  -0.25 m  dist=  2.48 m  bearing=   -6°  heading=  +85° | EVADE (meteor #9, impact in +5.7 s) | objects tracked: 1, threats: 1 | nav error vs truth 0.25 m
+[meteor_tracker-18] [INFO] [1791681513.459249537] [meteor_tracker]: perf: 5.5 frames/s, 24.9 ms/frame (p95 43.5 ms), 3 blobs tracked
+[mission_controller-19] [t=   20.5s] Rover rel. station: x=  +2.48 m  y=  +0.01 m  dist=  2.48 m  bearing=   +0°  heading=  +91° | EVADE (meteor #9, impact in +5.2 s) | objects tracked: 1, threats: 1 | nav error vs truth 0.29 m
+[meteor_spawner.py-10] [INFO] [1791681515.865003247] [meteor_spawner]: [SPACE] meteor_5 inbound: from (4.0,-18.1, h=16.7) m, speed 4.2 m/s, aimed 4.5 m from rover's predicted position, ETA 7.5 s
+[mission_controller-19] [t=   21.0s] Rover rel. station: x=  +2.45 m  y=  +0.31 m  dist=  2.47 m  bearing=   +7°  heading=  +97° | EVADE (meteor #9, impact in +4.7 s) | objects tracked: 1, threats: 1 | nav error vs truth 0.83 m
+[mission_controller-19] [t=   21.5s] Rover rel. station: x=  +2.40 m  y=  +0.60 m  dist=  2.48 m  bearing=  +14°  heading= +102° | EVADE (meteor #9, impact in +4.2 s) | objects tracked: 1, threats: 1 | nav error vs truth 1.42 m
+[mission_controller-19] [t=   22.0s] Rover rel. station: x=  +2.34 m  y=  +0.89 m  dist=  2.50 m  bearing=  +21°  heading= +105° | EVADE (meteor #9, impact in +3.7 s) | objects tracked: 2, threats: 1 | nav error vs truth 2.02 m
+[meteor_tracker-18] [INFO] [1791681518.503181776] [meteor_tracker]: [RGB-D] object #11 detected: range 16.3 m, altitude 19.9 m, speed 2.7 m/s, impact in 6.5 s at (-5.4,6.3) ±0.54 m, miss 4.4 m -> no threat
+[meteor_spawner.py-10] [INFO] [1791681518.826225950] [meteor_spawner]: [SPACE] meteor_3 IMPACT at (4.8,0.4); rover 5.4 m away -> SAFE
+[mission_controller-19] [t=   22.5s] Rover rel. station: x=  +2.25 m  y=  +1.18 m  dist=  2.55 m  bearing=  +28°  heading= +106° | EVADE (meteor #9, impact in +3.2 s) | objects tracked: 2, threats: 1 | nav error vs truth 2.58 m
+[mission_controller-19] [t=   23.0s] Rover rel. station: x=  +2.17 m  y=  +1.47 m  dist=  2.62 m  bearing=  +34°  heading= +107° | EVADE (meteor #9, impact in +2.7 s) | objects tracked: 2, threats: 1 | nav error vs truth 3.18 m
+[mission_controller-19] [t=   23.5s] Rover rel. station: x=  +2.08 m  y=  +1.76 m  dist=  2.72 m  bearing=  +40°  heading= +107° | EVADE (meteor #9, impact in +2.2 s) | objects tracked: 2, threats: 1 | nav error vs truth 3.74 m
+[mission_controller-19] [t=   24.0s] Rover rel. station: x=  +1.99 m  y=  +2.04 m  dist=  2.85 m  bearing=  +46°  heading= +107° | EVADE (meteor #9, impact in +1.7 s) | objects tracked: 1, threats: 0 | nav error vs truth 4.34 m
+[meteor_spawner.py-10] [INFO] [1791681523.920522960] [meteor_spawner]: [SPACE] meteor_6 inbound: from (-12.5,-18.0, h=15.2) m, speed 5.3 m/s, aimed 2.1 m from rover's predicted position, ETA 8.2 s
+[mission_controller-19] [t=   24.5s] Rover rel. station: x=  +1.90 m  y=  +2.33 m  dist=  3.01 m  bearing=  +51°  heading= +107° | EVADE (meteor #9, impact in +1.2 s) | objects tracked: 1, threats: 0 | nav error vs truth 4.94 m
+[mission_controller-19] [WARN] [1791681525.446314520] [mission_controller]: !!! INCOMING meteor #12: impact in 7.8 s at (-1.6, 5.9) ±1.44 m, 0.8 m from rover -> EVADING to (-0.5, 1.6)
+[mission_controller-19] [t=   25.0s] Rover rel. station: x=  +1.84 m  y=  +2.53 m  dist=  3.13 m  bearing=  +54°  heading= +108° | EVADE (meteor #12, impact in +7.7 s) | objects tracked: 2, threats: 1 | nav error vs truth 5.40 m
+[meteor_tracker-18] [INFO] [1791681526.678558896] [meteor_tracker]: [RGB-D] object #12 detected: range 17.4 m, altitude 19.3 m, speed 4.1 m/s, impact in 7.3 s at (-0.0,2.7) ±0.62 m, miss 0.7 m -> THREAT
+[mission_controller-19] [t=   25.5s] Rover rel. station: x=  +1.93 m  y=  +2.25 m  dist=  2.97 m  bearing=  +49°  heading= +109° | EVADE (meteor #12, impact in +7.2 s) | objects tracked: 2, threats: 1 | nav error vs truth 5.18 m
+[meteor_spawner.py-10] [INFO] [1791681527.724842525] [meteor_spawner]: [SPACE] meteor_4 IMPACT at (0.2,0.9); rover 3.8 m away -> SAFE
+[mission_controller-19] [t=   26.0s] Rover rel. station: x=  +2.01 m  y=  +2.04 m  dist=  2.86 m  bearing=  +46°  heading= +111° | EVADE (meteor #12, impact in +6.6 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.76 m
+[mission_controller-19] [t=   26.5s] Rover rel. station: x=  +2.05 m  y=  +1.95 m  dist=  2.83 m  bearing=  +44°  heading= +117° | EVADE (meteor #12, impact in +6.1 s) | objects tracked: 1, threats: 1 | nav error vs truth 4.48 m
+[mission_controller-19] [t=   27.0s] Rover rel. station: x=  +2.05 m  y=  +1.95 m  dist=  2.83 m  bearing=  +44°  heading= +121° | EVADE (meteor #12, impact in +5.6 s) | objects tracked: 1, threats: 1 | nav error vs truth 4.33 m
+[mission_controller-19] [t=   27.5s] Rover rel. station: x=  +2.05 m  y=  +1.95 m  dist=  2.83 m  bearing=  +44°  heading= +127° | EVADE (meteor #12, impact in +5.1 s) | objects tracked: 1, threats: 1 | nav error vs truth 4.22 m
+[meteor_tracker-18] [INFO] [1791681532.775176777] [meteor_tracker]: [RGB-D] object #13 detected: range 7.1 m, altitude 6.7 m, speed 7.0 m/s, impact in 0.8 s at (-5.0,5.9) ±0.12 m, miss 6.0 m -> no threat
+[mission_controller-19] [t=   28.0s] Rover rel. station: x=  +2.05 m  y=  +1.95 m  dist=  2.83 m  bearing=  +44°  heading= +135° | EVADE (meteor #12, impact in +4.6 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.12 m
+[mission_controller-19] [t=   28.5s] Rover rel. station: x=  +2.05 m  y=  +1.95 m  dist=  2.83 m  bearing=  +44°  heading= +145° | EVADE (meteor #12, impact in +4.1 s) | objects tracked: 3, threats: 1 | nav error vs truth 4.06 m
+[meteor_tracker-18] [INFO] [1791681535.110045970] [meteor_tracker]: [RGB-D] object #14 detected: range 22.2 m, altitude 17.0 m, speed 5.0 m/s, impact in 6.0 s at (3.9,-1.3) ±0.43 m, miss 5.5 m -> no threat
+[meteor_spawner.py-10] [ERROR] [1791681535.221376381] [meteor_spawner]: failed to spawn meteor_7
+[meteor_spawner.py-10] [INFO] [1791681535.600824101] [meteor_spawner]: [SPACE] meteor_5 IMPACT at (1.8,-7.7); rover 6.1 m away -> SAFE
+[mission_controller-19] [t=   29.0s] Rover rel. station: x=  +2.05 m  y=  +1.95 m  dist=  2.83 m  bearing=  +44°  heading= +160° | EVADE (meteor #12, impact in +3.6 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.04 m
+[mission_controller-19] [t=   29.5s] Rover rel. station: x=  +2.04 m  y=  +1.95 m  dist=  2.82 m  bearing=  +44°  heading= +176° | EVADE (meteor #12, impact in +3.1 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.04 m
+[mission_controller-19] [t=   30.0s] Rover rel. station: x=  +1.93 m  y=  +1.95 m  dist=  2.74 m  bearing=  +45°  heading= -174° | EVADE (meteor #12, impact in +2.6 s) | objects tracked: 1, threats: 0 | nav error vs truth 4.07 m
+[meteor_tracker-18] [INFO] [1791681538.208282305] [meteor_tracker]: perf: 5.2 frames/s, 22.2 ms/frame (p95 35.5 ms), 2 blobs tracked
+[mission_controller-19] [t=   30.5s] Rover rel. station: x=  +1.69 m  y=  +1.91 m  dist=  2.55 m  bearing=  +48°  heading= -169° | EVADE (meteor #12, impact in +2.1 s) | objects tracked: 1, threats: 0 | nav error vs truth 4.14 m
+[mission_controller-19] [t=   31.0s] Rover rel. station: x=  +1.40 m  y=  +1.85 m  dist=  2.31 m  bearing=  +53°  heading= -166° | EVADE (meteor #12, impact in +1.6 s) | objects tracked: 1, threats: 0 | nav error vs truth 4.27 m
+[meteor_spawner.py-10] [INFO] [1791681541.293144378] [meteor_spawner]: [SPACE] meteor_8 inbound: from (26.5,4.6, h=14.1) m, speed 5.5 m/s, aimed 4.7 m from rover's predicted position, ETA 7.4 s
+[mission_controller-19] [t=   31.5s] Rover rel. station: x=  +1.11 m  y=  +1.76 m  dist=  2.08 m  bearing=  +58°  heading= -161° | EVADE (meteor #12, impact in +1.1 s) | objects tracked: 1, threats: 0 | nav error vs truth 4.44 m
+[mission_controller-19] [WARN] [1791681542.874486660] [mission_controller]: !!! INCOMING meteor #15: impact in 6.9 s at (-4.8, 4.5) ±1.12 m, 4.2 m from rover -> EVADING to (-1.4, 1.5)
+[mission_controller-19] [INFO] [1791681543.000123738] [mission_controller]: evasion manoeuvre complete: now 4.2 m from predicted impact; holding until meteor #15 lands
+[mission_controller-19] [t=   32.0s] Rover rel. station: x=  +0.89 m  y=  +1.67 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #15, impact in +6.8 s) | objects tracked: 2, threats: 0 | nav error vs truth 4.63 m
+[meteor_tracker-18] [INFO] [1791681543.345241356] [meteor_tracker]: [RGB-D] object #15 detected: range 24.4 m, altitude 16.8 m, speed 4.7 m/s, impact in 6.7 s at (-5.1,5.1) ±0.62 m, miss 4.8 m -> no threat
+[mission_controller-19] [t=   32.5s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #15, impact in +6.2 s) | objects tracked: 2, threats: 0 | nav error vs truth 4.67 m
+[meteor_spawner.py-10] [INFO] [1791681544.950047267] [meteor_spawner]: [SPACE] meteor_6 IMPACT at (-1.5,-5.4); rover 3.7 m away -> SAFE
+[mission_controller-19] [t=   33.0s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #15, impact in +5.7 s) | objects tracked: 2, threats: 0 | nav error vs truth 4.67 m
+[mission_controller-19] [t=   33.5s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #15, impact in +5.2 s) | objects tracked: 2, threats: 0 | nav error vs truth 4.67 m
+[mission_controller-19] [t=   34.0s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #15, impact in +4.7 s) | objects tracked: 2, threats: 0 | nav error vs truth 4.67 m
+[mission_controller-19] [t=   34.5s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #15, impact in +4.2 s) | objects tracked: 1, threats: 0 | nav error vs truth 4.67 m
+[mission_controller-19] [t=   35.0s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #15, impact in +3.7 s) | objects tracked: 1, threats: 0 | nav error vs truth 4.67 m
+[mission_controller-19] [WARN] [1791681551.922064103] [mission_controller]: !!! INCOMING meteor #16: impact in 8.8 s at (-5.7, 2.9) ±2.37 m, 4.2 m from rover -> EVADING to (-1.4, 1.6)
+[mission_controller-19] [INFO] [1791681552.015745380] [mission_controller]: evasion manoeuvre complete: now 4.2 m from predicted impact; holding until meteor #16 lands
+[mission_controller-19] [t=   35.5s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #16, impact in +8.7 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.67 m
+[meteor_tracker-18] [INFO] [1791681552.983899535] [meteor_tracker]: [RGB-D] object #16 detected: range 23.8 m, altitude 20.3 m, speed 5.1 m/s, impact in 8.1 s at (-0.7,1.4) ±0.91 m, miss 1.1 m -> THREAT
+[mission_controller-19] [t=   36.0s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #16, impact in +7.8 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.67 m
+[meteor_spawner.py-10] [ERROR] [1791681553.979481308] [meteor_spawner]: failed to spawn meteor_9
+[mission_controller-19] [t=   36.5s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #16, impact in +7.4 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.67 m
+[mission_controller-19] [t=   37.0s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #16, impact in +7.0 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.67 m
+[mission_controller-19] [t=   37.5s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #16, impact in +6.5 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.67 m
+[meteor_spawner.py-10] [INFO] [1791681557.676731417] [meteor_spawner]: [SPACE] meteor_10 inbound: from (17.5,-13.8, h=17.9) m, speed 4.4 m/s, aimed 3.2 m from rover's predicted position, ETA 7.2 s
+[mission_controller-19] [t=   38.0s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #16, impact in +6.0 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.67 m
+[meteor_tracker-18] [INFO] [1791681559.784703766] [meteor_tracker]: [RGB-D] object #17 detected: range 18.5 m, altitude 20.2 m, speed 3.6 m/s, impact in 6.6 s at (-3.1,-1.6) ±0.71 m, miss 3.5 m -> THREAT
+[mission_controller-19] [t=   38.5s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #16, impact in +5.5 s) | objects tracked: 3, threats: 2 | nav error vs truth 4.67 m
+[meteor_spawner.py-10] [INFO] [1791681560.688758027] [meteor_spawner]: [SPACE] meteor_8 IMPACT at (2.1,-7.4); rover 5.3 m away -> SAFE
+[mission_controller-19] [t=   39.0s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #16, impact in +4.9 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.67 m
+[mission_controller-19] [t=   39.5s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #16, impact in +4.5 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.67 m
+[mission_controller-19] [t=   40.0s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #16, impact in +4.0 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.67 m
+[meteor_tracker-18] [INFO] [1791681563.574493789] [meteor_tracker]: perf: 6.7 frames/s, 20.1 ms/frame (p95 32.0 ms), 3 blobs tracked
+[meteor_spawner.py-10] [INFO] [1791681564.318256496] [meteor_spawner]: [SPACE] meteor_11 inbound: from (21.0,1.0, h=15.2) m, speed 5.3 m/s, aimed 2.8 m from rover's predicted position, ETA 8.1 s
+[mission_controller-19] [t=   40.5s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #16, impact in +3.4 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.67 m
+[mission_controller-19] [t=   41.0s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | SHELTER (meteor #16, impact in +3.0 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.67 m
+[meteor_tracker-18] [INFO] [1791681567.406809121] [meteor_tracker]: [RGB-D] object #18 detected: range 18.0 m, altitude 19.5 m, speed 3.9 m/s, impact in 7.1 s at (-0.7,-1.4) ±0.66 m, miss 3.3 m -> THREAT
+[mission_controller-19] [WARN] [1791681567.416884609] [mission_controller]: !!! INCOMING meteor #18: impact in 7.1 s at (-0.7, -1.4) ±0.66 m, 3.3 m from rover -> EVADING to (-2.1, 2.8)
+[mission_controller-19] [t=   41.5s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -157° | EVADE (meteor #18, impact in +7.0 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.67 m
+[mission_controller-19] [t=   42.0s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -162° | EVADE (meteor #18, impact in +6.5 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.67 m
+[mission_controller-19] [t=   42.5s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= -176° | EVADE (meteor #18, impact in +5.9 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.67 m
+[mission_controller-19] [t=   43.0s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= +167° | EVADE (meteor #18, impact in +5.4 s) | objects tracked: 1, threats: 1 | nav error vs truth 4.67 m
+[mission_controller-19] [t=   43.5s] Rover rel. station: x=  +0.89 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= +151° | EVADE (meteor #18, impact in +4.9 s) | objects tracked: 2, threats: 2 | nav error vs truth 4.67 m
+[meteor_tracker-18] [INFO] [1791681572.295137523] [meteor_tracker]: [RGB-D] object #19 detected: range 22.2 m, altitude 18.2 m, speed 4.9 m/s, impact in 7.0 s at (2.5,0.2) ±0.75 m, miss 4.4 m -> THREAT
+[meteor_spawner.py-10] [ERROR] [1791681573.570977295] [meteor_spawner]: failed to spawn meteor_12
+[mission_controller-19] [t=   44.0s] Rover rel. station: x=  +0.88 m  y=  +1.68 m  dist=  1.90 m  bearing=  +62°  heading= +121° | EVADE (meteor #18, impact in +4.4 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.69 m
+[mission_controller-19] [t=   44.5s] Rover rel. station: x=  +0.88 m  y=  +1.72 m  dist=  1.93 m  bearing=  +63°  heading=  -42° | EVADE (meteor #18, impact in +3.9 s) | objects tracked: 2, threats: 1 | nav error vs truth 4.88 m
+[meteor_spawner.py-10] [WARN] [1791681576.045247690] [meteor_spawner]: [SPACE] meteor_10 IMPACT at (3.1,-0.2); rover 1.6 m away -> HIT
+[mission_controller-19] [t=   45.0s] Rover rel. station: x=  +0.85 m  y=  +1.98 m  dist=  2.16 m  bearing=  +67°  heading=  -93° | EVADE (meteor #18, impact in +3.4 s) | objects tracked: 2, threats: 1 | nav error vs truth 5.35 m
+[mission_controller-19] [t=   45.5s] Rover rel. station: x=  +0.75 m  y=  +2.23 m  dist=  2.36 m  bearing=  +71°  heading=   -6° | EVADE (meteor #18, impact in +2.9 s) | objects tracked: 2, threats: 0 | nav error vs truth 5.94 m
+[mission_controller-19] [t=   46.0s] Rover rel. station: x=  +0.72 m  y=  +2.10 m  dist=  2.22 m  bearing=  +71°  heading= +156° | EVADE (meteor #18, impact in +2.4 s) | objects tracked: 2, threats: 2 | nav error vs truth 6.35 m
+[mission_controller-19] [WARN] [1791681579.775666431] [mission_controller]: !!! INCOMING meteor #19: impact in 4.3 s at (2.5, 0.5) ±0.49 m, 3.9 m from rover -> EVADING to (-1.7, 2.0)
+[mission_controller-19] [INFO] [1791681579.845869478] [mission_controller]: evasion manoeuvre complete: now 4.6 m from predicted impact; holding until meteor #19 lands
+[mission_controller-19] [t=   46.5s] Rover rel. station: x=  +0.78 m  y=  +2.12 m  dist=  2.26 m  bearing=  +70°  heading=  -43° | SHELTER (meteor #19, impact in +4.0 s) | objects tracked: 1, threats: 0 | nav error vs truth 6.86 m
+[mission_controller-19] [t=   47.0s] Rover rel. station: x=  +0.78 m  y=  +2.12 m  dist=  2.26 m  bearing=  +70°  heading=  +30° | SHELTER (meteor #19, impact in +3.5 s) | objects tracked: 1, threats: 0 | nav error vs truth 7.16 m
+[meteor_spawner.py-10] [ERROR] [1791681582.065565188] [meteor_spawner]: failed to spawn meteor_13
+[mission_controller-19] [t=   47.5s] Rover rel. station: x=  +0.78 m  y=  +2.12 m  dist=  2.26 m  bearing=  +70°  heading=  -48° | SHELTER (meteor #19, impact in +3.0 s) | objects tracked: 1, threats: 0 | nav error vs truth 7.20 m
+[mission_controller-19] [t=   48.0s] Rover rel. station: x=  +0.78 m  y=  +2.12 m  dist=  2.26 m  bearing=  +70°  heading=   +4° | SHELTER (meteor #19, impact in +2.5 s) | objects tracked: 0, threats: 0 | nav error vs truth 7.28 m
+[mission_controller-19] [t=   48.5s] Rover rel. station: x=  +0.78 m  y=  +2.12 m  dist=  2.26 m  bearing=  +70°  heading=  +55° | SHELTER (meteor #19, impact in +2.0 s) | objects tracked: 0, threats: 0 | nav error vs truth 7.34 m
+[mission_controller-19] [t=   49.0s] Rover rel. station: x=  +0.78 m  y=  +2.12 m  dist=  2.26 m  bearing=  +70°  heading=  -27° | SHELTER (meteor #19, impact in +1.5 s) | objects tracked: 0, threats: 0 | nav error vs truth 7.38 m
+[mission_controller-19] [t=   49.5s] Rover rel. station: x=  +0.78 m  y=  +2.12 m  dist=  2.26 m  bearing=  +70°  heading=  -52° | SHELTER (meteor #19, impact in +1.0 s) | objects tracked: 0, threats: 0 | nav error vs truth 7.34 m
+[meteor_spawner.py-10] [ERROR] [1791681589.099525452] [meteor_spawner]: failed to spawn meteor_14
+[meteor_spawner.py-10] [INFO] [1791681589.110067437] [meteor_spawner]: [SPACE] meteor_11 IMPACT at (0.6,0.5); rover 4.7 m away -> SAFE
+[mission_controller-19] [t=   50.0s] Rover rel. station: x=  +0.78 m  y=  +2.12 m  dist=  2.26 m  bearing=  +70°  heading=  -49° | SHELTER (meteor #19, impact in +0.5 s) | objects tracked: 2, threats: 0 | nav error vs truth 7.32 m
+[meteor_tracker-18] [INFO] [1791681590.016625606] [meteor_tracker]: perf: 5.7 frames/s, 23.4 ms/frame (p95 38.4 ms), 36 blobs tracked
+[meteor_tracker-18] [INFO] [1791681590.266323586] [meteor_tracker]: [RGB-D] object #69 detected: range 22.3 m, altitude 2.2 m, speed 4.4 m/s, impact in 0.5 s at (4.2,-19.4) ±0.93 m, miss 22.4 m -> no threat
+[meteor_tracker-18] [INFO] [1791681590.272310832] [meteor_tracker]: [RGB-D] object #70 detected: range 21.4 m, altitude 1.9 m, speed 4.1 m/s, impact in 0.4 s at (4.9,-18.5) ±0.77 m, miss 21.7 m -> no threat
+[meteor_tracker-18] [INFO] [1791681590.275983722] [meteor_tracker]: [RGB-D] object #71 detected: range 21.3 m, altitude 2.2 m, speed 4.4 m/s, impact in 0.5 s at (3.3,-19.3) ±1.19 m, miss 22.0 m -> no threat
+[mission_controller-19] [t=   50.5s] Rover rel. station: x=  +0.78 m  y=  +2.12 m  dist=  2.26 m  bearing=  +70°  heading=  -49° | SHELTER (meteor #19, impact in -0.0 s) | objects tracked: 6, threats: 0 | nav error vs truth 7.33 m
+[mission_controller-19] [t=   51.0s] Rover rel. station: x=  +0.78 m  y=  +2.12 m  dist=  2.26 m  bearing=  +70°  heading=  -49° | SHELTER (meteor #19, impact in -0.5 s) | objects tracked: 0, threats: 0 | nav error vs truth 7.32 m
+[mission_controller-19] [INFO] [1791681594.308839470] [mission_controller]: meteor #19 has landed near (2.5, 0.5); impact zone added to the hazard map. Resuming patrol -> WP0
+[mission_controller-19] [t=   51.5s] Rover rel. station: x=  +0.78 m  y=  +2.12 m  dist=  2.26 m  bearing=  +70°  heading=  -49° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 7.33 m
+[bt_navigator-15] [INFO] [1791681594.322969930] [bt_navigator]: Begin navigating from current location (-1.82, 2.12) to (6.00, 6.00)
+[planner_server-13] [WARN] [1791681594.343494243] [planner_server]: GridBased plugin failed to plan from (-1.82, 2.12) to (6.00, 6.00): "Failed to create plan with tolerance of: 0.500000"
+[planner_server-13] [WARN] [1791681594.343702939] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-13] [INFO] [1791681594.356038179] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-11] [INFO] [1791681594.477105955] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-11] [WARN] [1791681594.477229401] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded general_goal_checker . This warning will appear once.
+[controller_server-11] [WARN] [1791681594.477250742] [controller_server]: No progress checker was specified in parameter 'current_progress_checker'. Server will use only plugin loaded progress_checker . This warning will appear once.
+[controller_server-11] [INFO] [1791681594.486821700] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681594.492551493] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681594.492799466] [controller_server]: Optimizer fail to compute path
+[controller_server-11] [INFO] [1791681594.586369972] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681594.594357313] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681594.594498694] [controller_server]: Optimizer fail to compute path
+[controller_server-11] [INFO] [1791681594.679953062] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681594.682863571] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681594.684162481] [controller_server]: Optimizer fail to compute path
+[controller_server-11] [INFO] [1791681594.781534963] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681594.784975422] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681594.785141667] [controller_server]: Optimizer fail to compute path
+[controller_server-11] [INFO] [1791681594.883683834] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681594.886334939] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681594.886498991] [controller_server]: Optimizer fail to compute path
+[controller_server-11] [INFO] [1791681594.983244982] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681594.991890398] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681594.992037236] [controller_server]: Optimizer fail to compute path
+[controller_server-11] [INFO] [1791681595.385778130] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681595.391665858] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681595.391835516] [controller_server]: Optimizer fail to compute path
+[controller_server-11] [INFO] [1791681595.480843146] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681595.483791281] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681595.483991406] [controller_server]: Optimizer fail to compute path
+[controller_server-11] [INFO] [1791681595.577705043] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681595.583318840] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681595.586793222] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681595.586950691] [controller_server]: Optimizer fail to compute path
+[mission_controller-19] [t=   52.0s] Rover rel. station: x=  +0.78 m  y=  +2.12 m  dist=  2.26 m  bearing=  +70°  heading=  -49° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 7.32 m
+[bt_navigator-15] [INFO] [1791681595.788837397] [bt_navigator]: Received goal preemption request
+[bt_navigator-15] [INFO] [1791681595.789605132] [bt_navigator]: Begin navigating from current location (-1.82, 2.12) to (6.00, 6.00)
+[controller_server-11] [INFO] [1791681596.583137911] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   52.5s] Rover rel. station: x=  +0.82 m  y=  +2.07 m  dist=  2.23 m  bearing=  +68°  heading=  -49° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 7.27 m
+[controller_server-11] [INFO] [1791681597.577569668] [controller_server]: Passing new path to controller.
+[meteor_spawner.py-10] [ERROR] [1791681598.199122403] [meteor_spawner]: failed to spawn meteor_15
+[mission_controller-19] [t=   53.0s] Rover rel. station: x=  +0.89 m  y=  +1.99 m  dist=  2.18 m  bearing=  +66°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 7.19 m
+[controller_server-11] [INFO] [1791681598.577535792] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681599.677540674] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   53.5s] Rover rel. station: x=  +0.92 m  y=  +1.96 m  dist=  2.16 m  bearing=  +65°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 7.15 m
+[controller_server-11] [INFO] [1791681600.679083753] [controller_server]: Passing new path to controller.
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[controller_server-11] [INFO] [1791681601.677450911] [controller_server]: Passing new path to controller.
+[meteor_spawner.py-10] Exception sending a multicast message:Network is unreachable
+[meteor_spawner.py-10] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[meteor_spawner.py-10] Exception sending a multicast message:Network is unreachable
+[meteor_spawner.py-10] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[meteor_spawner.py-10] Exception sending a multicast message:Network is unreachable
+[meteor_spawner.py-10] Exception sending a multicast message:Network is unreachable
+[controller_server-11] [WARN] [1791681605.597795237] [controller_server]: Control loop missed its desired rate of 10.0000 Hz. Current loop rate is inf Hz.
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[meteor_spawner.py-10] Exception sending a multicast message:Network is unreachable
+[meteor_spawner.py-10] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[meteor_spawner.py-10] Exception sending a multicast message:Exception sending a multicast message:Network is unreachable
+[meteor_spawner.py-10] Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[meteor_spawner.py-10] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[meteor_spawner.py-10] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[meteor_spawner.py-10] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[parameter_bridge-8] Exception sending a multicast message:Network is unreachable
+[meteor_spawner.py-10] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[gazebo-1] Exception sending a multicast message:Network is unreachable
+[ekf_node-9] [ERROR] [1791681615.760675920] [ekf_odom]: Failed to meet update rate! Took 0.040000000000000000833seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[mission_controller-19] [t=   54.0s] Rover rel. station: x=  +0.93 m  y=  +1.94 m  dist=  2.15 m  bearing=  +64°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 7.14 m
+[ekf_node-9] [ERROR] [1791681615.828172522] [ekf_odom]: Failed to meet update rate! Took 0.068000000000000004885seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[controller_server-11] [INFO] [1791681615.899054578] [controller_server]: Passing new path to controller.
+[ekf_node-9] [ERROR] [1791681616.025174386] [ekf_odom]: Failed to meet update rate! Took 0.043999999999999997446seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[mission_controller-19] [t=   54.5s] Rover rel. station: x=  +0.96 m  y=  +1.91 m  dist=  2.14 m  bearing=  +63°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 7.10 m
+[meteor_spawner.py-10] [INFO] [1791681616.280166791] [meteor_spawner]: [SPACE] meteor_16 inbound: from (-18.6,-12.6, h=17.5) m, speed 5.0 m/s, aimed 2.6 m from rover's predicted position, ETA 7.5 s
+[mission_controller-19] [t=   55.1s] Rover rel. station: x=  +0.98 m  y=  +1.89 m  dist=  2.13 m  bearing=  +63°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 7.08 m
+[planner_server-13] [INFO] [1791681616.422115715] [global_costmap.global_costmap]: Message Filter dropping message: frame 'lidar' at time 61.300 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[mission_controller-19] [t=   61.3s] Rover rel. station: x=  +0.98 m  y=  +1.88 m  dist=  2.12 m  bearing=  +62°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 7.07 m
+[meteor_spawner.py-10] [INFO] [1791681616.428146273] [meteor_spawner]: [SPACE] meteor_17 inbound: from (-7.3,-14.9, h=16.6) m, speed 4.7 m/s, aimed 4.7 m from rover's predicted position, ETA 7.1 s
+[meteor_tracker-18] [INFO] [1791681616.436227200] [meteor_tracker]: perf: 2.4 frames/s, 23.0 ms/frame (p95 39.9 ms), 0 blobs tracked
+[controller_server-11] [INFO] [1791681616.898074386] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   61.5s] Rover rel. station: x=  +1.22 m  y=  +1.60 m  dist=  2.01 m  bearing=  +53°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.77 m
+[controller_server-11] [INFO] [1791681617.997990706] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   62.0s] Rover rel. station: x=  +1.31 m  y=  +1.50 m  dist=  1.99 m  bearing=  +49°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.67 m
+[controller_server-11] [INFO] [1791681619.000510327] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   62.5s] Rover rel. station: x=  +1.30 m  y=  +1.50 m  dist=  1.99 m  bearing=  +49°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.67 m
+[controller_server-11] [INFO] [1791681619.998093877] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681621.098293166] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   63.0s] Rover rel. station: x=  +1.32 m  y=  +1.48 m  dist=  1.99 m  bearing=  +48°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.65 m
+[controller_server-11] [INFO] [1791681622.098539032] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   63.5s] Rover rel. station: x=  +1.35 m  y=  +1.45 m  dist=  1.98 m  bearing=  +47°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.62 m
+[controller_server-11] [INFO] [1791681623.098042676] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681624.100578126] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   64.0s] Rover rel. station: x=  +1.36 m  y=  +1.43 m  dist=  1.98 m  bearing=  +47°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.60 m
+[controller_server-11] [INFO] [1791681625.198324722] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   64.5s] Rover rel. station: x=  +1.38 m  y=  +1.41 m  dist=  1.97 m  bearing=  +46°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.58 m
+[controller_server-11] [INFO] [1791681626.198511342] [controller_server]: Passing new path to controller.
+[meteor_spawner.py-10] [INFO] [1791681626.415661623] [meteor_spawner]: [SPACE] meteor_18 inbound: from (-14.7,-15.5, h=15.6) m, speed 6.1 m/s, aimed 4.6 m from rover's predicted position, ETA 8.7 s
+[controller_server-11] [INFO] [1791681627.198184865] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   65.0s] Rover rel. station: x=  +1.40 m  y=  +1.39 m  dist=  1.97 m  bearing=  +45°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.56 m
+[controller_server-11] [INFO] [1791681628.297981457] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681629.298139266] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   65.5s] Rover rel. station: x=  +1.40 m  y=  +1.39 m  dist=  1.97 m  bearing=  +45°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.55 m
+[controller_server-11] [INFO] [1791681630.299770072] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   66.0s] Rover rel. station: x=  +1.41 m  y=  +1.37 m  dist=  1.97 m  bearing=  +44°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.54 m
+[controller_server-11] [INFO] [1791681631.398549387] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681632.397996021] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   66.5s] Rover rel. station: x=  +1.43 m  y=  +1.36 m  dist=  1.97 m  bearing=  +44°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.52 m
+[controller_server-11] [INFO] [1791681633.397999054] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   67.0s] Rover rel. station: x=  +1.43 m  y=  +1.35 m  dist=  1.97 m  bearing=  +43°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.51 m
+[controller_server-11] [INFO] [1791681634.497958912] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681635.497988472] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   67.5s] Rover rel. station: x=  +1.44 m  y=  +1.34 m  dist=  1.97 m  bearing=  +43°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.50 m
+[controller_server-11] [INFO] [1791681636.500240442] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   68.0s] Rover rel. station: x=  +1.45 m  y=  +1.32 m  dist=  1.97 m  bearing=  +42°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.49 m
+[controller_server-11] [INFO] [1791681637.498349116] [controller_server]: Passing new path to controller.
+[meteor_spawner.py-10] [INFO] [1791681637.814677743] [meteor_spawner]: [SPACE] meteor_19 inbound: from (-14.8,-2.1, h=15.4) m, speed 5.6 m/s, aimed 4.4 m from rover's predicted position, ETA 8.1 s
+[controller_server-11] [INFO] [1791681638.597970373] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   68.5s] Rover rel. station: x=  +1.47 m  y=  +1.31 m  dist=  1.97 m  bearing=  +42°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.47 m
+[meteor_spawner.py-10] [INFO] [1791681639.140954039] [meteor_spawner]: [SPACE] meteor_17 IMPACT at (3.4,4.5); rover 4.7 m away -> SAFE
+[controller_server-11] [INFO] [1791681639.601978087] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   69.0s] Rover rel. station: x=  +1.48 m  y=  +1.29 m  dist=  1.96 m  bearing=  +41°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.46 m
+[controller_server-11] [INFO] [1791681640.599443815] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681641.597965323] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   69.5s] Rover rel. station: x=  +1.49 m  y=  +1.28 m  dist=  1.96 m  bearing=  +41°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.45 m
+[controller_server-11] [INFO] [1791681642.698750827] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   70.0s] Rover rel. station: x=  +1.50 m  y=  +1.27 m  dist=  1.96 m  bearing=  +40°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.43 m
+[meteor_tracker-18] [INFO] [1791681643.150186923] [meteor_tracker]: perf: 4.4 frames/s, 21.3 ms/frame (p95 39.9 ms), 0 blobs tracked
+[controller_server-11] [INFO] [1791681643.698583130] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   70.5s] Rover rel. station: x=  +1.51 m  y=  +1.25 m  dist=  1.96 m  bearing=  +40°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.42 m
+[controller_server-11] [INFO] [1791681644.698038521] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681645.699368843] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   71.0s] Rover rel. station: x=  +1.52 m  y=  +1.24 m  dist=  1.96 m  bearing=  +39°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.41 m
+[controller_server-11] [INFO] [1791681646.801027363] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   71.5s] Rover rel. station: x=  +1.53 m  y=  +1.24 m  dist=  1.96 m  bearing=  +39°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.40 m
+[meteor_spawner.py-10] [INFO] [1791681647.477783756] [meteor_spawner]: [SPACE] meteor_20 inbound: from (-14.3,3.9, h=14.6) m, speed 4.9 m/s, aimed 0.7 m from rover's predicted position, ETA 7.5 s
+[controller_server-11] [INFO] [1791681647.798065819] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681648.799120425] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   72.0s] Rover rel. station: x=  +1.53 m  y=  +1.23 m  dist=  1.96 m  bearing=  +39°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.39 m
+[controller_server-11] [INFO] [1791681649.798011129] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   72.5s] Rover rel. station: x=  +1.54 m  y=  +1.22 m  dist=  1.96 m  bearing=  +38°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.39 m
+[controller_server-11] [INFO] [1791681650.797963103] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   73.0s] Rover rel. station: x=  +1.54 m  y=  +1.21 m  dist=  1.96 m  bearing=  +38°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.38 m
+[controller_server-11] [INFO] [1791681651.898745143] [controller_server]: Passing new path to controller.
+[meteor_spawner.py-10] [INFO] [1791681652.475870020] [meteor_spawner]: [SPACE] meteor_18 IMPACT at (8.9,-2.7); rover 4.6 m away -> SAFE
+[controller_server-11] [INFO] [1791681652.897954048] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   73.5s] Rover rel. station: x=  +1.55 m  y=  +1.20 m  dist=  1.97 m  bearing=  +38°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.37 m
+[controller_server-11] [INFO] [1791681653.898064289] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   74.0s] Rover rel. station: x=  +1.56 m  y=  +1.20 m  dist=  1.97 m  bearing=  +38°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.37 m
+[controller_server-11] [INFO] [1791681654.998607114] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681655.998237950] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   74.5s] Rover rel. station: x=  +1.56 m  y=  +1.20 m  dist=  1.97 m  bearing=  +37°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.36 m
+[meteor_spawner.py-10] [INFO] [1791681656.937233869] [meteor_spawner]: [SPACE] meteor_21 inbound: from (-19.5,-7.4, h=16.1) m, speed 5.3 m/s, aimed 3.5 m from rover's predicted position, ETA 7.9 s
+[controller_server-11] [INFO] [1791681657.000984941] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   75.0s] Rover rel. station: x=  +1.56 m  y=  +1.19 m  dist=  1.97 m  bearing=  +37°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.36 m
+[controller_server-11] [INFO] [1791681657.998524556] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681659.097997992] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   75.5s] Rover rel. station: x=  +1.57 m  y=  +1.19 m  dist=  1.97 m  bearing=  +37°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.35 m
+[controller_server-11] [INFO] [1791681660.097964550] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   76.0s] Rover rel. station: x=  +1.57 m  y=  +1.18 m  dist=  1.97 m  bearing=  +37°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.35 m
+[controller_server-11] [INFO] [1791681661.098006555] [controller_server]: Passing new path to controller.
+[meteor_spawner.py-10] [INFO] [1791681661.590819542] [meteor_spawner]: [SPACE] meteor_19 IMPACT at (9.3,1.5); rover 4.3 m away -> SAFE
+[mission_controller-19] [t=   76.5s] Rover rel. station: x=  +1.57 m  y=  +1.18 m  dist=  1.97 m  bearing=  +37°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.35 m
+[controller_server-11] [INFO] [1791681662.097948972] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681663.199969780] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   77.0s] Rover rel. station: x=  +1.57 m  y=  +1.18 m  dist=  1.97 m  bearing=  +37°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.35 m
+[controller_server-11] [INFO] [1791681664.198571742] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   77.5s] Rover rel. station: x=  +1.58 m  y=  +1.18 m  dist=  1.97 m  bearing=  +37°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.34 m
+[controller_server-11] [INFO] [1791681665.198031967] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   78.0s] Rover rel. station: x=  +1.58 m  y=  +1.18 m  dist=  1.97 m  bearing=  +37°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.34 m
+[controller_server-11] [INFO] [1791681666.199581609] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681667.299388616] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   78.5s] Rover rel. station: x=  +1.58 m  y=  +1.17 m  dist=  1.97 m  bearing=  +37°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.34 m
+[controller_server-11] [INFO] [1791681668.298082984] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   79.0s] Rover rel. station: x=  +1.58 m  y=  +1.17 m  dist=  1.97 m  bearing=  +36°  heading=  -50° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 6.36 m
+[controller_server-11] [INFO] [1791681669.297949125] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681669.405106033] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681669.411391963] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681669.413428474] [controller_server]: Optimizer fail to compute path
+[controller_server-11] [INFO] [1791681669.501282981] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681669.502839608] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681669.503283694] [controller_server]: Optimizer fail to compute path
+[mission_controller-19] [t=   79.5s] Rover rel. station: x=  +1.59 m  y=  +1.16 m  dist=  1.97 m  bearing=  +36°  heading=  -49° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 7.15 m
+[controller_server-11] [INFO] [1791681670.398010843] [controller_server]: Passing new path to controller.
+[meteor_spawner.py-10] [ERROR] [1791681670.634318789] [meteor_spawner]: failed to spawn meteor_22
+[controller_server-11] [INFO] [1791681671.302008930] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681671.311869907] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681671.312058139] [controller_server]: Optimizer fail to compute path
+[controller_server-11] [INFO] [1791681671.398221321] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681671.402500532] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681671.405116962] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681671.405252086] [controller_server]: Optimizer fail to compute path
+[meteor_spawner.py-10] [INFO] [1791681671.489112589] [meteor_spawner]: [SPACE] meteor_20 IMPACT at (4.7,-0.3); rover 2.5 m away -> SAFE
+[controller_server-11] [INFO] [1791681671.500229313] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681671.503182888] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681671.504271139] [controller_server]: Optimizer fail to compute path
+[controller_server-11] [INFO] [1791681671.600495483] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681671.605228728] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681671.607013964] [controller_server]: Optimizer fail to compute path
+[controller_server-11] [INFO] [1791681671.699983620] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681671.704359841] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681671.704549492] [controller_server]: Optimizer fail to compute path
+[mission_controller-19] [t=   80.0s] Rover rel. station: x=  +1.59 m  y=  +1.16 m  dist=  1.97 m  bearing=  +36°  heading=  -68° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 7.86 m
+[controller_server-11] [INFO] [1791681671.800374359] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681671.804305514] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681671.804489493] [controller_server]: Optimizer fail to compute path
+[meteor_tracker-18] [INFO] [1791681671.814891853] [meteor_tracker]: perf: 6.5 frames/s, 17.3 ms/frame (p95 31.0 ms), 19 blobs tracked
+[mission_controller-19] [WARN] [1791681671.816226631] [mission_controller]: !!! INCOMING meteor #100: impact in 7.7 s at (-9.6, -5.4) ±7.08 m, 10.8 m from rover -> EVADING to (-6.0, -2.7)
+[bt_navigator-15] [ERROR] [1791681671.844477180] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for follow_path in node halt!
+[bt_navigator-15] [INFO] [1791681671.845054198] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-15] [INFO] [1791681671.845684946] [bt_navigator]: Goal canceled
+[controller_server-11] [INFO] [1791681671.898008435] [controller_server]: Cancellation was successful. Stopping the robot.
+[controller_server-11] [INFO] [1791681671.898145275] [controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+[controller_server-11] [INFO] [1791681671.898681820] [controller_server]: Optimizer reset
+[mission_controller-19] [t=   80.5s] Rover rel. station: x=  +1.59 m  y=  +1.16 m  dist=  1.97 m  bearing=  +36°  heading=  -61° | EVADE (meteor #100, impact in +6.1 s) | objects tracked: 1, threats: 1 | nav error vs truth 8.09 m
+[mission_controller-19] [t=   81.0s] Rover rel. station: x=  +1.59 m  y=  +1.16 m  dist=  1.97 m  bearing=  +36°  heading=  -59° | EVADE (meteor #100, impact in +5.5 s) | objects tracked: 1, threats: 1 | nav error vs truth 8.05 m
+[mission_controller-19] [t=   81.5s] Rover rel. station: x=  +1.59 m  y=  +1.16 m  dist=  1.97 m  bearing=  +36°  heading=  -59° | EVADE (meteor #100, impact in +5.1 s) | objects tracked: 1, threats: 1 | nav error vs truth 8.05 m
+[mission_controller-19] [t=   82.0s] Rover rel. station: x=  +1.59 m  y=  +1.16 m  dist=  1.97 m  bearing=  +36°  heading=  -59° | EVADE (meteor #100, impact in +4.6 s) | objects tracked: 1, threats: 1 | nav error vs truth 8.05 m
+[mission_controller-19] [t=   82.5s] Rover rel. station: x=  +1.59 m  y=  +1.16 m  dist=  1.97 m  bearing=  +36°  heading=  -59° | EVADE (meteor #100, impact in +4.0 s) | objects tracked: 1, threats: 1 | nav error vs truth 8.05 m
+[meteor_spawner.py-10] [ERROR] [1791681680.517363047] [meteor_spawner]: failed to spawn meteor_23
+[mission_controller-19] [t=   83.0s] Rover rel. station: x=  +1.59 m  y=  +1.16 m  dist=  1.97 m  bearing=  +36°  heading=  -59° | EVADE (meteor #100, impact in +3.5 s) | objects tracked: 0, threats: 0 | nav error vs truth 8.05 m
+[meteor_spawner.py-10] [INFO] [1791681681.324960432] [meteor_spawner]: [SPACE] meteor_21 IMPACT at (3.1,-2.7); rover 5.6 m away -> SAFE
+[mission_controller-19] [t=   83.5s] Rover rel. station: x=  +1.59 m  y=  +1.16 m  dist=  1.97 m  bearing=  +36°  heading=  -59° | EVADE (meteor #100, impact in +3.0 s) | objects tracked: 0, threats: 0 | nav error vs truth 8.05 m
+[mission_controller-19] [t=   84.0s] Rover rel. station: x=  +1.59 m  y=  +1.16 m  dist=  1.97 m  bearing=  +36°  heading=  -59° | EVADE (meteor #100, impact in +2.5 s) | objects tracked: 0, threats: 0 | nav error vs truth 8.05 m
+[mission_controller-19] [t=   84.5s] Rover rel. station: x=  +1.59 m  y=  +1.16 m  dist=  1.97 m  bearing=  +36°  heading=  -59° | EVADE (meteor #100, impact in +2.0 s) | objects tracked: 0, threats: 0 | nav error vs truth 8.05 m
+[meteor_spawner.py-10] [INFO] [1791681685.652917840] [meteor_spawner]: [SPACE] meteor_24 inbound: from (-17.5,-4.3, h=16.3) m, speed 5.5 m/s, aimed 2.8 m from rover's predicted position, ETA 7.7 s
+[mission_controller-19] [t=   85.0s] Rover rel. station: x=  +1.59 m  y=  +1.16 m  dist=  1.97 m  bearing=  +36°  heading=  -59° | EVADE (meteor #100, impact in +1.5 s) | objects tracked: 0, threats: 0 | nav error vs truth 8.05 m
+[mission_controller-19] [t=   85.5s] Rover rel. station: x=  +1.59 m  y=  +1.16 m  dist=  1.97 m  bearing=  +36°  heading=  -59° | EVADE (meteor #100, impact in +1.0 s) | objects tracked: 0, threats: 0 | nav error vs truth 8.05 m
+[mission_controller-19] [t=   86.0s] Rover rel. station: x=  +1.59 m  y=  +1.16 m  dist=  1.97 m  bearing=  +36°  heading=  -59° | EVADE (meteor #100, impact in +0.5 s) | objects tracked: 0, threats: 0 | nav error vs truth 8.05 m
+[mission_controller-19] [t=   86.5s] Rover rel. station: x=  +1.59 m  y=  +1.16 m  dist=  1.97 m  bearing=  +36°  heading=  -59° | EVADE (meteor #100, impact in +0.0 s) | objects tracked: 0, threats: 0 | nav error vs truth 8.05 m
+[mission_controller-19] [INFO] [1791681691.622181586] [mission_controller]: evasion manoeuvre complete: now 11.0 m from predicted impact; holding until meteor #100 lands
+[mission_controller-19] [t=   87.0s] Rover rel. station: x=  +1.59 m  y=  +1.16 m  dist=  1.97 m  bearing=  +36°  heading=  -59° | SHELTER (meteor #100, impact in -0.5 s) | objects tracked: 0, threats: 0 | nav error vs truth 8.05 m
+[mission_controller-19] [t=   87.5s] Rover rel. station: x=  +1.59 m  y=  +1.16 m  dist=  1.97 m  bearing=  +36°  heading=  -59° | SHELTER (meteor #100, impact in -1.0 s) | objects tracked: 0, threats: 0 | nav error vs truth 8.05 m
+[meteor_spawner.py-10] [INFO] [1791681694.536539933] [meteor_spawner]: [SPACE] meteor_25 inbound: from (-11.3,-1.6, h=15.6) m, speed 5.2 m/s, aimed 4.7 m from rover's predicted position, ETA 8.0 s
+[mission_controller-19] [INFO] [1791681694.714342619] [mission_controller]: meteor #100 has landed near (-3.1, -9.6); impact zone added to the hazard map. Resuming patrol -> WP0
+[bt_navigator-15] [INFO] [1791681694.720650990] [bt_navigator]: Begin navigating from current location (-1.01, 1.16) to (6.00, 6.00)
+[controller_server-11] [INFO] [1791681694.744355689] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-11] [INFO] [1791681695.845171177] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   88.0s] Rover rel. station: x=  +1.59 m  y=  +1.16 m  dist=  1.97 m  bearing=  +36°  heading=  -59° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 8.05 m
+[controller_server-11] [INFO] [1791681696.845586917] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   88.5s] Rover rel. station: x=  +1.59 m  y=  +1.15 m  dist=  1.97 m  bearing=  +36°  heading=  -59° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 8.05 m
+[controller_server-11] [INFO] [1791681697.844774551] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681698.944636347] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   89.0s] Rover rel. station: x=  +1.60 m  y=  +1.15 m  dist=  1.97 m  bearing=  +36°  heading=  -59° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 8.05 m
+[controller_server-11] [INFO] [1791681699.945067040] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   89.5s] Rover rel. station: x=  +1.60 m  y=  +1.14 m  dist=  1.97 m  bearing=  +35°  heading=  -59° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 8.04 m
+[controller_server-11] [INFO] [1791681700.945511324] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   90.0s] Rover rel. station: x=  +1.60 m  y=  +1.14 m  dist=  1.97 m  bearing=  +35°  heading=  -59° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 8.04 m
+[meteor_tracker-18] [INFO] [1791681701.820361499] [meteor_tracker]: perf: 5.9 frames/s, 17.3 ms/frame (p95 32.1 ms), 0 blobs tracked
+[meteor_spawner.py-10] [INFO] [1791681701.820411711] [meteor_spawner]: [SPACE] meteor_26 inbound: from (-3.8,-20.3, h=14.1) m, speed 6.2 m/s, aimed 4.6 m from rover's predicted position, ETA 8.4 s
+[controller_server-11] [INFO] [1791681701.944634348] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681703.044600209] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   90.5s] Rover rel. station: x=  +1.61 m  y=  +1.13 m  dist=  1.97 m  bearing=  +35°  heading=  -59° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 8.04 m
+[controller_server-11] [INFO] [1791681704.045447780] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   91.0s] Rover rel. station: x=  +1.61 m  y=  +1.13 m  dist=  1.96 m  bearing=  +35°  heading=  -59° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 8.04 m
+[controller_server-11] [INFO] [1791681705.044669658] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681706.044702318] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791681706.247565143] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681706.252057086] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681706.252213963] [controller_server]: Optimizer fail to compute path
+[controller_server-11] [INFO] [1791681706.355385105] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681706.358129031] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681706.358245592] [controller_server]: Optimizer fail to compute path
+[mission_controller-19] [t=   91.5s] Rover rel. station: x=  +1.61 m  y=  +1.12 m  dist=  1.96 m  bearing=  +35°  heading=  -59° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 8.03 m
+[controller_server-11] [INFO] [1791681706.855837108] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681706.862277875] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681706.862463357] [controller_server]: Optimizer fail to compute path
+[controller_server-11] [INFO] [1791681706.948188020] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791681706.954574451] [controller_server]: Optimizer reset
+[controller_server-11] [WARN] [1791681706.954772123] [controller_server]: Optimizer fail to compute path
+[controller_server-11] [INFO] [1791681707.144663350] [controller_server]: Passing new path to controller.
+[static_transform_publisher-4] [INFO] [1791681707.915893606] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[static_transform_publisher-7] [INFO] [1791681707.915967286] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[static_transform_publisher-2] [INFO] [1791681707.916061907] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[ekf_node-9] [INFO] [1791681707.916411059] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[planner_server-13] [INFO] [1791681707.916656657] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[static_transform_publisher-3] [INFO] [1791681707.916771605] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[static_transform_publisher-6] [INFO] [1791681707.916857580] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[static_transform_publisher-5] [INFO] [1791681707.916938502] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[behavior_server-14] [INFO] [1791681707.916957917] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[behavior_server-14] [INFO] [1791681707.917045803] [behavior_server]: Running Nav2 LifecycleNode rcl preshutdown (behavior_server)
+[behavior_server-14] [INFO] [1791681707.917181629] [behavior_server]: Deactivating
+[behavior_server-14] [INFO] [1791681707.917225270] [behavior_server]: Destroying bond (behavior_server) to lifecycle manager.
+[planner_server-13] [INFO] [1791681707.916758553] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[collision_monitor-17] [INFO] [1791681707.917493482] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[collision_monitor-17] [INFO] [1791681707.917606823] [collision_monitor]: Running Nav2 LifecycleNode rcl preshutdown (collision_monitor)
+[collision_monitor-17] [INFO] [1791681707.917700081] [collision_monitor]: Deactivating
+[collision_monitor-17] [INFO] [1791681707.917742702] [collision_monitor]: Destroying bond (collision_monitor) to lifecycle manager.
+[parameter_bridge-8] [INFO] [1791681707.917700549] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[velocity_smoother-16] [INFO] [1791681707.917766777] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[velocity_smoother-16] [INFO] [1791681707.917887989] [velocity_smoother]: Running Nav2 LifecycleNode rcl preshutdown (velocity_smoother)
+[lifecycle_manager-20] [INFO] [1791681707.918505867] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[lifecycle_manager-20] [INFO] [1791681707.918631232] [lifecycle_manager_navigation]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_navigation)
+[lifecycle_manager-20] [INFO] [1791681707.918682294] [lifecycle_manager_navigation]: [34m[1mTerminating bond timer...[0m[0m
+[smoother_server-12] [INFO] [1791681707.918522850] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[smoother_server-12] [INFO] [1791681707.918630058] [smoother_server]: Running Nav2 LifecycleNode rcl preshutdown (smoother_server)
+[smoother_server-12] [INFO] [1791681707.918724020] [smoother_server]: Deactivating
+[smoother_server-12] [INFO] [1791681707.918749611] [smoother_server]: Destroying bond (smoother_server) to lifecycle manager.
+[controller_server-11] [INFO] [1791681707.921093028] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[controller_server-11] [INFO] [1791681707.921407594] [controller_server]: Running Nav2 LifecycleNode rcl preshutdown (controller_server)
+[controller_server-11] [INFO] [1791681707.921601954] [controller_server]: Deactivating
+[controller_server-11] [WARN] [1791681707.921629233] [controller_server]: [follow_path] [ActionServer] Requested to deactivate server but goal is still executing. Should check if action server is running before deactivating.
+[controller_server-11] [WARN] [1791681707.945693569] [controller_server]: [follow_path] [ActionServer] Stopping the thread per request.
+[controller_server-11] [INFO] [1791681707.945766155] [controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+[controller_server-11] [INFO] [1791681707.946621613] [MPPIController]: Deactivated MPPI Controller: FollowPath
+[controller_server-11] [INFO] [1791681707.947718883] [local_costmap.local_costmap]: Deactivating
+[bt_navigator-15] [INFO] [1791681707.922450108] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[bt_navigator-15] [INFO] [1791681707.922803948] [bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+[bt_navigator-15] [INFO] [1791681707.922984680] [bt_navigator]: Deactivating
+[bt_navigator-15] [WARN] [1791681707.923027212] [bt_navigator]: [navigate_to_pose] [ActionServer] Requested to deactivate server but goal is still executing. Should check if action server is running before deactivating.
+[bt_navigator-15] [WARN] [1791681707.947332851] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.
+[planner_server-13] [INFO] [1791681707.919397195] [planner_server]: Deactivating
+[planner_server-13] [INFO] [1791681707.923123139] [global_costmap.global_costmap]: Deactivating
+[velocity_smoother-16] [INFO] [1791681707.922926735] [velocity_smoother]: Deactivating
+[velocity_smoother-16] [INFO] [1791681707.923078441] [velocity_smoother]: Destroying bond (velocity_smoother) to lifecycle manager.
+[velocity_smoother-16] [INFO] [1791681707.941415202] [velocity_smoother]: Cleaning up
+[velocity_smoother-16] [INFO] [1791681707.941496642] [velocity_smoother]: Destroying bond (velocity_smoother) to lifecycle manager.
+[collision_monitor-17] [INFO] [1791681707.938161491] [collision_monitor]: Cleaning up
+[collision_monitor-17] [INFO] [1791681707.938224444] [collision_monitor]: [FootprintApproach]: Destroying Polygon
+[collision_monitor-17] [INFO] [1791681707.938240804] [collision_monitor]: [scan]: Destroying Scan
+[behavior_server-14] [INFO] [1791681707.939380184] [behavior_server]: Cleaning up
+[smoother_server-12] [INFO] [1791681707.949546292] [smoother_server]: Cleaning up
+[bt_navigator-15] [INFO] [1791681707.949873082] [bt_navigator]: Goal canceled
+[bt_navigator-15] [WARN] [1791681707.949947700] [bt_navigator]: [navigate_to_pose] [ActionServer] Stopping the thread per request.
+[planner_server-13] [INFO] [1791681707.952052878] [planner_server]: Deactivating plugin GridBased of type NavfnPlanner
+[planner_server-13] [INFO] [1791681707.952135715] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[bt_navigator-15] [INFO] [1791681707.952670771] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[velocity_smoother-16] [INFO] [1791681707.953126481] [velocity_smoother]: Destroying
+[bt_navigator-15] [INFO] [1791681707.963300989] [bt_navigator]: Cleaning up
+[collision_monitor-17] [INFO] [1791681707.968597845] [collision_monitor]: Destroying bond (collision_monitor) to lifecycle manager.
+[planner_server-13] [INFO] [1791681707.973791382] [planner_server]: Cleaning up
+[collision_monitor-17] [INFO] [1791681707.994287834] [collision_monitor]: Destroying
+[controller_server-11] [INFO] [1791681708.005319554] [controller_server]: Destroying bond (controller_server) to lifecycle manager.
+[controller_server-11] [INFO] [1791681708.019885943] [controller_server]: Cleaning up
+[controller_server-11] [INFO] [1791681708.021403882] [MPPIController]: Cleaned up MPPI Controller: FollowPath
+[controller_server-11] [INFO] [1791681708.021770931] [local_costmap.local_costmap]: Cleaning up
+[behavior_server-14] [INFO] [1791681708.043816692] [behavior_server]: Destroying bond (behavior_server) to lifecycle manager.
+[smoother_server-12] [INFO] [1791681708.076070930] [smoother_server]: Destroying bond (smoother_server) to lifecycle manager.
+[smoother_server-12] [INFO] [1791681708.088996235] [smoother_server]: Destroying
+[planner_server-13] [INFO] [1791681708.106972034] [global_costmap.global_costmap]: Cleaning up
+[planner_server-13] [INFO] [1791681708.139897976] [planner_server]: Cleaning up plugin GridBased of type NavfnPlanner
+[planner_server-13] [INFO] [1791681708.140338913] [planner_server]: Destroying plugin GridBased of type NavfnPlanner
+[INFO] [static_transform_publisher-6]: process has finished cleanly [pid 143472]
+[INFO] [static_transform_publisher-3]: process has finished cleanly [pid 143469]
+[behavior_server-14] [INFO] [1791681708.166532619] [behavior_server]: Destroying
+[INFO] [static_transform_publisher-7]: process has finished cleanly [pid 143473]
+[INFO] [static_transform_publisher-5]: process has finished cleanly [pid 143471]
+[INFO] [static_transform_publisher-2]: process has finished cleanly [pid 143467]
+[planner_server-13] [INFO] [1791681708.178147928] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[lifecycle_manager-20] [INFO] [1791681708.183642319] [lifecycle_manager_navigation]: Destroying lifecycle_manager_navigation
+[INFO] [static_transform_publisher-4]: process has finished cleanly [pid 143470]
+[controller_server-11] [INFO] [1791681708.191729481] [controller_server]: Destroying bond (controller_server) to lifecycle manager.
+[planner_server-13] [INFO] [1791681708.203009091] [global_costmap.global_costmap]: Destroying
+[INFO] [parameter_bridge-8]: process has finished cleanly [pid 143689]
+[controller_server-11] [INFO] [1791681708.220256387] [local_costmap.local_costmap]: Destroying
+[INFO] [ekf_node-9]: process has finished cleanly [pid 143730]
+[INFO] [velocity_smoother-16]: process has finished cleanly [pid 143796]
+[INFO] [collision_monitor-17]: process has finished cleanly [pid 143797]
+[controller_server-11] [INFO] [1791681708.263953314] [controller_server]: Destroying
+[planner_server-13] [INFO] [1791681708.270121246] [planner_server]: Destroying
+[INFO] [smoother_server-12]: process has finished cleanly [pid 143792]
+[mission_controller-19] Traceback (most recent call last):
+[mission_controller-19]   File "/home/youssefsfeihi/crater_ws/install/crater_perception/lib/crater_perception/mission_controller", line 33, in <module>
+[mission_controller-19]     sys.exit(load_entry_point('crater-perception', 'console_scripts', 'mission_controller')())
+[mission_controller-19]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[mission_controller-19]   File "/home/youssefsfeihi/crater_ws/build/crater_perception/crater_perception/mission_controller.py", line 327, in main
+[mission_controller-19]     rclpy.spin(node)
+[mission_controller-19]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+[mission_controller-19]     executor.spin_once()
+[mission_controller-19]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+[mission_controller-19]     self._spin_once_impl(timeout_sec)
+[mission_controller-19]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 907, in _spin_once_impl
+[mission_controller-19]     handler, entity, node = self.wait_for_ready_callbacks(
+[mission_controller-19]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[mission_controller-19]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+[mission_controller-19]     return next(self._cb_iter)
+[mission_controller-19]            ^^^^^^^^^^^^^^^^^^^
+[mission_controller-19]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 757, in _wait_for_ready_callbacks
+[mission_controller-19]     wait_set = _rclpy.WaitSet(
+[mission_controller-19]                ^^^^^^^^^^^^^^^
+[mission_controller-19] rclpy._rclpy_pybind11.RCLError: failed to initialize wait set: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at ./src/rcl/wait.c:130
+[bt_navigator-15] [INFO] [1791681708.330129164] [bt_navigator]: Completed Cleaning up
+[bt_navigator-15] [INFO] [1791681708.330241795] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[bt_navigator-15] [INFO] [1791681708.352396076] [bt_navigator]: Destroying
+[INFO] [behavior_server-14]: process has finished cleanly [pid 143794]
+[INFO] [lifecycle_manager-20]: process has finished cleanly [pid 143953]
+[INFO] [planner_server-13]: process has finished cleanly [pid 143793]
+[INFO] [controller_server-11]: process has finished cleanly [pid 143791]
+[INFO] [bt_navigator-15]: process has finished cleanly [pid 143795]
+[INFO] [meteor_spawner.py-10]: process has finished cleanly [pid 143752]
+[INFO] [meteor_tracker-18]: process has finished cleanly [pid 143905]
+[ERROR] [mission_controller-19]: process has died [pid 143906, exit code 1, cmd '/home/youssefsfeihi/crater_ws/install/crater_perception/lib/crater_perception/mission_controller --ros-args -r __node:=mission_controller --params-file /tmp/launch_params_h5wmdbj2'].
+[INFO] [gazebo-1]: process has finished cleanly [pid 143466]

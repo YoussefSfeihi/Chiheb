@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <model name="lunar_rock_sample"><static>true</static>
+    <link name="link"><visual name="v"><geometry><mesh><uri>model://lunar_rocks/meshes/rock_00.obj</uri></mesh></geometry></visual></link>
+  </model>
+</sdf>

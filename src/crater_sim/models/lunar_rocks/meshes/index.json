@@ -1,0 +1,434 @@
+[
+ {
+  "file": "rock_00.obj",
+  "family": "boulder",
+  "extent": [
+   1.0,
+   0.7964,
+   0.6498
+  ]
+ },
+ {
+  "file": "rock_01.obj",
+  "family": "block",
+  "extent": [
+   1.0,
+   0.8608,
+   0.7996
+  ]
+ },
+ {
+  "file": "rock_02.obj",
+  "family": "slab",
+  "extent": [
+   1.0,
+   0.8079,
+   0.34
+  ]
+ },
+ {
+  "file": "rock_03.obj",
+  "family": "boulder",
+  "extent": [
+   1.0,
+   0.8791,
+   0.788
+  ]
+ },
+ {
+  "file": "rock_04.obj",
+  "family": "block",
+  "extent": [
+   1.0,
+   0.8519,
+   0.516
+  ]
+ },
+ {
+  "file": "rock_05.obj",
+  "family": "slab",
+  "extent": [
+   1.0,
+   0.7702,
+   0.2428
+  ]
+ },
+ {
+  "file": "rock_06.obj",
+  "family": "boulder",
+  "extent": [
+   1.0,
+   0.6276,
+   0.6129
+  ]
+ },
+ {
+  "file": "rock_07.obj",
+  "family": "block",
+  "extent": [
+   1.0,
+   0.8639,
+   0.5847
+  ]
+ },
+ {
+  "file": "rock_08.obj",
+  "family": "slab",
+  "extent": [
+   1.0,
+   0.8739,
+   0.225
+  ]
+ },
+ {
+  "file": "rock_09.obj",
+  "family": "boulder",
+  "extent": [
+   1.0,
+   0.9559,
+   0.5054
+  ]
+ },
+ {
+  "file": "rock_10.obj",
+  "family": "block",
+  "extent": [
+   1.0,
+   0.7448,
+   0.6512
+  ]
+ },
+ {
+  "file": "rock_11.obj",
+  "family": "slab",
+  "extent": [
+   1.0,
+   0.9802,
+   0.2891
+  ]
+ },
+ {
+  "file": "rock_12.obj",
+  "family": "boulder",
+  "extent": [
+   1.0,
+   0.863,
+   0.6158
+  ]
+ },
+ {
+  "file": "rock_13.obj",
+  "family": "block",
+  "extent": [
+   1.0,
+   0.7581,
+   0.7689
+  ]
+ },
+ {
+  "file": "rock_14.obj",
+  "family": "slab",
+  "extent": [
+   1.0,
+   0.5169,
+   0.1827
+  ]
+ },
+ {
+  "file": "rock_15.obj",
+  "family": "boulder",
+  "extent": [
+   1.0,
+   0.6502,
+   0.5929
+  ]
+ },
+ {
+  "file": "rock_16.obj",
+  "family": "block",
+  "extent": [
+   0.978,
+   1.0,
+   0.4794
+  ]
+ },
+ {
+  "file": "rock_17.obj",
+  "family": "slab",
+  "extent": [
+   1.0,
+   0.5879,
+   0.3005
+  ]
+ },
+ {
+  "file": "rock_18.obj",
+  "family": "boulder",
+  "extent": [
+   1.0,
+   0.7159,
+   0.7541
+  ]
+ },
+ {
+  "file": "rock_19.obj",
+  "family": "block",
+  "extent": [
+   1.0,
+   0.749,
+   0.4511
+  ]
+ },
+ {
+  "file": "rock_20.obj",
+  "family": "slab",
+  "extent": [
+   1.0,
+   0.5447,
+   0.21
+  ]
+ },
+ {
+  "file": "rock_21.obj",
+  "family": "boulder",
+  "extent": [
+   1.0,
+   0.611,
+   0.5202
+  ]
+ },
+ {
+  "file": "rock_22.obj",
+  "family": "block",
+  "extent": [
+   1.0,
+   0.6096,
+   0.4479
+  ]
+ },
+ {
+  "file": "rock_23.obj",
+  "family": "slab",
+  "extent": [
+   1.0,
+   0.7664,
+   0.2845
+  ]
+ },
+ {
+  "file": "rock_24.obj",
+  "family": "boulder",
+  "extent": [
+   1.0,
+   0.5626,
+   0.4358
+  ]
+ },
+ {
+  "file": "rock_25.obj",
+  "family": "block",
+  "extent": [
+   1.0,
+   0.718,
+   0.6197
+  ]
+ },
+ {
+  "file": "rock_26.obj",
+  "family": "slab",
+  "extent": [
+   1.0,
+   0.5987,
+   0.2649
+  ]
+ },
+ {
+  "file": "rock_27.obj",
+  "family": "boulder",
+  "extent": [
+   1.0,
+   0.7906,
+   0.5074
+  ]
+ },
+ {
+  "file": "rock_28.obj",
+  "family": "block",
+  "extent": [
+   1.0,
+   0.5971,
+   0.5318
+  ]
+ },
+ {
+  "file": "rock_29.obj",
+  "family": "slab",
+  "extent": [
+   1.0,
+   0.9876,
+   0.3939
+  ]
+ },
+ {
+  "file": "rock_30.obj",
+  "family": "boulder",
+  "extent": [
+   1.0,
+   0.7143,
+   0.5568
+  ]
+ },
+ {
+  "file": "rock_31.obj",
+  "family": "block",
+  "extent": [
+   1.0,
+   0.7317,
+   0.7535
+  ]
+ },
+ {
+  "file": "rock_32.obj",
+  "family": "slab",
+  "extent": [
+   1.0,
+   0.7322,
+   0.3208
+  ]
+ },
+ {
+  "file": "rock_33.obj",
+  "family": "boulder",
+  "extent": [
+   1.0,
+   0.7742,
+   0.4774
+  ]
+ },
+ {
+  "file": "rock_34.obj",
+  "family": "block",
+  "extent": [
+   1.0,
+   0.6599,
+   0.4839
+  ]
+ },
+ {
+  "file": "rock_35.obj",
+  "family": "slab",
+  "extent": [
+   1.0,
+   0.8524,
+   0.1708
+  ]
+ },
+ {
+  "file": "rock_36.obj",
+  "family": "boulder",
+  "extent": [
+   1.0,
+   0.8529,
+   0.6664
+  ]
+ },
+ {
+  "file": "rock_37.obj",
+  "family": "block",
+  "extent": [
+   1.0,
+   0.8086,
+   0.7296
+  ]
+ },
+ {
+  "file": "rock_38.obj",
+  "family": "slab",
+  "extent": [
+   1.0,
+   0.5774,
+   0.2653
+  ]
+ },
+ {
+  "file": "rock_39.obj",
+  "family": "boulder",
+  "extent": [
+   1.0,
+   0.9064,
+   0.6658
+  ]
+ },
+ {
+  "file": "rock_40.obj",
+  "family": "block",
+  "extent": [
+   1.0,
+   0.8204,
+   0.6549
+  ]
+ },
+ {
+  "file": "rock_41.obj",
+  "family": "slab",
+  "extent": [
+   1.0,
+   0.5572,
+   0.2151
+  ]
+ },
+ {
+  "file": "rock_42.obj",
+  "family": "boulder",
+  "extent": [
+   1.0,
+   0.7243,
+   0.6691
+  ]
+ },
+ {
+  "file": "rock_43.obj",
+  "family": "block",
+  "extent": [
+   1.0,
+   0.7621,
+   0.5444
+  ]
+ },
+ {
+  "file": "rock_44.obj",
+  "family": "slab",
+  "extent": [
+   1.0,
+   0.5123,
+   0.2776
+  ]
+ },
+ {
+  "file": "rock_45.obj",
+  "family": "boulder",
+  "extent": [
+   1.0,
+   0.7054,
+   0.7026
+  ]
+ },
+ {
+  "file": "rock_46.obj",
+  "family": "block",
+  "extent": [
+   1.0,
+   0.8558,
+   0.6452
+  ]
+ },
+ {
+  "file": "rock_47.obj",
+  "family": "slab",
+  "extent": [
+   1.0,
+   0.636,
+   0.2933
+  ]
+ }
+]

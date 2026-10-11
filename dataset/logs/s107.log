@@ -1,0 +1,671 @@
+[INFO] [launch]: All log files can be found below /home/youssefsfeihi/.ros/log/2026-10-11-03-42-00-065728-youssefsfeihi-Thin-GF63-12UCX-187197
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [gazebo-1]: process started with pid [187209]
+[INFO] [static_transform_publisher-2]: process started with pid [187211]
+[INFO] [static_transform_publisher-3]: process started with pid [187212]
+[INFO] [static_transform_publisher-4]: process started with pid [187213]
+[INFO] [static_transform_publisher-5]: process started with pid [187214]
+[INFO] [static_transform_publisher-6]: process started with pid [187215]
+[INFO] [static_transform_publisher-7]: process started with pid [187216]
+[static_transform_publisher-3] [INFO] [1791686520.971898909] [tf_camera_link]: Spinning until stopped - publishing transform
+[static_transform_publisher-3] translation: ('0.350000', '0.000000', '0.500000')
+[static_transform_publisher-3] rotation: ('0.000000', '-0.099833', '0.000000', '0.995004')
+[static_transform_publisher-3] from 'base_link' to 'camera_link'
+[static_transform_publisher-6] [INFO] [1791686520.991012798] [tf_odom]: Spinning until stopped - publishing transform
+[static_transform_publisher-6] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-6] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-6] from 'map' to 'odom'
+[static_transform_publisher-5] [INFO] [1791686521.003471695] [tf_camera_optical]: Spinning until stopped - publishing transform
+[static_transform_publisher-5] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-5] rotation: ('-0.500000', '0.500000', '-0.500000', '0.500000')
+[static_transform_publisher-5] from 'camera_link' to 'camera_optical'
+[static_transform_publisher-7] [INFO] [1791686521.005388507] [tf_station]: Spinning until stopped - publishing transform
+[static_transform_publisher-7] translation: ('-2.600000', '0.000000', '0.000000')
+[static_transform_publisher-7] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-7] from 'map' to 'station'
+[static_transform_publisher-4] [INFO] [1791686521.007543212] [tf_base_footprint]: Spinning until stopped - publishing transform
+[static_transform_publisher-4] translation: ('0.000000', '0.000000', '-0.230000')
+[static_transform_publisher-4] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-4] from 'base_link' to 'base_footprint'
+[static_transform_publisher-2] [INFO] [1791686521.011331597] [tf_lidar]: Spinning until stopped - publishing transform
+[static_transform_publisher-2] translation: ('0.300000', '0.000000', '0.350000')
+[static_transform_publisher-2] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-2] from 'base_link' to 'lidar'
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="crater_rover"]/link[@name="base_link"]/sensor[@name="lidar"]/gz_frame_id:/home/youssefsfeihi/crater_ws/install/crater_sim/share/crater_sim/models/rover/model.sdf:L45]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="crater_rover"]/link[@name="base_link"]/sensor[@name="rgbd_camera"]/gz_frame_id:/home/youssefsfeihi/crater_ws/install/crater_sim/share/crater_sim/models/rover/model.sdf:L62]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="crater_rover"]/link[@name="base_link"]/sensor[@name="bbox_camera"]/gz_frame_id:/home/youssefsfeihi/crater_ws/install/crater_sim/share/crater_sim/models/rover/model.sdf:L81]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gazebo-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="crater_rover"]/link[@name="base_link"]/sensor[@name="imu"]/gz_frame_id:/home/youssefsfeihi/crater_ws/install/crater_sim/share/crater_sim/models/rover/model.sdf:L94]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[INFO] [parameter_bridge-8]: process started with pid [187406]
+[parameter_bridge-8] [INFO] [1791686525.990032101] [gz_bridge]: Creating ROS->GZ Bridge: [/cmd_vel (geometry_msgs/msg/Twist) -> /cmd_vel (gz.msgs.Twist)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791686525.996473209] [gz_bridge]: Creating GZ->ROS Bridge: [/scan (gz.msgs.LaserScan) -> /scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791686526.001798324] [gz_bridge]: Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791686526.005165074] [gz_bridge]: Creating GZ->ROS Bridge: [/wheel/odom (gz.msgs.Odometry) -> /wheel/odom (nav_msgs/msg/Odometry)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791686526.010116861] [gz_bridge]: Creating GZ->ROS Bridge: [/imu (gz.msgs.IMU) -> /imu (sensor_msgs/msg/Imu)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791686526.011732775] [gz_bridge]: Creating GZ->ROS Bridge: [/camera/image (gz.msgs.Image) -> /camera/image (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791686526.014740816] [gz_bridge]: Creating GZ->ROS Bridge: [/camera/depth_image (gz.msgs.Image) -> /camera/depth_image (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791686526.017591891] [gz_bridge]: Creating GZ->ROS Bridge: [/camera/camera_info (gz.msgs.CameraInfo) -> /camera/camera_info (sensor_msgs/msg/CameraInfo)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791686526.022189194] [gz_bridge]: Creating ROS->GZ Bridge: [/perception/debug_image (sensor_msgs/msg/Image) -> /perception/debug_image (gz.msgs.Image)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791686526.024673827] [gz_bridge]: Creating GZ->ROS Bridge: [/camera/bbox (gz.msgs.AnnotatedAxisAligned2DBox_V) -> /camera/bbox (vision_msgs/msg/Detection2DArray)] (Lazy 0)
+[parameter_bridge-8] [INFO] [1791686526.031367581] [gz_bridge]: Creating GZ->ROS Bridge: [/ground_truth/odom (gz.msgs.Odometry) -> /ground_truth/odom (nav_msgs/msg/Odometry)] (Lazy 0)
+[INFO] [ekf_node-9]: process started with pid [187439]
+[ekf_node-9] [INFO] [1791686526.976304392] [ekf_odom]: Waiting for clock to start...
+[INFO] [meteor_spawner.py-10]: process started with pid [187478]
+[INFO] [controller_server-11]: process started with pid [187528]
+[INFO] [smoother_server-12]: process started with pid [187529]
+[INFO] [planner_server-13]: process started with pid [187530]
+[INFO] [behavior_server-14]: process started with pid [187531]
+[INFO] [bt_navigator-15]: process started with pid [187532]
+[INFO] [velocity_smoother-16]: process started with pid [187533]
+[INFO] [collision_monitor-17]: process started with pid [187534]
+[velocity_smoother-16] [INFO] [1791686531.001537647] [velocity_smoother]: 
+[velocity_smoother-16] 	velocity_smoother lifecycle node launched. 
+[velocity_smoother-16] 	Waiting on external lifecycle transitions to activate
+[velocity_smoother-16] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-11] [INFO] [1791686531.050043500] [controller_server]: 
+[controller_server-11] 	controller_server lifecycle node launched. 
+[controller_server-11] 	Waiting on external lifecycle transitions to activate
+[controller_server-11] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-11] [INFO] [1791686531.060605389] [controller_server]: Creating controller server
+[collision_monitor-17] [INFO] [1791686531.547461593] [collision_monitor]: 
+[collision_monitor-17] 	collision_monitor lifecycle node launched. 
+[collision_monitor-17] 	Waiting on external lifecycle transitions to activate
+[collision_monitor-17] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-13] [INFO] [1791686531.598141459] [planner_server]: 
+[planner_server-13] 	planner_server lifecycle node launched. 
+[planner_server-13] 	Waiting on external lifecycle transitions to activate
+[planner_server-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[behavior_server-14] [INFO] [1791686531.600422226] [behavior_server]: 
+[behavior_server-14] 	behavior_server lifecycle node launched. 
+[behavior_server-14] 	Waiting on external lifecycle transitions to activate
+[behavior_server-14] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[smoother_server-12] [INFO] [1791686531.607254126] [smoother_server]: 
+[smoother_server-12] 	smoother_server lifecycle node launched. 
+[smoother_server-12] 	Waiting on external lifecycle transitions to activate
+[smoother_server-12] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-13] [INFO] [1791686531.607410922] [planner_server]: Creating
+[controller_server-11] [INFO] [1791686531.615253233] [local_costmap.local_costmap]: 
+[controller_server-11] 	local_costmap lifecycle node launched. 
+[controller_server-11] 	Waiting on external lifecycle transitions to activate
+[controller_server-11] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-11] [INFO] [1791686531.616060727] [local_costmap.local_costmap]: Creating Costmap
+[bt_navigator-15] [INFO] [1791686531.621196780] [bt_navigator]: 
+[bt_navigator-15] 	bt_navigator lifecycle node launched. 
+[bt_navigator-15] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-15] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[smoother_server-12] [INFO] [1791686531.622596813] [smoother_server]: Creating smoother server
+[bt_navigator-15] [INFO] [1791686531.629505928] [bt_navigator]: Creating
+[planner_server-13] [INFO] [1791686531.696402095] [global_costmap.global_costmap]: 
+[planner_server-13] 	global_costmap lifecycle node launched. 
+[planner_server-13] 	Waiting on external lifecycle transitions to activate
+[planner_server-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-13] [INFO] [1791686531.699569716] [global_costmap.global_costmap]: Creating Costmap
+[INFO] [meteor_tracker-18]: process started with pid [187666]
+[INFO] [mission_controller-19]: process started with pid [187667]
+[meteor_tracker-18] [INFO] [1791686535.931584784] [meteor_tracker]: RGB-D intrinsics fx=268.6; processing 320x240 px
+[INFO] [lifecycle_manager-20]: process started with pid [187737]
+[lifecycle_manager-20] [INFO] [1791686536.968238594] [lifecycle_manager_navigation]: Creating
+[lifecycle_manager-20] [INFO] [1791686536.986454685] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[mission_controller-19] [t=    7.0s] Rover rel. station: x=  +2.60 m  y=  +0.00 m  dist=  2.60 m  bearing=   +0°  heading=   -0° | WAIT_NAV2 | objects tracked: 0, threats: 0 | nav error vs truth 0.00 m
+[mission_controller-19] [t=    7.5s] Rover rel. station: x=  +2.60 m  y=  +0.00 m  dist=  2.60 m  bearing=   +0°  heading=   -0° | WAIT_NAV2 | objects tracked: 0, threats: 0 | nav error vs truth 0.00 m
+[lifecycle_manager-20] [INFO] [1791686539.456469808] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-20] [INFO] [1791686539.456551932] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[controller_server-11] [INFO] [1791686539.457085658] [controller_server]: Configuring controller interface
+[controller_server-11] [INFO] [1791686539.457137987] [controller_server]: getting progress checker plugins..
+[controller_server-11] [INFO] [1791686539.457893117] [controller_server]: getting goal checker plugins..
+[controller_server-11] [INFO] [1791686539.458507238] [controller_server]: Controller frequency set to 10.0000Hz
+[controller_server-11] [INFO] [1791686539.458605896] [local_costmap.local_costmap]: Configuring
+[mission_controller-19] [t=    8.0s] Rover rel. station: x=  +2.60 m  y=  +0.00 m  dist=  2.60 m  bearing=   +0°  heading=   -0° | WAIT_NAV2 | objects tracked: 0, threats: 0 | nav error vs truth 0.00 m
+[controller_server-11] [INFO] [1791686539.493417510] [local_costmap.local_costmap]: Using plugin "voxel_layer"
+[controller_server-11] [INFO] [1791686539.502196502] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[controller_server-11] [INFO] [1791686539.528630976] [local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+[controller_server-11] [INFO] [1791686539.528697178] [local_costmap.local_costmap]: Using plugin "hazard_layer"
+[controller_server-11] [INFO] [1791686539.533229673] [local_costmap.local_costmap]: Subscribed to Topics: hazards rocks
+[controller_server-11] [INFO] [1791686539.547375018] [local_costmap.local_costmap]: Initialized plugin "hazard_layer"
+[controller_server-11] [INFO] [1791686539.547436544] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[controller_server-11] [INFO] [1791686539.548020625] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[controller_server-11] [INFO] [1791686539.589773037] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[controller_server-11] [INFO] [1791686539.591360185] [controller_server]: Controller Server has progress_checker  progress checkers available.
+[controller_server-11] [INFO] [1791686539.592654123] [controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+[controller_server-11] [INFO] [1791686539.594613919] [controller_server]: Controller Server has general_goal_checker  goal checkers available.
+[controller_server-11] [INFO] [1791686539.596686129] [controller_server]: Created controller : FollowPath of type nav2_mppi_controller::MPPIController
+[controller_server-11] [INFO] [1791686539.601735893] [controller_server]: Controller period is equal to model dt. Control sequence shifting is ON
+[controller_server-11] [INFO] [1791686539.605027799] [controller_server]: ConstraintCritic instantiated with 1 power and 4.000000 weight.
+[controller_server-11] [INFO] [1791686539.605097875] [controller_server]: Critic loaded : mppi::critics::ConstraintCritic
+[controller_server-11] [INFO] [1791686539.606219848] [controller_server]: InflationCostCritic instantiated with 1 power and 300.000000 / 0.013780 weights. Critic will collision check based on footprint cost.
+[controller_server-11] [INFO] [1791686539.606257582] [controller_server]: Critic loaded : mppi::critics::CostCritic
+[controller_server-11] [INFO] [1791686539.606536263] [controller_server]: GoalCritic instantiated with 1 power and 5.000000 weight.
+[controller_server-11] [INFO] [1791686539.606551407] [controller_server]: Critic loaded : mppi::critics::GoalCritic
+[controller_server-11] [INFO] [1791686539.607394561] [controller_server]: GoalAngleCritic instantiated with 1 power, 3.000000 weight, 0.500000 angular threshold and symmetric_yaw_tolerance disabled
+[controller_server-11] [INFO] [1791686539.607500344] [controller_server]: Critic loaded : mppi::critics::GoalAngleCritic
+[controller_server-11] [INFO] [1791686539.608721112] [controller_server]: ReferenceTrajectoryCritic instantiated with 1 power and 14.000000 weight
+[controller_server-11] [INFO] [1791686539.608765493] [controller_server]: Critic loaded : mppi::critics::PathAlignCritic
+[controller_server-11] [INFO] [1791686539.608919704] [controller_server]: Critic loaded : mppi::critics::PathFollowCritic
+[controller_server-11] [INFO] [1791686539.609214588] [controller_server]: PathAngleCritic instantiated with 1 power and 2.000000 weight. Mode set to: Forward Preference
+[controller_server-11] [INFO] [1791686539.609232777] [controller_server]: Critic loaded : mppi::critics::PathAngleCritic
+[controller_server-11] [INFO] [1791686539.609438449] [controller_server]: PreferForwardCritic instantiated with 1 power and 5.000000 weight.
+[controller_server-11] [INFO] [1791686539.609449318] [controller_server]: Critic loaded : mppi::critics::PreferForwardCritic
+[controller_server-11] [INFO] [1791686539.609958293] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791686539.620525775] [MPPIController]: Configured MPPI Controller: FollowPath
+[controller_server-11] [INFO] [1791686539.620673568] [controller_server]: Controller Server has FollowPath  controllers available.
+[lifecycle_manager-20] [INFO] [1791686539.667621103] [lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[smoother_server-12] [INFO] [1791686539.668814476] [smoother_server]: Configuring smoother server
+[smoother_server-12] [INFO] [1791686539.740273099] [smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+[smoother_server-12] [INFO] [1791686539.741925948] [smoother_server]: Smoother Server has simple_smoother  smoothers available.
+[lifecycle_manager-20] [INFO] [1791686539.786616530] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[planner_server-13] [INFO] [1791686539.788882147] [planner_server]: Configuring
+[planner_server-13] [INFO] [1791686539.788936056] [global_costmap.global_costmap]: Configuring
+[planner_server-13] [INFO] [1791686539.811144432] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[planner_server-13] [INFO] [1791686539.818910818] [global_costmap.global_costmap]: Subscribed to Topics: scan
+[planner_server-13] [INFO] [1791686539.830276569] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[planner_server-13] [INFO] [1791686539.830365866] [global_costmap.global_costmap]: Using plugin "hazard_layer"
+[planner_server-13] [INFO] [1791686539.833955837] [global_costmap.global_costmap]: Subscribed to Topics: hazards rocks
+[planner_server-13] [INFO] [1791686539.850129924] [global_costmap.global_costmap]: Initialized plugin "hazard_layer"
+[planner_server-13] [INFO] [1791686539.851073378] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[planner_server-13] [INFO] [1791686539.851857893] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[planner_server-13] [INFO] [1791686539.944100952] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+[planner_server-13] [INFO] [1791686539.945211205] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[planner_server-13] [INFO] [1791686539.951956968] [planner_server]: Planner Server has GridBased  planners available.
+[lifecycle_manager-20] [INFO] [1791686540.008465840] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[behavior_server-14] [INFO] [1791686540.010312670] [behavior_server]: Configuring
+[behavior_server-14] [INFO] [1791686540.048890829] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors::Spin
+[behavior_server-14] [INFO] [1791686540.050829567] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors::BackUp
+[behavior_server-14] [INFO] [1791686540.052610057] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors::DriveOnHeading
+[behavior_server-14] [INFO] [1791686540.054360100] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors::Wait
+[behavior_server-14] [INFO] [1791686540.089910655] [behavior_server]: Configuring spin
+[behavior_server-14] [INFO] [1791686540.120085147] [behavior_server]: Configuring backup
+[behavior_server-14] [INFO] [1791686540.134759601] [behavior_server]: Configuring drive_on_heading
+[behavior_server-14] [INFO] [1791686540.148389455] [behavior_server]: Configuring wait
+[lifecycle_manager-20] [INFO] [1791686540.167485192] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[bt_navigator-15] [INFO] [1791686540.168337919] [bt_navigator]: Configuring
+[bt_navigator-15] [INFO] [1791686540.214533087] [bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+[bt_navigator-15] [INFO] [1791686540.456703552] [bt_navigator]: Creating navigator id navigate_through_poses of type nav2_bt_navigator::NavigateThroughPosesNavigator
+[lifecycle_manager-20] [INFO] [1791686540.582985951] [lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+[velocity_smoother-16] [INFO] [1791686540.584687773] [velocity_smoother]: Configuring velocity smoother
+[lifecycle_manager-20] [INFO] [1791686540.599047948] [lifecycle_manager_navigation]: [34m[1mConfiguring collision_monitor[0m[0m
+[collision_monitor-17] [INFO] [1791686540.600351032] [collision_monitor]: Configuring
+[collision_monitor-17] [INFO] [1791686540.654133269] [collision_monitor]: [scan]: Creating Scan
+[collision_monitor-17] [INFO] [1791686540.659103034] [collision_monitor]: [FootprintApproach]: Creating Polygon
+[collision_monitor-17] [INFO] [1791686540.659329518] [collision_monitor]: [FootprintApproach]: Polygon points are not defined. Using dynamic subscription instead.
+[collision_monitor-17] [INFO] [1791686540.659670655] [collision_monitor]: [FootprintApproach]: Making footprint subscriber on /local_costmap/published_footprint topic
+[lifecycle_manager-20] [INFO] [1791686540.703063789] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[controller_server-11] [INFO] [1791686540.703623592] [controller_server]: Activating
+[controller_server-11] [INFO] [1791686540.703693850] [local_costmap.local_costmap]: Activating
+[controller_server-11] [INFO] [1791686540.703707696] [local_costmap.local_costmap]: Checking transform
+[controller_server-11] [INFO] [1791686540.703919177] [local_costmap.local_costmap]: start
+[mission_controller-19] [t=    8.5s] Rover rel. station: x=  +2.60 m  y=  +0.00 m  dist=  2.60 m  bearing=   +0°  heading=   -0° | WAIT_NAV2 | objects tracked: 0, threats: 0 | nav error vs truth 0.00 m
+[controller_server-11] [WARN] [1791686540.912441186] [controller_server]: Parameter controller_server.verbose not found
+[controller_server-11] [INFO] [1791686540.912891138] [controller_server]: Optimizer reset
+[controller_server-11] [INFO] [1791686540.914322417] [MPPIController]: Activated MPPI Controller: FollowPath
+[controller_server-11] [INFO] [1791686540.914412211] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+[lifecycle_manager-20] [INFO] [1791686541.026458686] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+[lifecycle_manager-20] [INFO] [1791686541.026570875] [lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+[smoother_server-12] [INFO] [1791686541.029595752] [smoother_server]: Activating
+[smoother_server-12] [INFO] [1791686541.029724556] [smoother_server]: Creating bond (smoother_server) to lifecycle manager.
+[lifecycle_manager-20] [INFO] [1791686541.156045990] [lifecycle_manager_navigation]: Server smoother_server connected with bond.
+[lifecycle_manager-20] [INFO] [1791686541.156184739] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[planner_server-13] [INFO] [1791686541.157045935] [planner_server]: Activating
+[planner_server-13] [INFO] [1791686541.157160162] [global_costmap.global_costmap]: Activating
+[planner_server-13] [INFO] [1791686541.157182137] [global_costmap.global_costmap]: Checking transform
+[planner_server-13] [INFO] [1791686541.157442356] [global_costmap.global_costmap]: start
+[planner_server-13] [INFO] [1791686541.670035633] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[planner_server-13] [INFO] [1791686541.675837582] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[lifecycle_manager-20] [INFO] [1791686541.796378636] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[lifecycle_manager-20] [INFO] [1791686541.796471273] [lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+[behavior_server-14] [INFO] [1791686541.798215832] [behavior_server]: Activating
+[behavior_server-14] [INFO] [1791686541.798340018] [behavior_server]: Activating spin
+[behavior_server-14] [INFO] [1791686541.798406639] [behavior_server]: Activating backup
+[behavior_server-14] [INFO] [1791686541.798429377] [behavior_server]: Activating drive_on_heading
+[behavior_server-14] [INFO] [1791686541.798445360] [behavior_server]: Activating wait
+[behavior_server-14] [INFO] [1791686541.798507705] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[lifecycle_manager-20] [INFO] [1791686541.913298282] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[lifecycle_manager-20] [INFO] [1791686541.913391421] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[bt_navigator-15] [INFO] [1791686541.917868168] [bt_navigator]: Activating
+[bt_navigator-15] [INFO] [1791686542.300918328] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[mission_controller-19] [t=    9.0s] Rover rel. station: x=  +2.60 m  y=  +0.00 m  dist=  2.60 m  bearing=   +0°  heading=   -0° | WAIT_NAV2 | objects tracked: 0, threats: 0 | nav error vs truth 0.00 m
+[mission_controller-19] [INFO] [1791686542.383844773] [mission_controller]: Nav2 ready. Starting patrol around the station (4 waypoints).
+[bt_navigator-15] [INFO] [1791686542.387329721] [bt_navigator]: Begin navigating from current location (-0.00, 0.00) to (6.00, 6.00)
+[controller_server-11] [INFO] [1791686542.420100968] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-11] [WARN] [1791686542.420192648] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded general_goal_checker . This warning will appear once.
+[controller_server-11] [WARN] [1791686542.420207855] [controller_server]: No progress checker was specified in parameter 'current_progress_checker'. Server will use only plugin loaded progress_checker . This warning will appear once.
+[lifecycle_manager-20] [INFO] [1791686542.441088625] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[lifecycle_manager-20] [INFO] [1791686542.441232545] [lifecycle_manager_navigation]: [34m[1mActivating velocity_smoother[0m[0m
+[velocity_smoother-16] [INFO] [1791686542.442141042] [velocity_smoother]: Activating
+[velocity_smoother-16] [INFO] [1791686542.447320074] [velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+[lifecycle_manager-20] [INFO] [1791686542.569475904] [lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+[lifecycle_manager-20] [INFO] [1791686542.569597560] [lifecycle_manager_navigation]: [34m[1mActivating collision_monitor[0m[0m
+[collision_monitor-17] [INFO] [1791686542.570659265] [collision_monitor]: Activating
+[collision_monitor-17] [INFO] [1791686542.570753639] [collision_monitor]: Creating bond (collision_monitor) to lifecycle manager.
+[parameter_bridge-8] [INFO] [1791686542.598978943] [gz_bridge]: Passing message from ROS geometry_msgs/msg/Twist to Gazebo gz.msgs.Twist (showing msg only once per type)
+[lifecycle_manager-20] [INFO] [1791686542.694928363] [lifecycle_manager_navigation]: Server collision_monitor connected with bond.
+[lifecycle_manager-20] [INFO] [1791686542.695026457] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-20] [INFO] [1791686542.695048268] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[controller_server-11] [INFO] [1791686543.520412805] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=    9.5s] Rover rel. station: x=  +2.65 m  y=  +0.00 m  dist=  2.65 m  bearing=   +0°  heading=   +4° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 0.03 m
+[mission_controller-19] [WARN] [1791686543.912852393] [mission_controller]: !!! INCOMING meteor #2: impact in 6.8 s at (-0.1, -4.6) ±1.47 m, 4.7 m from rover -> EVADING to (0.0, -0.1)
+[controller_server-11] [INFO] [1791686543.920458565] [controller_server]: Cancellation was successful. Stopping the robot.
+[controller_server-11] [INFO] [1791686543.920539451] [controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+[controller_server-11] [INFO] [1791686543.921942964] [controller_server]: Optimizer reset
+[bt_navigator-15] [INFO] [1791686543.922045842] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-15] [INFO] [1791686543.922363341] [bt_navigator]: Goal canceled
+[mission_controller-19] [INFO] [1791686544.004692582] [mission_controller]: evasion manoeuvre complete: now 4.7 m from predicted impact; holding until meteor #2 lands
+[meteor_tracker-18] [INFO] [1791686544.146495327] [meteor_tracker]: [RGB-D] object #2 detected: range 19.1 m, altitude 16.8 m, speed 4.3 m/s, impact in 6.7 s at (-0.3,-4.3) ±1.09 m, miss 4.3 m -> THREAT
+[mission_controller-19] [t=   10.0s] Rover rel. station: x=  +2.66 m  y=  +0.00 m  dist=  2.66 m  bearing=   +0°  heading=   +5° | SHELTER (meteor #2, impact in +6.3 s) | objects tracked: 1, threats: 1 | nav error vs truth 0.04 m
+[meteor_tracker-18] [INFO] [1791686544.963720112] [meteor_tracker]: perf: 2.3 frames/s, 19.5 ms/frame (p95 31.6 ms), 2 blobs tracked
+[mission_controller-19] [t=   10.5s] Rover rel. station: x=  +2.66 m  y=  +0.00 m  dist=  2.66 m  bearing=   +0°  heading=   +5° | SHELTER (meteor #2, impact in +5.9 s) | objects tracked: 1, threats: 1 | nav error vs truth 0.04 m
+[mission_controller-19] [t=   11.0s] Rover rel. station: x=  +2.66 m  y=  +0.00 m  dist=  2.66 m  bearing=   +0°  heading=   +5° | SHELTER (meteor #2, impact in +5.4 s) | objects tracked: 1, threats: 1 | nav error vs truth 0.04 m
+[mission_controller-19] [t=   11.5s] Rover rel. station: x=  +2.66 m  y=  +0.00 m  dist=  2.66 m  bearing=   +0°  heading=   +5° | SHELTER (meteor #2, impact in +4.8 s) | objects tracked: 1, threats: 1 | nav error vs truth 0.04 m
+[mission_controller-19] [t=   12.0s] Rover rel. station: x=  +2.66 m  y=  +0.00 m  dist=  2.66 m  bearing=   +0°  heading=   +5° | SHELTER (meteor #2, impact in +4.3 s) | objects tracked: 1, threats: 1 | nav error vs truth 0.04 m
+[mission_controller-19] [t=   12.5s] Rover rel. station: x=  +2.66 m  y=  +0.00 m  dist=  2.66 m  bearing=   +0°  heading=   +5° | SHELTER (meteor #2, impact in +3.8 s) | objects tracked: 1, threats: 1 | nav error vs truth 0.04 m
+[mission_controller-19] [t=   13.0s] Rover rel. station: x=  +2.66 m  y=  +0.00 m  dist=  2.66 m  bearing=   +0°  heading=   +5° | SHELTER (meteor #2, impact in +3.3 s) | objects tracked: 1, threats: 1 | nav error vs truth 10.46 m
+[meteor_spawner.py-10] [ERROR] [1791686552.445133185] [meteor_spawner]: failed to spawn meteor_1 (service timeout)
+[mission_controller-19] [t=   13.5s] Rover rel. station: x=  +2.66 m  y=  +0.00 m  dist=  2.66 m  bearing=   +0°  heading=   +5° | SHELTER (meteor #2, impact in +2.8 s) | objects tracked: 1, threats: 1 | nav error vs truth 10.46 m
+[mission_controller-19] [t=   14.0s] Rover rel. station: x=  +2.66 m  y=  +0.00 m  dist=  2.66 m  bearing=   +0°  heading=   +5° | SHELTER (meteor #2, impact in +2.3 s) | objects tracked: 2, threats: 2 | nav error vs truth 10.46 m
+[meteor_tracker-18] [INFO] [1791686554.925224992] [meteor_tracker]: [RGB-D] object #4 detected: range 22.1 m, altitude 15.4 m, speed 4.3 m/s, impact in 6.1 s at (0.6,-3.7) ±0.50 m, miss 3.7 m -> THREAT
+[mission_controller-19] [t=   14.5s] Rover rel. station: x=  +2.66 m  y=  +0.00 m  dist=  2.66 m  bearing=   +0°  heading=   +5° | SHELTER (meteor #2, impact in +1.8 s) | objects tracked: 2, threats: 1 | nav error vs truth 10.46 m
+[mission_controller-19] [t=   15.0s] Rover rel. station: x=  +2.66 m  y=  +0.00 m  dist=  2.66 m  bearing=   +0°  heading=   +5° | SHELTER (meteor #2, impact in +1.3 s) | objects tracked: 2, threats: 1 | nav error vs truth 10.46 m
+[mission_controller-19] [t=   15.5s] Rover rel. station: x=  +2.66 m  y=  +0.00 m  dist=  2.66 m  bearing=   +0°  heading=   +5° | SHELTER (meteor #2, impact in +0.8 s) | objects tracked: 1, threats: 0 | nav error vs truth 10.46 m
+[mission_controller-19] [t=   16.0s] Rover rel. station: x=  +2.66 m  y=  +0.00 m  dist=  2.66 m  bearing=   +0°  heading=   +5° | SHELTER (meteor #2, impact in +0.3 s) | objects tracked: 1, threats: 0 | nav error vs truth 10.46 m
+[mission_controller-19] [t=   16.5s] Rover rel. station: x=  +2.66 m  y=  +0.00 m  dist=  2.66 m  bearing=   +0°  heading=   +5° | SHELTER (meteor #2, impact in -0.2 s) | objects tracked: 1, threats: 0 | nav error vs truth 0.64 m
+[mission_controller-19] [t=   17.0s] Rover rel. station: x=  +2.66 m  y=  +0.00 m  dist=  2.66 m  bearing=   +0°  heading=   +5° | SHELTER (meteor #2, impact in -0.7 s) | objects tracked: 1, threats: 0 | nav error vs truth 0.64 m
+[mission_controller-19] [INFO] [1791686562.379834777] [mission_controller]: meteor #2 has landed near (0.2, -3.2); impact zone added to the hazard map. Resuming patrol -> WP0
+[bt_navigator-15] [INFO] [1791686562.385667677] [bt_navigator]: Begin navigating from current location (0.06, 0.00) to (6.00, 6.00)
+[controller_server-11] [INFO] [1791686562.397822433] [controller_server]: Received a goal, begin computing control effort.
+[meteor_spawner.py-10] [ERROR] [1791686562.476138200] [meteor_spawner]: failed to spawn meteor_2 (service timeout)
+[mission_controller-19] [t=   17.5s] Rover rel. station: x=  +2.66 m  y=  +0.00 m  dist=  2.66 m  bearing=   +0°  heading=   +5° | PATROL -> WP0 | objects tracked: 1, threats: 0 | nav error vs truth 0.64 m
+[controller_server-11] [INFO] [1791686563.499182940] [controller_server]: Passing new path to controller.
+[mission_controller-19] [WARN] [1791686564.118516285] [mission_controller]: !!! INCOMING meteor #5: impact in 6.8 s at (-4.2, -2.0) ±1.04 m, 4.8 m from rover -> EVADING to (-0.1, -0.1)
+[bt_navigator-15] [ERROR] [1791686564.150404787] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for follow_path in node halt!
+[bt_navigator-15] [INFO] [1791686564.150625091] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-15] [INFO] [1791686564.150814038] [bt_navigator]: Goal canceled
+[mission_controller-19] [INFO] [1791686564.183660102] [mission_controller]: evasion manoeuvre complete: now 4.8 m from predicted impact; holding until meteor #5 lands
+[mission_controller-19] [t=   18.0s] Rover rel. station: x=  +2.74 m  y=  +0.01 m  dist=  2.74 m  bearing=   +0°  heading=  +10° | SHELTER (meteor #5, impact in +6.8 s) | objects tracked: 2, threats: 1 | nav error vs truth 0.70 m
+[controller_server-11] [INFO] [1791686564.198801960] [controller_server]: Cancellation was successful. Stopping the robot.
+[controller_server-11] [INFO] [1791686564.198923893] [controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+[controller_server-11] [INFO] [1791686564.200252868] [controller_server]: Optimizer reset
+[meteor_tracker-18] [INFO] [1791686564.405118873] [meteor_tracker]: [RGB-D] object #5 detected: range 22.1 m, altitude 14.4 m, speed 5.0 m/s, impact in 6.6 s at (-4.5,-1.7) ±0.73 m, miss 4.9 m -> no threat
+[mission_controller-19] [t=   18.5s] Rover rel. station: x=  +2.76 m  y=  +0.02 m  dist=  2.76 m  bearing=   +0°  heading=  +12° | SHELTER (meteor #5, impact in +6.2 s) | objects tracked: 2, threats: 0 | nav error vs truth 0.71 m
+[mission_controller-19] [WARN] [1791686566.061612945] [mission_controller]: !!! INCOMING meteor #4: impact in 1.6 s at (2.2, -1.6) ±0.21 m, 2.7 m from rover -> EVADING to (-1.3, 1.2)
+[mission_controller-19] [t=   19.0s] Rover rel. station: x=  +2.76 m  y=  +0.02 m  dist=  2.76 m  bearing=   +0°  heading=   +8° | EVADE (meteor #4, impact in +1.3 s) | objects tracked: 2, threats: 1 | nav error vs truth 0.71 m
+[mission_controller-19] [WARN] [1791686567.609360506] [mission_controller]: !!! INCOMING meteor #5: impact in 5.3 s at (-4.6, -0.8) ±0.20 m, 1.6 m from rover -> EVADING to (-0.1, -0.0)
+[mission_controller-19] [INFO] [1791686567.702882950] [mission_controller]: evasion manoeuvre complete: now 4.6 m from predicted impact; holding until meteor #5 lands
+[mission_controller-19] [t=   19.5s] Rover rel. station: x=  +2.49 m  y=  +0.01 m  dist=  2.49 m  bearing=   +0°  heading=   -3° | SHELTER (meteor #5, impact in +5.2 s) | objects tracked: 2, threats: 1 | nav error vs truth 0.57 m
+[meteor_tracker-18] [INFO] [1791686568.835331878] [meteor_tracker]: perf: 7.9 frames/s, 18.3 ms/frame (p95 31.8 ms), 2 blobs tracked
+[mission_controller-19] [t=   20.0s] Rover rel. station: x=  +2.25 m  y=  +0.03 m  dist=  2.25 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #5, impact in +4.7 s) | objects tracked: 2, threats: 0 | nav error vs truth 0.36 m
+[mission_controller-19] [t=   20.5s] Rover rel. station: x=  +2.14 m  y=  +0.04 m  dist=  2.14 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #5, impact in +4.2 s) | objects tracked: 1, threats: 0 | nav error vs truth 3.81 m
+[mission_controller-19] [t=   21.0s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #5, impact in +3.7 s) | objects tracked: 1, threats: 0 | nav error vs truth 3.82 m
+[mission_controller-19] [t=   21.5s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #5, impact in +3.2 s) | objects tracked: 1, threats: 0 | nav error vs truth 3.82 m
+[meteor_spawner.py-10] [ERROR] [1791686572.494209620] [meteor_spawner]: failed to spawn meteor_3 (service timeout)
+[mission_controller-19] [WARN] [1791686573.583383195] [mission_controller]: !!! INCOMING meteor #11: impact in 7.9 s at (-2.3, 4.3) ±1.69 m, 4.7 m from rover -> EVADING to (-0.5, 0.2)
+[mission_controller-19] [INFO] [1791686573.677032857] [mission_controller]: evasion manoeuvre complete: now 4.7 m from predicted impact; holding until meteor #11 lands
+[mission_controller-19] [t=   22.0s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #11, impact in +7.8 s) | objects tracked: 2, threats: 1 | nav error vs truth 3.82 m
+[meteor_tracker-18] [INFO] [1791686574.525543886] [meteor_tracker]: [RGB-D] object #11 detected: range 21.7 m, altitude 17.4 m, speed 4.8 m/s, impact in 7.5 s at (-1.7,4.2) ±0.69 m, miss 4.4 m -> THREAT
+[mission_controller-19] [t=   22.5s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #11, impact in +7.3 s) | objects tracked: 2, threats: 1 | nav error vs truth 3.82 m
+[mission_controller-19] [t=   23.0s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #11, impact in +6.7 s) | objects tracked: 2, threats: 0 | nav error vs truth 3.82 m
+[mission_controller-19] [t=   23.5s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #11, impact in +6.1 s) | objects tracked: 2, threats: 0 | nav error vs truth 3.82 m
+[mission_controller-19] [t=   24.0s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #11, impact in +5.6 s) | objects tracked: 2, threats: 0 | nav error vs truth 3.82 m
+[mission_controller-19] [t=   24.5s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #11, impact in +5.0 s) | objects tracked: 1, threats: 0 | nav error vs truth 6.98 m
+[mission_controller-19] [t=   25.0s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #11, impact in +4.6 s) | objects tracked: 1, threats: 0 | nav error vs truth 6.98 m
+[meteor_spawner.py-10] [ERROR] [1791686582.517039030] [meteor_spawner]: failed to spawn meteor_4 (service timeout)
+[mission_controller-19] [t=   25.5s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #11, impact in +4.1 s) | objects tracked: 1, threats: 0 | nav error vs truth 6.98 m
+[mission_controller-19] [t=   26.0s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #11, impact in +3.6 s) | objects tracked: 1, threats: 0 | nav error vs truth 6.98 m
+[mission_controller-19] [WARN] [1791686584.512019859] [mission_controller]: !!! INCOMING meteor #12: impact in 7.0 s at (2.2, 3.2) ±0.68 m, 4.1 m from rover -> EVADING to (-0.7, -0.2)
+[mission_controller-19] [INFO] [1791686584.681144603] [mission_controller]: evasion manoeuvre complete: now 4.1 m from predicted impact; holding until meteor #12 lands
+[meteor_tracker-18] [INFO] [1791686584.942285841] [meteor_tracker]: [RGB-D] object #12 detected: range 17.4 m, altitude 19.2 m, speed 3.5 m/s, impact in 6.9 s at (2.2,3.3) ±0.51 m, miss 4.2 m -> no threat
+[mission_controller-19] [t=   26.5s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #12, impact in +6.8 s) | objects tracked: 2, threats: 0 | nav error vs truth 6.98 m
+[mission_controller-19] [t=   27.0s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #12, impact in +6.3 s) | objects tracked: 2, threats: 0 | nav error vs truth 6.98 m
+[mission_controller-19] [t=   27.5s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #12, impact in +5.8 s) | objects tracked: 2, threats: 0 | nav error vs truth 6.98 m
+[mission_controller-19] [t=   28.0s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #12, impact in +5.3 s) | objects tracked: 1, threats: 0 | nav error vs truth 6.98 m
+[mission_controller-19] [t=   28.5s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #12, impact in +4.8 s) | objects tracked: 1, threats: 0 | nav error vs truth 7.72 m
+[mission_controller-19] [t=   29.0s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #12, impact in +4.3 s) | objects tracked: 1, threats: 0 | nav error vs truth 7.72 m
+[mission_controller-19] [t=   29.5s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #12, impact in +3.8 s) | objects tracked: 1, threats: 0 | nav error vs truth 7.72 m
+[meteor_spawner.py-10] [ERROR] [1791686592.541646550] [meteor_spawner]: failed to spawn meteor_5 (service timeout)
+[mission_controller-19] [t=   30.0s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #12, impact in +3.3 s) | objects tracked: 1, threats: 0 | nav error vs truth 7.72 m
+[meteor_tracker-18] [INFO] [1791686593.396518934] [meteor_tracker]: perf: 7.6 frames/s, 19.6 ms/frame (p95 34.6 ms), 4 blobs tracked
+[mission_controller-19] [WARN] [1791686593.837361510] [mission_controller]: !!! INCOMING meteor #15: impact in 8.1 s at (2.8, -3.1) ±1.43 m, 4.5 m from rover -> EVADING to (-0.5, 0.0)
+[mission_controller-19] [INFO] [1791686593.964013046] [mission_controller]: evasion manoeuvre complete: now 4.5 m from predicted impact; holding until meteor #15 lands
+[mission_controller-19] [t=   30.5s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #15, impact in +7.7 s) | objects tracked: 2, threats: 1 | nav error vs truth 7.72 m
+[meteor_tracker-18] [INFO] [1791686594.613195349] [meteor_tracker]: [RGB-D] object #15 detected: range 20.4 m, altitude 20.4 m, speed 4.5 m/s, impact in 7.7 s at (2.0,-3.2) ±0.66 m, miss 4.1 m -> THREAT
+[mission_controller-19] [t=   31.0s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #15, impact in +7.2 s) | objects tracked: 1, threats: 0 | nav error vs truth 7.72 m
+[mission_controller-19] [t=   31.5s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -6° | SHELTER (meteor #15, impact in +6.6 s) | objects tracked: 1, threats: 0 | nav error vs truth 7.72 m
+[mission_controller-19] [t=   32.0s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -7° | SHELTER (meteor #15, impact in +6.1 s) | objects tracked: 1, threats: 0 | nav error vs truth 5.23 m
+[mission_controller-19] [t=   32.5s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -7° | SHELTER (meteor #15, impact in +5.6 s) | objects tracked: 1, threats: 0 | nav error vs truth 5.23 m
+[mission_controller-19] [t=   33.0s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -7° | SHELTER (meteor #15, impact in +5.1 s) | objects tracked: 1, threats: 0 | nav error vs truth 5.23 m
+[meteor_spawner.py-10] [ERROR] [1791686602.590054744] [meteor_spawner]: failed to spawn meteor_6 (service timeout)
+[mission_controller-19] [t=   33.5s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -7° | SHELTER (meteor #15, impact in +4.6 s) | objects tracked: 1, threats: 0 | nav error vs truth 5.23 m
+[mission_controller-19] [t=   34.0s] Rover rel. station: x=  +2.13 m  y=  +0.04 m  dist=  2.13 m  bearing=   +1°  heading=   -7° | SHELTER (meteor #15, impact in +4.1 s) | objects tracked: 1, threats: 0 | nav error vs truth 5.23 m
+[mission_controller-19] [WARN] [1791686604.251788147] [mission_controller]: !!! INCOMING meteor #17: impact in 7.4 s at (2.7, 1.9) ±1.01 m, 3.7 m from rover -> EVADING to (-1.2, -0.4)
+[meteor_tracker-18] [INFO] [1791686604.900399999] [meteor_tracker]: [RGB-D] object #17 detected: range 24.0 m, altitude 18.4 m, speed 4.4 m/s, impact in 7.1 s at (2.6,2.5) ±0.54 m, miss 3.9 m -> THREAT
+[mission_controller-19] [t=   34.5s] Rover rel. station: x=  +2.12 m  y=  +0.04 m  dist=  2.12 m  bearing=   +1°  heading=   -4° | EVADE (meteor #17, impact in +7.0 s) | objects tracked: 2, threats: 1 | nav error vs truth 5.23 m
+[mission_controller-19] [t=   35.0s] Rover rel. station: x=  +1.87 m  y=  +0.05 m  dist=  1.87 m  bearing=   +2°  heading=   +1° | EVADE (meteor #17, impact in +6.5 s) | objects tracked: 2, threats: 0 | nav error vs truth 5.05 m
+[mission_controller-19] [t=   35.5s] Rover rel. station: x=  +1.74 m  y=  +0.04 m  dist=  1.74 m  bearing=   +1°  heading=  +14° | EVADE (meteor #17, impact in +6.0 s) | objects tracked: 1, threats: 0 | nav error vs truth 15.99 m
+[mission_controller-19] [t=   36.0s] Rover rel. station: x=  +1.61 m  y=  -0.01 m  dist=  1.61 m  bearing=   -1°  heading=  +29° | EVADE (meteor #17, impact in +5.5 s) | objects tracked: 1, threats: 0 | nav error vs truth 16.00 m
+[mission_controller-19] [INFO] [1791686608.879210108] [mission_controller]: evasion manoeuvre complete: now 3.9 m from predicted impact; holding until meteor #17 lands
+[meteor_tracker-18] [INFO] [1791686608.998985510] [meteor_tracker]: [RGB-D] object #19 detected: range 40.0 m, altitude 21.7 m, speed 3.2 m/s, impact in 5.5 s at (4.2,22.6) ±0.87 m, miss 23.2 m -> no threat
+[meteor_tracker-18] [INFO] [1791686609.479856537] [meteor_tracker]: [RGB-D] object #22 detected: range 26.9 m, altitude 13.0 m, speed 6.5 m/s, impact in 1.7 s at (7.7,26.1) ±0.30 m, miss 27.6 m -> no threat
+[mission_controller-19] [t=   36.5s] Rover rel. station: x=  +1.51 m  y=  -0.08 m  dist=  1.51 m  bearing=   -3°  heading=  +36° | SHELTER (meteor #17, impact in +5.0 s) | objects tracked: 3, threats: 0 | nav error vs truth 16.02 m
+[mission_controller-19] [t=   37.0s] Rover rel. station: x=  +1.50 m  y=  -0.09 m  dist=  1.50 m  bearing=   -4°  heading=  +36° | SHELTER (meteor #17, impact in +4.5 s) | objects tracked: 3, threats: 0 | nav error vs truth 16.03 m
+[mission_controller-19] [t=   37.5s] Rover rel. station: x=  +1.50 m  y=  -0.09 m  dist=  1.50 m  bearing=   -4°  heading=  +35° | SHELTER (meteor #17, impact in +4.0 s) | objects tracked: 3, threats: 0 | nav error vs truth 16.03 m
+[mission_controller-19] [t=   38.0s] Rover rel. station: x=  +1.50 m  y=  -0.09 m  dist=  1.50 m  bearing=   -4°  heading=  +35° | SHELTER (meteor #17, impact in +3.5 s) | objects tracked: 3, threats: 0 | nav error vs truth 16.03 m
+[meteor_spawner.py-10] [ERROR] [1791686612.615828721] [meteor_spawner]: failed to spawn meteor_7 (service timeout)
+[mission_controller-19] [t=   38.5s] Rover rel. station: x=  +1.50 m  y=  -0.09 m  dist=  1.50 m  bearing=   -4°  heading=  +35° | SHELTER (meteor #17, impact in +3.0 s) | objects tracked: 2, threats: 0 | nav error vs truth 16.03 m
+[mission_controller-19] [t=   39.0s] Rover rel. station: x=  +1.50 m  y=  -0.09 m  dist=  1.50 m  bearing=   -4°  heading=  +35° | SHELTER (meteor #17, impact in +2.5 s) | objects tracked: 2, threats: 0 | nav error vs truth 16.03 m
+[mission_controller-19] [t=   39.5s] Rover rel. station: x=  +1.50 m  y=  -0.09 m  dist=  1.50 m  bearing=   -4°  heading=  +35° | SHELTER (meteor #17, impact in +2.0 s) | objects tracked: 1, threats: 0 | nav error vs truth 18.97 m
+[mission_controller-19] [t=   40.0s] Rover rel. station: x=  +1.50 m  y=  -0.09 m  dist=  1.50 m  bearing=   -4°  heading=  +35° | SHELTER (meteor #17, impact in +1.5 s) | objects tracked: 1, threats: 0 | nav error vs truth 18.97 m
+[meteor_tracker-18] [INFO] [1791686615.584162231] [meteor_tracker]: perf: 8.3 frames/s, 19.9 ms/frame (p95 33.7 ms), 5 blobs tracked
+[mission_controller-19] [t=   40.5s] Rover rel. station: x=  +1.50 m  y=  -0.09 m  dist=  1.50 m  bearing=   -4°  heading=  +35° | SHELTER (meteor #17, impact in +1.0 s) | objects tracked: 1, threats: 0 | nav error vs truth 18.97 m
+[mission_controller-19] [t=   41.0s] Rover rel. station: x=  +1.50 m  y=  -0.09 m  dist=  1.50 m  bearing=   -4°  heading=  +35° | SHELTER (meteor #17, impact in +0.5 s) | objects tracked: 1, threats: 0 | nav error vs truth 18.97 m
+[mission_controller-19] [t=   41.5s] Rover rel. station: x=  +1.50 m  y=  -0.09 m  dist=  1.50 m  bearing=   -4°  heading=  +35° | SHELTER (meteor #17, impact in -0.0 s) | objects tracked: 1, threats: 0 | nav error vs truth 18.97 m
+[meteor_tracker-18] [INFO] [1791686619.050862274] [meteor_tracker]: [RGB-D] object #30 detected: range 20.3 m, altitude 21.7 m, speed 2.8 m/s, impact in 4.8 s at (31.7,6.1) ±0.65 m, miss 33.4 m -> no threat
+[mission_controller-19] [t=   42.0s] Rover rel. station: x=  +1.50 m  y=  -0.09 m  dist=  1.50 m  bearing=   -4°  heading=  +35° | SHELTER (meteor #17, impact in -0.5 s) | objects tracked: 1, threats: 0 | nav error vs truth 18.97 m
+[mission_controller-19] [INFO] [1791686620.002264979] [mission_controller]: meteor #17 has landed near (2.1, 2.3); impact zone added to the hazard map. Resuming patrol -> WP0
+[bt_navigator-15] [INFO] [1791686620.003561396] [bt_navigator]: Begin navigating from current location (-1.10, -0.09) to (6.00, 6.00)
+[mission_controller-19] [t=   42.5s] Rover rel. station: x=  +1.50 m  y=  -0.09 m  dist=  1.50 m  bearing=   -4°  heading=  +35° | PATROL -> WP0 | objects tracked: 1, threats: 0 | nav error vs truth 18.97 m
+[controller_server-11] [INFO] [1791686620.015253832] [controller_server]: Received a goal, begin computing control effort.
+[mission_controller-19] [t=   43.0s] Rover rel. station: x=  +1.54 m  y=  -0.06 m  dist=  1.54 m  bearing=   -2°  heading=  +36° | PATROL -> WP0 | objects tracked: 1, threats: 0 | nav error vs truth 16.06 m
+[controller_server-11] [INFO] [1791686621.115498418] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   43.5s] Rover rel. station: x=  +1.67 m  y=  +0.03 m  dist=  1.67 m  bearing=   +1°  heading=  +37° | PATROL -> WP0 | objects tracked: 1, threats: 0 | nav error vs truth 16.18 m
+[controller_server-11] [INFO] [1791686622.116036776] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   44.0s] Rover rel. station: x=  +1.76 m  y=  +0.10 m  dist=  1.77 m  bearing=   +3°  heading=  +37° | PATROL -> WP0 | objects tracked: 1, threats: 0 | nav error vs truth 16.27 m
+[meteor_spawner.py-10] [ERROR] [1791686622.626330155] [meteor_spawner]: failed to spawn meteor_8 (service timeout)
+[controller_server-11] [INFO] [1791686623.115569152] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   44.5s] Rover rel. station: x=  +1.87 m  y=  +0.18 m  dist=  1.88 m  bearing=   +5°  heading=  +32° | PATROL -> WP0 | objects tracked: 1, threats: 0 | nav error vs truth 16.36 m
+[mission_controller-19] [WARN] [1791686623.335820330] [mission_controller]: !!! INCOMING meteor #32: impact in 7.7 s at (-0.3, -1.6) ±1.74 m, 1.9 m from rover -> EVADING to (-1.2, 2.8)
+[bt_navigator-15] [ERROR] [1791686623.364367546] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for follow_path in node halt!
+[bt_navigator-15] [INFO] [1791686623.364561975] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-15] [INFO] [1791686623.364725951] [bt_navigator]: Goal canceled
+[controller_server-11] [INFO] [1791686623.415471965] [controller_server]: Cancellation was successful. Stopping the robot.
+[controller_server-11] [INFO] [1791686623.415540691] [controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+[controller_server-11] [INFO] [1791686623.415852802] [controller_server]: Optimizer reset
+[meteor_tracker-18] [INFO] [1791686623.864422431] [meteor_tracker]: [RGB-D] object #32 detected: range 18.9 m, altitude 19.7 m, speed 4.2 m/s, impact in 7.2 s at (-0.1,-3.3) ±0.71 m, miss 3.5 m -> THREAT
+[mission_controller-19] [t=   45.0s] Rover rel. station: x=  +1.94 m  y=  +0.21 m  dist=  1.95 m  bearing=   +6°  heading=  +25° | EVADE (meteor #32, impact in +7.1 s) | objects tracked: 2, threats: 1 | nav error vs truth 16.41 m
+[mission_controller-19] [t=   45.5s] Rover rel. station: x=  +1.94 m  y=  +0.21 m  dist=  1.95 m  bearing=   +6°  heading=  +25° | EVADE (meteor #32, impact in +6.6 s) | objects tracked: 2, threats: 1 | nav error vs truth 16.41 m
+[mission_controller-19] [t=   46.0s] Rover rel. station: x=  +1.94 m  y=  +0.21 m  dist=  1.95 m  bearing=   +6°  heading=  +26° | EVADE (meteor #32, impact in +6.0 s) | objects tracked: 2, threats: 1 | nav error vs truth 16.41 m
+[mission_controller-19] [t=   46.5s] Rover rel. station: x=  +1.94 m  y=  +0.21 m  dist=  1.95 m  bearing=   +6°  heading=  +35° | EVADE (meteor #32, impact in +5.5 s) | objects tracked: 2, threats: 1 | nav error vs truth 16.41 m
+[mission_controller-19] [t=   47.0s] Rover rel. station: x=  +1.94 m  y=  +0.21 m  dist=  1.95 m  bearing=   +6°  heading=  +52° | EVADE (meteor #32, impact in +5.0 s) | objects tracked: 1, threats: 1 | nav error vs truth 1.36 m
+[mission_controller-19] [t=   47.5s] Rover rel. station: x=  +1.94 m  y=  +0.22 m  dist=  1.95 m  bearing=   +6°  heading=  +71° | EVADE (meteor #32, impact in +4.5 s) | objects tracked: 1, threats: 1 | nav error vs truth 1.35 m
+[mission_controller-19] [t=   48.0s] Rover rel. station: x=  +1.96 m  y=  +0.32 m  dist=  1.98 m  bearing=   +9°  heading=  +83° | EVADE (meteor #32, impact in +4.0 s) | objects tracked: 1, threats: 1 | nav error vs truth 1.33 m
+[mission_controller-19] [t=   48.5s] Rover rel. station: x=  +1.98 m  y=  +0.53 m  dist=  2.05 m  bearing=  +15°  heading=  +86° | EVADE (meteor #32, impact in +3.5 s) | objects tracked: 1, threats: 1 | nav error vs truth 1.33 m
+[mission_controller-19] [t=   49.0s] Rover rel. station: x=  +1.99 m  y=  +0.82 m  dist=  2.15 m  bearing=  +22°  heading=  +91° | EVADE (meteor #32, impact in +3.0 s) | objects tracked: 1, threats: 0 | nav error vs truth 1.42 m
+[mission_controller-19] [t=   49.5s] Rover rel. station: x=  +1.97 m  y=  +1.01 m  dist=  2.21 m  bearing=  +27°  heading= +102° | EVADE (meteor #32, impact in +2.6 s) | objects tracked: 1, threats: 0 | nav error vs truth 1.54 m
+[mission_controller-19] [INFO] [1791686631.127562297] [mission_controller]: evasion manoeuvre complete: now 3.8 m from predicted impact; holding until meteor #32 lands
+[mission_controller-19] [t=   50.0s] Rover rel. station: x=  +1.96 m  y=  +1.04 m  dist=  2.22 m  bearing=  +28°  heading= +104° | SHELTER (meteor #32, impact in +2.0 s) | objects tracked: 0, threats: 0 | nav error vs truth 1.56 m
+[meteor_tracker-18] [INFO] [1791686631.909796456] [meteor_tracker]: perf: 10.7 frames/s, 13.7 ms/frame (p95 20.3 ms), 5 blobs tracked
+[meteor_spawner.py-10] [ERROR] [1791686632.639179070] [meteor_spawner]: failed to spawn meteor_9 (service timeout)
+[mission_controller-19] [t=   50.5s] Rover rel. station: x=  +1.96 m  y=  +1.04 m  dist=  2.22 m  bearing=  +28°  heading= +104° | SHELTER (meteor #32, impact in +1.5 s) | objects tracked: 0, threats: 0 | nav error vs truth 3.30 m
+[meteor_tracker-18] [INFO] [1791686633.302452152] [meteor_tracker]: [RGB-D] object #38 detected: range 23.1 m, altitude 9.2 m, speed 7.2 m/s, impact in 1.2 s at (-13.5,18.7) ±0.18 m, miss 21.9 m -> no threat
+[mission_controller-19] [WARN] [1791686633.599244528] [mission_controller]: !!! INCOMING meteor #42: impact in 7.6 s at (-2.3, 4.7) ±1.95 m, 4.0 m from rover -> EVADING to (-0.4, 0.6)
+[mission_controller-19] [t=   51.0s] Rover rel. station: x=  +1.96 m  y=  +1.04 m  dist=  2.22 m  bearing=  +28°  heading= +104° | EVADE (meteor #42, impact in +7.5 s) | objects tracked: 2, threats: 1 | nav error vs truth 3.30 m
+[meteor_tracker-18] [INFO] [1791686633.681440936] [meteor_tracker]: [RGB-D] object #42 detected: range 23.9 m, altitude 19.2 m, speed 4.5 m/s, impact in 7.5 s at (-1.7,4.9) ±1.47 m, miss 4.0 m -> THREAT
+[mission_controller-19] [t=   51.5s] Rover rel. station: x=  +2.00 m  y=  +0.88 m  dist=  2.19 m  bearing=  +24°  heading= +105° | EVADE (meteor #42, impact in +7.0 s) | objects tracked: 2, threats: 1 | nav error vs truth 3.55 m
+[mission_controller-19] [t=   52.0s] Rover rel. station: x=  +2.09 m  y=  +0.59 m  dist=  2.17 m  bearing=  +16°  heading= +107° | EVADE (meteor #42, impact in +6.6 s) | objects tracked: 2, threats: 0 | nav error vs truth 4.05 m
+[mission_controller-19] [t=   52.5s] Rover rel. station: x=  +2.16 m  y=  +0.34 m  dist=  2.19 m  bearing=   +9°  heading= +109° | EVADE (meteor #42, impact in +6.1 s) | objects tracked: 1, threats: 0 | nav error vs truth 4.55 m
+[mission_controller-19] [INFO] [1791686636.992893387] [mission_controller]: evasion manoeuvre complete: now 5.2 m from predicted impact; holding until meteor #42 lands
+[mission_controller-19] [t=   53.0s] Rover rel. station: x=  +2.22 m  y=  +0.18 m  dist=  2.23 m  bearing=   +5°  heading= +109° | SHELTER (meteor #42, impact in +5.5 s) | objects tracked: 1, threats: 0 | nav error vs truth 4.89 m
+[mission_controller-19] [t=   53.5s] Rover rel. station: x=  +2.24 m  y=  +0.12 m  dist=  2.24 m  bearing=   +3°  heading= +109° | SHELTER (meteor #42, impact in +4.9 s) | objects tracked: 1, threats: 0 | nav error vs truth 5.01 m
+[mission_controller-19] [t=   54.0s] Rover rel. station: x=  +2.24 m  y=  +0.12 m  dist=  2.24 m  bearing=   +3°  heading= +109° | SHELTER (meteor #42, impact in +4.4 s) | objects tracked: 1, threats: 0 | nav error vs truth 16.03 m
+[mission_controller-19] [t=   54.5s] Rover rel. station: x=  +2.24 m  y=  +0.12 m  dist=  2.24 m  bearing=   +3°  heading= +109° | SHELTER (meteor #42, impact in +4.0 s) | objects tracked: 1, threats: 0 | nav error vs truth 16.03 m
+[mission_controller-19] [t=   55.0s] Rover rel. station: x=  +2.24 m  y=  +0.12 m  dist=  2.24 m  bearing=   +3°  heading= +109° | SHELTER (meteor #42, impact in +3.4 s) | objects tracked: 1, threats: 0 | nav error vs truth 16.03 m
+[mission_controller-19] [t=   55.5s] Rover rel. station: x=  +2.24 m  y=  +0.12 m  dist=  2.24 m  bearing=   +3°  heading= +109° | SHELTER (meteor #42, impact in +3.0 s) | objects tracked: 1, threats: 0 | nav error vs truth 16.03 m
+[mission_controller-19] [t=   56.0s] Rover rel. station: x=  +2.24 m  y=  +0.12 m  dist=  2.24 m  bearing=   +3°  heading= +109° | SHELTER (meteor #42, impact in +2.5 s) | objects tracked: 1, threats: 0 | nav error vs truth 16.03 m
+[meteor_spawner.py-10] [ERROR] [1791686642.657646210] [meteor_spawner]: failed to spawn meteor_10 (service timeout)
+[mission_controller-19] [t=   56.5s] Rover rel. station: x=  +2.24 m  y=  +0.12 m  dist=  2.24 m  bearing=   +3°  heading= +109° | SHELTER (meteor #42, impact in +1.9 s) | objects tracked: 1, threats: 0 | nav error vs truth 16.03 m
+[mission_controller-19] [WARN] [1791686643.338627271] [mission_controller]: !!! INCOMING meteor #45: impact in 8.6 s at (-3.4, -6.1) ±2.25 m, 6.9 m from rover -> EVADING to (-1.4, -2.0)
+[meteor_tracker-18] [INFO] [1791686643.656372406] [meteor_tracker]: [RGB-D] object #45 detected: range 23.8 m, altitude 17.0 m, speed 5.7 m/s, impact in 8.3 s at (-4.4,-5.5) ±1.25 m, miss 6.9 m -> no threat
+[mission_controller-19] [t=   57.0s] Rover rel. station: x=  +2.24 m  y=  +0.12 m  dist=  2.24 m  bearing=   +3°  heading= +105° | EVADE (meteor #45, impact in +8.2 s) | objects tracked: 2, threats: 0 | nav error vs truth 16.03 m
+[mission_controller-19] [t=   57.5s] Rover rel. station: x=  +2.24 m  y=  +0.12 m  dist=  2.24 m  bearing=   +3°  heading=  +90° | EVADE (meteor #45, impact in +7.8 s) | objects tracked: 1, threats: 0 | nav error vs truth 17.10 m
+[mission_controller-19] [t=   58.0s] Rover rel. station: x=  +2.22 m  y=  -0.18 m  dist=  2.23 m  bearing=   -5°  heading=  +85° | EVADE (meteor #45, impact in +7.3 s) | objects tracked: 1, threats: 1 | nav error vs truth 17.01 m
+[mission_controller-19] [t=   58.5s] Rover rel. station: x=  +2.18 m  y=  -0.47 m  dist=  2.24 m  bearing=  -12°  heading=  +80° | EVADE (meteor #45, impact in +6.7 s) | objects tracked: 1, threats: 1 | nav error vs truth 16.97 m
+[mission_controller-19] [t=   59.0s] Rover rel. station: x=  +2.11 m  y=  -0.77 m  dist=  2.25 m  bearing=  -20°  heading=  +71° | EVADE (meteor #45, impact in +6.3 s) | objects tracked: 1, threats: 1 | nav error vs truth 16.97 m
+[mission_controller-19] [t=   59.5s] Rover rel. station: x=  +1.98 m  y=  -1.04 m  dist=  2.24 m  bearing=  -28°  heading=  +57° | EVADE (meteor #45, impact in +5.8 s) | objects tracked: 1, threats: 1 | nav error vs truth 17.02 m
+[mission_controller-19] [t=   60.0s] Rover rel. station: x=  +1.80 m  y=  -1.27 m  dist=  2.20 m  bearing=  -35°  heading=  +47° | EVADE (meteor #45, impact in +5.3 s) | objects tracked: 1, threats: 1 | nav error vs truth 17.07 m
+[meteor_tracker-18] [INFO] [1791686648.398326988] [meteor_tracker]: perf: 10.2 frames/s, 14.6 ms/frame (p95 23.7 ms), 4 blobs tracked
+[mission_controller-19] [t=   60.5s] Rover rel. station: x=  +1.59 m  y=  -1.47 m  dist=  2.17 m  bearing=  -43°  heading=  +40° | EVADE (meteor #45, impact in +4.8 s) | objects tracked: 1, threats: 1 | nav error vs truth 17.11 m
+[mission_controller-19] [t=   61.0s] Rover rel. station: x=  +1.43 m  y=  -1.59 m  dist=  2.14 m  bearing=  -48°  heading=  +31° | EVADE (meteor #45, impact in +4.3 s) | objects tracked: 1, threats: 1 | nav error vs truth 10.25 m
+[mission_controller-19] [INFO] [1791686650.203402854] [mission_controller]: evasion manoeuvre complete: now 4.6 m from predicted impact; holding until meteor #45 lands
+[mission_controller-19] [t=   61.5s] Rover rel. station: x=  +1.33 m  y=  -1.64 m  dist=  2.12 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #45, impact in +3.7 s) | objects tracked: 0, threats: 0 | nav error vs truth 10.13 m
+[mission_controller-19] [t=   62.0s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #45, impact in +3.2 s) | objects tracked: 0, threats: 0 | nav error vs truth 10.12 m
+[mission_controller-19] [t=   62.5s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #45, impact in +2.7 s) | objects tracked: 0, threats: 0 | nav error vs truth 10.12 m
+[meteor_spawner.py-10] [ERROR] [1791686652.665785087] [meteor_spawner]: failed to spawn meteor_11 (service timeout)
+[mission_controller-19] [t=   63.0s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #45, impact in +2.2 s) | objects tracked: 0, threats: 0 | nav error vs truth 10.12 m
+[mission_controller-19] [WARN] [1791686653.286560756] [mission_controller]: !!! INCOMING meteor #53: impact in 7.0 s at (-2.1, 3.4) ±2.17 m, 5.1 m from rover -> EVADING to (-1.4, -1.0)
+[meteor_tracker-18] [INFO] [1791686653.356437586] [meteor_tracker]: [RGB-D] object #53 detected: range 26.0 m, altitude 16.5 m, speed 5.1 m/s, impact in 6.8 s at (-2.7,2.6) ±1.53 m, miss 4.5 m -> THREAT
+[mission_controller-19] [INFO] [1791686653.428532829] [mission_controller]: evasion manoeuvre complete: now 4.5 m from predicted impact; holding until meteor #53 lands
+[mission_controller-19] [t=   63.5s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #53, impact in +6.7 s) | objects tracked: 1, threats: 1 | nav error vs truth 10.12 m
+[mission_controller-19] [t=   64.0s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #53, impact in +6.1 s) | objects tracked: 1, threats: 1 | nav error vs truth 10.12 m
+[mission_controller-19] [t=   64.5s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #53, impact in +5.6 s) | objects tracked: 1, threats: 1 | nav error vs truth 4.32 m
+[mission_controller-19] [t=   65.0s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #53, impact in +5.1 s) | objects tracked: 1, threats: 1 | nav error vs truth 4.32 m
+[mission_controller-19] [t=   65.5s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #53, impact in +4.6 s) | objects tracked: 1, threats: 1 | nav error vs truth 4.32 m
+[mission_controller-19] [t=   66.0s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #53, impact in +4.1 s) | objects tracked: 1, threats: 1 | nav error vs truth 4.32 m
+[mission_controller-19] [t=   66.5s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #53, impact in +3.6 s) | objects tracked: 1, threats: 1 | nav error vs truth 4.32 m
+[mission_controller-19] [t=   67.0s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #53, impact in +3.1 s) | objects tracked: 1, threats: 1 | nav error vs truth 4.32 m
+[mission_controller-19] [t=   67.5s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #53, impact in +2.6 s) | objects tracked: 1, threats: 1 | nav error vs truth 4.32 m
+[mission_controller-19] [t=   68.0s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #53, impact in +2.1 s) | objects tracked: 1, threats: 1 | nav error vs truth 4.74 m
+[mission_controller-19] [t=   68.5s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #53, impact in +1.6 s) | objects tracked: 1, threats: 1 | nav error vs truth 4.74 m
+[meteor_spawner.py-10] [ERROR] [1791686662.685531022] [meteor_spawner]: failed to spawn meteor_12 (service timeout)
+[mission_controller-19] [t=   69.0s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #53, impact in +1.1 s) | objects tracked: 0, threats: 0 | nav error vs truth 4.74 m
+[mission_controller-19] [WARN] [1791686663.357206701] [mission_controller]: !!! INCOMING meteor #61: impact in 8.4 s at (2.1, -4.2) ±2.11 m, 4.2 m from rover -> EVADING to (-1.5, -1.5)
+[mission_controller-19] [INFO] [1791686663.415437493] [mission_controller]: evasion manoeuvre complete: now 4.2 m from predicted impact; holding until meteor #61 lands
+[meteor_tracker-18] [INFO] [1791686663.431265137] [meteor_tracker]: [RGB-D] object #61 detected: range 22.8 m, altitude 18.5 m, speed 5.2 m/s, impact in 8.4 s at (0.7,-4.9) ±1.61 m, miss 3.8 m -> THREAT
+[mission_controller-19] [t=   69.5s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in +8.2 s) | objects tracked: 1, threats: 1 | nav error vs truth 4.74 m
+[mission_controller-19] [t=   70.0s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in +7.6 s) | objects tracked: 1, threats: 1 | nav error vs truth 4.74 m
+[meteor_tracker-18] [INFO] [1791686664.526495641] [meteor_tracker]: perf: 10.4 frames/s, 11.8 ms/frame (p95 19.5 ms), 4 blobs tracked
+[mission_controller-19] [t=   70.5s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in +7.2 s) | objects tracked: 1, threats: 1 | nav error vs truth 4.74 m
+[mission_controller-19] [t=   71.0s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in +6.7 s) | objects tracked: 1, threats: 1 | nav error vs truth 4.74 m
+[mission_controller-19] [t=   71.5s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in +6.2 s) | objects tracked: 1, threats: 1 | nav error vs truth 4.74 m
+[mission_controller-19] [t=   72.0s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in +5.7 s) | objects tracked: 1, threats: 1 | nav error vs truth 1.83 m
+[mission_controller-19] [t=   72.5s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in +5.2 s) | objects tracked: 1, threats: 1 | nav error vs truth 1.83 m
+[mission_controller-19] [t=   73.0s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in +4.7 s) | objects tracked: 1, threats: 1 | nav error vs truth 1.83 m
+[mission_controller-19] [t=   73.5s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in +4.2 s) | objects tracked: 1, threats: 1 | nav error vs truth 1.83 m
+[mission_controller-19] [t=   74.0s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in +3.7 s) | objects tracked: 1, threats: 1 | nav error vs truth 1.83 m
+[mission_controller-19] [t=   74.5s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in +3.2 s) | objects tracked: 0, threats: 0 | nav error vs truth 1.83 m
+[mission_controller-19] [t=   75.0s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in +2.7 s) | objects tracked: 0, threats: 0 | nav error vs truth 1.83 m
+[meteor_spawner.py-10] [ERROR] [1791686672.703154776] [meteor_spawner]: failed to spawn meteor_13 (service timeout)
+[planner_server-13] [INFO] [1791686673.062612036] [global_costmap.global_costmap]: Message Filter dropping message: frame 'lidar' at time 75.000 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[mission_controller-19] [t=   75.5s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in +2.2 s) | objects tracked: 0, threats: 0 | nav error vs truth 14.49 m
+[mission_controller-19] [t=   76.0s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in +1.7 s) | objects tracked: 0, threats: 0 | nav error vs truth 14.49 m
+[mission_controller-19] [t=   76.5s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in +1.2 s) | objects tracked: 0, threats: 0 | nav error vs truth 14.49 m
+[mission_controller-19] [t=   77.0s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in +0.7 s) | objects tracked: 0, threats: 0 | nav error vs truth 14.49 m
+[mission_controller-19] [t=   77.5s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in +0.2 s) | objects tracked: 0, threats: 0 | nav error vs truth 14.49 m
+[mission_controller-19] [t=   78.0s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in -0.3 s) | objects tracked: 0, threats: 0 | nav error vs truth 14.49 m
+[mission_controller-19] [t=   78.5s] Rover rel. station: x=  +1.33 m  y=  -1.65 m  dist=  2.11 m  bearing=  -51°  heading=  +29° | SHELTER (meteor #61, impact in -0.8 s) | objects tracked: 0, threats: 0 | nav error vs truth 14.49 m
+[mission_controller-19] [INFO] [1791686678.748637343] [mission_controller]: meteor #61 has landed near (0.3, -3.9); impact zone added to the hazard map. Resuming patrol -> WP0
+[bt_navigator-15] [INFO] [1791686678.753503753] [bt_navigator]: Begin navigating from current location (-1.27, -1.65) to (6.00, 6.00)
+[controller_server-11] [INFO] [1791686678.784912661] [controller_server]: Received a goal, begin computing control effort.
+[mission_controller-19] [t=   79.0s] Rover rel. station: x=  +1.34 m  y=  -1.64 m  dist=  2.12 m  bearing=  -51°  heading=  +29° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 14.52 m
+[controller_server-11] [INFO] [1791686679.885256693] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   79.5s] Rover rel. station: x=  +1.45 m  y=  -1.58 m  dist=  2.14 m  bearing=  -47°  heading=  +29° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 3.63 m
+[controller_server-11] [INFO] [1791686680.885519488] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   80.0s] Rover rel. station: x=  +1.60 m  y=  -1.50 m  dist=  2.19 m  bearing=  -43°  heading=  +28° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 3.52 m
+[meteor_tracker-18] [INFO] [1791686680.938341696] [meteor_tracker]: perf: 10.2 frames/s, 12.1 ms/frame (p95 17.4 ms), 4 blobs tracked
+[mission_controller-19] [t=   80.5s] Rover rel. station: x=  +1.75 m  y=  -1.42 m  dist=  2.25 m  bearing=  -39°  heading=  +27° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 3.41 m
+[controller_server-11] [INFO] [1791686681.985340299] [controller_server]: Passing new path to controller.
+[meteor_spawner.py-10] [ERROR] [1791686682.714898787] [meteor_spawner]: failed to spawn meteor_14 (service timeout)
+[mission_controller-19] [t=   81.0s] Rover rel. station: x=  +1.90 m  y=  -1.35 m  dist=  2.33 m  bearing=  -35°  heading=  +24° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 3.31 m
+[controller_server-11] [INFO] [1791686682.985251341] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   81.5s] Rover rel. station: x=  +2.07 m  y=  -1.27 m  dist=  2.43 m  bearing=  -32°  heading=  +23° | PATROL -> WP0 | objects tracked: 0, threats: 0 | nav error vs truth 3.18 m
+[controller_server-11] [INFO] [1791686683.985280436] [controller_server]: Passing new path to controller.
+[mission_controller-19] [WARN] [1791686684.036233725] [mission_controller]: !!! INCOMING meteor #69: impact in 8.1 s at (-0.9, 5.6) ±2.02 m, 6.5 m from rover -> EVADING to (-0.7, 1.1)
+[bt_navigator-15] [ERROR] [1791686684.065941738] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for follow_path in node halt!
+[bt_navigator-15] [INFO] [1791686684.066415122] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-15] [INFO] [1791686684.066715953] [bt_navigator]: Goal canceled
+[controller_server-11] [INFO] [1791686684.085254348] [controller_server]: Cancellation was successful. Stopping the robot.
+[controller_server-11] [INFO] [1791686684.085438570] [controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+[controller_server-11] [INFO] [1791686684.086248717] [controller_server]: Optimizer reset
+[meteor_tracker-18] [INFO] [1791686684.215044879] [meteor_tracker]: [RGB-D] object #69 detected: range 19.4 m, altitude 16.9 m, speed 4.8 m/s, impact in 8.0 s at (0.1,4.8) ±1.51 m, miss 5.4 m -> THREAT
+[mission_controller-19] [t=   82.0s] Rover rel. station: x=  +2.12 m  y=  -1.25 m  dist=  2.46 m  bearing=  -31°  heading=  +24° | EVADE (meteor #69, impact in +7.7 s) | objects tracked: 1, threats: 0 | nav error vs truth 3.15 m
+[mission_controller-19] [t=   82.5s] Rover rel. station: x=  +2.12 m  y=  -1.25 m  dist=  2.46 m  bearing=  -31°  heading=  +24° | EVADE (meteor #69, impact in +7.2 s) | objects tracked: 1, threats: 0 | nav error vs truth 3.15 m
+[meteor_tracker-18] [INFO] [1791686686.363366226] [meteor_tracker]: [RGB-D] object #70 detected: range 5.5 m, altitude 4.5 m, speed 8.1 m/s, impact in 0.5 s at (3.6,0.9) ±0.09 m, miss 4.6 m -> no threat
+[mission_controller-19] [WARN] [1791686686.838944315] [mission_controller]: !!! INCOMING meteor #70: impact in 0.2 s at (2.2, 0.4) ±0.62 m, 3.2 m from rover -> EVADING to (-1.6, -1.9)
+[mission_controller-19] [t=   83.0s] Rover rel. station: x=  +2.12 m  y=  -1.25 m  dist=  2.46 m  bearing=  -31°  heading=  +25° | EVADE (meteor #70, impact in +0.2 s) | objects tracked: 2, threats: 1 | nav error vs truth 0.48 m
+[mission_controller-19] [t=   83.5s] Rover rel. station: x=  +1.88 m  y=  -1.39 m  dist=  2.33 m  bearing=  -36°  heading=  +31° | EVADE (meteor #70, impact in -0.3 s) | objects tracked: 1, threats: 0 | nav error vs truth 0.48 m
+[mission_controller-19] [t=   84.0s] Rover rel. station: x=  +1.62 m  y=  -1.55 m  dist=  2.24 m  bearing=  -44°  heading=  +33° | EVADE (meteor #70, impact in -0.8 s) | objects tracked: 1, threats: 0 | nav error vs truth 0.79 m
+[mission_controller-19] [t=   84.5s] Rover rel. station: x=  +1.37 m  y=  -1.71 m  dist=  2.19 m  bearing=  -51°  heading=  +34° | EVADE (meteor #70, impact in -1.3 s) | objects tracked: 1, threats: 0 | nav error vs truth 1.23 m
+[mission_controller-19] [INFO] [1791686691.917444827] [mission_controller]: evasion manoeuvre complete: now 3.5 m from predicted impact; holding until meteor #70 lands
+[mission_controller-19] [INFO] [1791686692.023720496] [mission_controller]: meteor #70 has landed near (1.6, 0.2); impact zone added to the hazard map. Resuming patrol -> WP0
+[bt_navigator-15] [INFO] [1791686692.035134285] [bt_navigator]: Begin navigating from current location (-1.38, -1.81) to (6.00, 6.00)
+[controller_server-11] [INFO] [1791686692.078261228] [controller_server]: Received a goal, begin computing control effort.
+[mission_controller-19] [t=   85.0s] Rover rel. station: x=  +1.13 m  y=  -1.87 m  dist=  2.19 m  bearing=  -59°  heading=  +35° | PATROL -> WP0 | objects tracked: 1, threats: 0 | nav error vs truth 1.70 m
+[meteor_spawner.py-10] [ERROR] [1791686692.750788272] [meteor_spawner]: failed to spawn meteor_15 (service timeout)
+[controller_server-11] [INFO] [1791686693.180008348] [controller_server]: Passing new path to controller.
+[mission_controller-19] [t=   85.5s] Rover rel. station: x=  +0.98 m  y=  -1.98 m  dist=  2.21 m  bearing=  -64°  heading=  +33° | PATROL -> WP0 | objects tracked: 1, threats: 0 | nav error vs truth 2.02 m
+[controller_server-11] [INFO] [1791686694.280152667] [controller_server]: Passing new path to controller.
+[controller_server-11] [INFO] [1791686695.279865284] [controller_server]: Passing new path to controller.
+[mission_controller-19] [WARN] [1791686695.746832898] [mission_controller]: !!! INCOMING meteor #73: impact in 6.6 s at (-1.7, -4.7) ±0.57 m, 2.5 m from rover -> EVADING to (-1.7, -0.2)
+[bt_navigator-15] [ERROR] [1791686695.772665253] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for follow_path in node halt!
+[bt_navigator-15] [INFO] [1791686695.772937227] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-15] [INFO] [1791686695.773163305] [bt_navigator]: Goal canceled
+[controller_server-11] [INFO] [1791686695.780120265] [controller_server]: Cancellation was successful. Stopping the robot.
+[controller_server-11] [INFO] [1791686695.780208728] [controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+[controller_server-11] [INFO] [1791686695.780481364] [controller_server]: Optimizer reset
+[mission_controller-19] [t=   86.0s] Rover rel. station: x=  +0.93 m  y=  -2.01 m  dist=  2.21 m  bearing=  -65°  heading=  +31° | EVADE (meteor #73, impact in +6.5 s) | objects tracked: 2, threats: 1 | nav error vs truth 2.12 m
+[meteor_tracker-18] [INFO] [1791686697.068320136] [meteor_tracker]: [RGB-D] object #73 detected: range 17.7 m, altitude 19.7 m, speed 3.5 m/s, impact in 6.1 s at (-1.5,-4.5) ±0.35 m, miss 2.5 m -> THREAT
+[mission_controller-19] [t=   86.5s] Rover rel. station: x=  +0.93 m  y=  -2.01 m  dist=  2.21 m  bearing=  -65°  heading=  +31° | EVADE (meteor #73, impact in +6.0 s) | objects tracked: 2, threats: 1 | nav error vs truth 2.12 m
+[mission_controller-19] [t=   87.0s] Rover rel. station: x=  +0.93 m  y=  -2.01 m  dist=  2.21 m  bearing=  -65°  heading=  +31° | EVADE (meteor #73, impact in +5.5 s) | objects tracked: 1, threats: 1 | nav error vs truth 5.58 m
+[meteor_tracker-18] [INFO] [1791686699.266067831] [meteor_tracker]: [RGB-D] object #75 detected: range 17.7 m, altitude 16.7 m, speed 4.9 m/s, impact in 2.5 s at (13.3,-0.1) ±0.33 m, miss 15.1 m -> no threat
+[meteor_tracker-18] [INFO] [1791686699.268460303] [meteor_tracker]: [RGB-D] object #76 detected: range 17.9 m, altitude 20.7 m, speed 2.9 m/s, impact in 5.2 s at (8.0,-2.9) ±0.70 m, miss 9.7 m -> no threat
+[mission_controller-19] [t=   87.5s] Rover rel. station: x=  +0.93 m  y=  -2.01 m  dist=  2.21 m  bearing=  -65°  heading=  +36° | EVADE (meteor #73, impact in +4.9 s) | objects tracked: 3, threats: 1 | nav error vs truth 5.58 m
+[mission_controller-19] [t=   88.0s] Rover rel. station: x=  +0.93 m  y=  -2.01 m  dist=  2.21 m  bearing=  -65°  heading=  +50° | EVADE (meteor #73, impact in +4.5 s) | objects tracked: 3, threats: 1 | nav error vs truth 5.59 m
+[meteor_spawner.py-10] [ERROR] [1791686702.777515198] [meteor_spawner]: failed to spawn meteor_16 (service timeout)
+[mission_controller-19] [t=   88.5s] Rover rel. station: x=  +0.94 m  y=  -1.99 m  dist=  2.20 m  bearing=  -65°  heading=  +68° | EVADE (meteor #73, impact in +4.0 s) | objects tracked: 3, threats: 1 | nav error vs truth 5.61 m
+[mission_controller-19] [t=   89.0s] Rover rel. station: x=  +0.98 m  y=  -1.86 m  dist=  2.10 m  bearing=  -62°  heading=  +78° | EVADE (meteor #73, impact in +3.5 s) | objects tracked: 3, threats: 1 | nav error vs truth 5.68 m
+[meteor_tracker-18] [INFO] [1791686704.846161706] [meteor_tracker]: [RGB-D] object #81 detected: range 18.2 m, altitude 16.4 m, speed 4.5 m/s, impact in 6.8 s at (-0.3,-6.1) ±0.70 m, miss 4.5 m -> no threat
+[mission_controller-19] [t=   89.5s] Rover rel. station: x=  +1.02 m  y=  -1.60 m  dist=  1.89 m  bearing=  -58°  heading=  +85° | EVADE (meteor #73, impact in +3.0 s) | objects tracked: 4, threats: 1 | nav error vs truth 5.84 m
+[mission_controller-19] [t=   90.0s] Rover rel. station: x=  +1.03 m  y=  -1.30 m  dist=  1.66 m  bearing=  -52°  heading=  +89° | EVADE (meteor #73, impact in +2.5 s) | objects tracked: 3, threats: 1 | nav error vs truth 6.04 m
+[meteor_tracker-18] [INFO] [1791686706.803876363] [meteor_tracker]: perf: 6.7 frames/s, 18.3 ms/frame (p95 36.1 ms), 8 blobs tracked
+[mission_controller-19] [t=   90.5s] Rover rel. station: x=  +1.03 m  y=  -1.00 m  dist=  1.43 m  bearing=  -44°  heading=  +92° | EVADE (meteor #73, impact in +1.9 s) | objects tracked: 3, threats: 1 | nav error vs truth 6.25 m
+[mission_controller-19] [t=   91.0s] Rover rel. station: x=  +1.02 m  y=  -0.73 m  dist=  1.25 m  bearing=  -36°  heading=  +94° | EVADE (meteor #73, impact in +1.4 s) | objects tracked: 2, threats: 0 | nav error vs truth 13.16 m
+[mission_controller-19] [INFO] [1791686711.158493275] [mission_controller]: evasion manoeuvre complete: now 3.9 m from predicted impact; holding until meteor #73 lands
+[mission_controller-19] [t=   91.5s] Rover rel. station: x=  +1.00 m  y=  -0.57 m  dist=  1.15 m  bearing=  -30°  heading=  +96° | SHELTER (meteor #73, impact in +0.9 s) | objects tracked: 2, threats: 0 | nav error vs truth 13.09 m
+[meteor_spawner.py-10] [ERROR] [1791686712.795865102] [meteor_spawner]: failed to spawn meteor_17 (service timeout)
+[mission_controller-19] [t=   92.0s] Rover rel. station: x=  +1.00 m  y=  -0.57 m  dist=  1.15 m  bearing=  -30°  heading=  +96° | SHELTER (meteor #73, impact in +0.4 s) | objects tracked: 2, threats: 0 | nav error vs truth 13.08 m
+[mission_controller-19] [t=   92.5s] Rover rel. station: x=  +1.00 m  y=  -0.57 m  dist=  1.15 m  bearing=  -30°  heading=  +96° | SHELTER (meteor #73, impact in -0.1 s) | objects tracked: 1, threats: 0 | nav error vs truth 13.08 m
+[mission_controller-19] [t=   93.0s] Rover rel. station: x=  +1.00 m  y=  -0.57 m  dist=  1.15 m  bearing=  -30°  heading=  +96° | SHELTER (meteor #73, impact in -0.6 s) | objects tracked: 1, threats: 0 | nav error vs truth 13.08 m
+[mission_controller-19] [INFO] [1791686719.028510358] [mission_controller]: meteor #73 has landed near (-1.5, -4.5); impact zone added to the hazard map. Resuming patrol -> WP0
+[bt_navigator-15] [INFO] [1791686719.032876073] [bt_navigator]: Begin navigating from current location (-1.60, -0.57) to (6.00, 6.00)
+[controller_server-11] [INFO] [1791686719.109534865] [controller_server]: Received a goal, begin computing control effort.
+[mission_controller-19] [t=   93.5s] Rover rel. station: x=  +1.00 m  y=  -0.57 m  dist=  1.15 m  bearing=  -30°  heading=  +96° | PATROL -> WP0 | objects tracked: 1, threats: 0 | nav error vs truth 13.08 m
+[static_transform_publisher-7] [INFO] [1791686720.013709389] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[controller_server-11] [INFO] [1791686720.013729509] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[controller_server-11] [INFO] [1791686720.013831946] [controller_server]: Running Nav2 LifecycleNode rcl preshutdown (controller_server)
+[controller_server-11] [INFO] [1791686720.013912028] [controller_server]: Deactivating
+[controller_server-11] [WARN] [1791686720.013925693] [controller_server]: [follow_path] [ActionServer] Requested to deactivate server but goal is still executing. Should check if action server is running before deactivating.
+[collision_monitor-17] [INFO] [1791686720.014040754] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[collision_monitor-17] [INFO] [1791686720.014138929] [collision_monitor]: Running Nav2 LifecycleNode rcl preshutdown (collision_monitor)
+[collision_monitor-17] [INFO] [1791686720.014386957] [collision_monitor]: Deactivating
+[collision_monitor-17] [INFO] [1791686720.014413448] [collision_monitor]: Destroying bond (collision_monitor) to lifecycle manager.
+[smoother_server-12] [INFO] [1791686720.014158800] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[smoother_server-12] [INFO] [1791686720.014259272] [smoother_server]: Running Nav2 LifecycleNode rcl preshutdown (smoother_server)
+[smoother_server-12] [INFO] [1791686720.014349916] [smoother_server]: Deactivating
+[smoother_server-12] [INFO] [1791686720.014373798] [smoother_server]: Destroying bond (smoother_server) to lifecycle manager.
+[static_transform_publisher-4] [INFO] [1791686720.014813811] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[ekf_node-9] [INFO] [1791686720.014885874] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[behavior_server-14] [INFO] [1791686720.014915746] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[behavior_server-14] [INFO] [1791686720.015002107] [behavior_server]: Running Nav2 LifecycleNode rcl preshutdown (behavior_server)
+[behavior_server-14] [INFO] [1791686720.015070503] [behavior_server]: Deactivating
+[behavior_server-14] [INFO] [1791686720.015105000] [behavior_server]: Destroying bond (behavior_server) to lifecycle manager.
+[velocity_smoother-16] [INFO] [1791686720.015769674] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[velocity_smoother-16] [INFO] [1791686720.015876147] [velocity_smoother]: Running Nav2 LifecycleNode rcl preshutdown (velocity_smoother)
+[velocity_smoother-16] [INFO] [1791686720.015948930] [velocity_smoother]: Deactivating
+[velocity_smoother-16] [INFO] [1791686720.015975943] [velocity_smoother]: Destroying bond (velocity_smoother) to lifecycle manager.
+[planner_server-13] [INFO] [1791686720.016508324] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[planner_server-13] [INFO] [1791686720.016592843] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[planner_server-13] [INFO] [1791686720.016658034] [planner_server]: Deactivating
+[planner_server-13] [INFO] [1791686720.016690453] [global_costmap.global_costmap]: Deactivating
+[lifecycle_manager-20] [INFO] [1791686720.016758272] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[lifecycle_manager-20] [INFO] [1791686720.016893554] [lifecycle_manager_navigation]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_navigation)
+[static_transform_publisher-6] [INFO] [1791686720.017110540] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[static_transform_publisher-5] [INFO] [1791686720.017506553] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[parameter_bridge-8] [INFO] [1791686720.017512853] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[bt_navigator-15] [INFO] [1791686720.019143905] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[bt_navigator-15] [INFO] [1791686720.019272109] [bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+[bt_navigator-15] [INFO] [1791686720.019346772] [bt_navigator]: Deactivating
+[bt_navigator-15] [WARN] [1791686720.019363735] [bt_navigator]: [navigate_to_pose] [ActionServer] Requested to deactivate server but goal is still executing. Should check if action server is running before deactivating.
+[static_transform_publisher-2] [INFO] [1791686720.019316045] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[lifecycle_manager-20] [INFO] [1791686720.020761055] [lifecycle_manager_navigation]: [34m[1mTerminating bond timer...[0m[0m
+[static_transform_publisher-3] [INFO] [1791686720.025125087] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[smoother_server-12] [INFO] [1791686720.037412480] [smoother_server]: Cleaning up
+[behavior_server-14] [INFO] [1791686720.038982066] [behavior_server]: Cleaning up
+[collision_monitor-17] [INFO] [1791686720.055067222] [collision_monitor]: Cleaning up
+[collision_monitor-17] [INFO] [1791686720.055135421] [collision_monitor]: [FootprintApproach]: Destroying Polygon
+[collision_monitor-17] [INFO] [1791686720.055151321] [collision_monitor]: [scan]: Destroying Scan
+[velocity_smoother-16] [INFO] [1791686720.057843736] [velocity_smoother]: Cleaning up
+[velocity_smoother-16] [INFO] [1791686720.057912022] [velocity_smoother]: Destroying bond (velocity_smoother) to lifecycle manager.
+[bt_navigator-15] [ERROR] [1791686720.061307819] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for follow_path in node halt!
+[bt_navigator-15] [WARN] [1791686720.061551196] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.
+[bt_navigator-15] [INFO] [1791686720.061725564] [bt_navigator]: Goal canceled
+[bt_navigator-15] [WARN] [1791686720.061746704] [bt_navigator]: [navigate_to_pose] [ActionServer] Stopping the thread per request.
+[bt_navigator-15] [INFO] [1791686720.064410319] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[bt_navigator-15] [INFO] [1791686720.077834882] [bt_navigator]: Cleaning up
+[behavior_server-14] [INFO] [1791686720.097607155] [behavior_server]: Destroying bond (behavior_server) to lifecycle manager.
+[collision_monitor-17] [INFO] [1791686720.101505165] [collision_monitor]: Destroying bond (collision_monitor) to lifecycle manager.
+[controller_server-11] [WARN] [1791686720.110278069] [controller_server]: [follow_path] [ActionServer] Stopping the thread per request.
+[controller_server-11] [INFO] [1791686720.110387934] [controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+[controller_server-11] [INFO] [1791686720.111797385] [MPPIController]: Deactivated MPPI Controller: FollowPath
+[controller_server-11] [INFO] [1791686720.111932863] [local_costmap.local_costmap]: Deactivating
+[smoother_server-12] [INFO] [1791686720.113215369] [smoother_server]: Destroying bond (smoother_server) to lifecycle manager.
+[velocity_smoother-16] [INFO] [1791686720.117968462] [velocity_smoother]: Destroying
+[collision_monitor-17] [INFO] [1791686720.133082568] [collision_monitor]: Destroying
+[smoother_server-12] [INFO] [1791686720.143979797] [smoother_server]: Destroying
+[planner_server-13] [INFO] [1791686720.160761732] [planner_server]: Deactivating plugin GridBased of type NavfnPlanner
+[planner_server-13] [INFO] [1791686720.160827345] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[planner_server-13] [INFO] [1791686720.173620912] [planner_server]: Cleaning up
+[INFO] [static_transform_publisher-2]: process has finished cleanly [pid 187211]
+[INFO] [parameter_bridge-8]: process has finished cleanly [pid 187406]
+[planner_server-13] [INFO] [1791686720.232197539] [global_costmap.global_costmap]: Cleaning up
+[behavior_server-14] [INFO] [1791686720.234029453] [behavior_server]: Destroying
+[lifecycle_manager-20] [INFO] [1791686720.255854481] [lifecycle_manager_navigation]: Destroying lifecycle_manager_navigation
+[INFO] [static_transform_publisher-7]: process has finished cleanly [pid 187216]
+[INFO] [static_transform_publisher-5]: process has finished cleanly [pid 187214]
+[INFO] [static_transform_publisher-3]: process has finished cleanly [pid 187212]
+[planner_server-13] [INFO] [1791686720.284651311] [planner_server]: Cleaning up plugin GridBased of type NavfnPlanner
+[planner_server-13] [INFO] [1791686720.284789215] [planner_server]: Destroying plugin GridBased of type NavfnPlanner
+[INFO] [static_transform_publisher-6]: process has finished cleanly [pid 187215]
+[INFO] [static_transform_publisher-4]: process has finished cleanly [pid 187213]
+[controller_server-11] [INFO] [1791686720.307399251] [controller_server]: Destroying bond (controller_server) to lifecycle manager.
+[controller_server-11] [INFO] [1791686720.317739377] [controller_server]: Cleaning up
+[controller_server-11] [INFO] [1791686720.319297287] [MPPIController]: Cleaned up MPPI Controller: FollowPath
+[controller_server-11] [INFO] [1791686720.319509038] [local_costmap.local_costmap]: Cleaning up
+[planner_server-13] [INFO] [1791686720.328110002] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[meteor_tracker-18] Traceback (most recent call last):
+[meteor_tracker-18]   File "/home/youssefsfeihi/crater_ws/install/crater_perception/lib/crater_perception/meteor_tracker", line 33, in <module>
+[meteor_tracker-18]     sys.exit(load_entry_point('crater-perception', 'console_scripts', 'meteor_tracker')())
+[meteor_tracker-18]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[meteor_tracker-18]   File "/home/youssefsfeihi/crater_ws/build/crater_perception/crater_perception/meteor_tracker.py", line 373, in main
+[meteor_tracker-18]     rclpy.spin(node)
+[meteor_tracker-18]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+[meteor_tracker-18]     executor.spin_once()
+[meteor_tracker-18]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+[meteor_tracker-18]     self._spin_once_impl(timeout_sec)
+[meteor_tracker-18]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 907, in _spin_once_impl
+[meteor_tracker-18]     handler, entity, node = self.wait_for_ready_callbacks(
+[meteor_tracker-18]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[meteor_tracker-18]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+[meteor_tracker-18]     return next(self._cb_iter)
+[meteor_tracker-18]            ^^^^^^^^^^^^^^^^^^^
+[meteor_tracker-18]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 757, in _wait_for_ready_callbacks
+[meteor_tracker-18]     wait_set = _rclpy.WaitSet(
+[meteor_tracker-18]                ^^^^^^^^^^^^^^^
+[meteor_tracker-18] rclpy._rclpy_pybind11.RCLError: failed to initialize wait set: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at ./src/rcl/wait.c:130
+[INFO] [velocity_smoother-16]: process has finished cleanly [pid 187533]
+[INFO] [ekf_node-9]: process has finished cleanly [pid 187439]
+[planner_server-13] [INFO] [1791686720.352610036] [global_costmap.global_costmap]: Destroying
+[INFO] [smoother_server-12]: process has finished cleanly [pid 187529]
+[INFO] [collision_monitor-17]: process has finished cleanly [pid 187534]
+[planner_server-13] [INFO] [1791686720.423840294] [planner_server]: Destroying
+[INFO] [behavior_server-14]: process has finished cleanly [pid 187531]
+[INFO] [lifecycle_manager-20]: process has finished cleanly [pid 187737]
+[controller_server-11] [INFO] [1791686720.488897386] [controller_server]: Destroying bond (controller_server) to lifecycle manager.
+[controller_server-11] [INFO] [1791686720.516808889] [local_costmap.local_costmap]: Destroying
+[controller_server-11] [INFO] [1791686720.552473660] [controller_server]: Destroying
+[INFO] [planner_server-13]: process has finished cleanly [pid 187530]
+[bt_navigator-15] [INFO] [1791686720.589519683] [bt_navigator]: Completed Cleaning up
+[bt_navigator-15] [INFO] [1791686720.589600324] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[bt_navigator-15] [INFO] [1791686720.616256727] [bt_navigator]: Destroying
+[INFO] [controller_server-11]: process has finished cleanly [pid 187528]
+[ERROR] [meteor_tracker-18]: process has died [pid 187666, exit code 1, cmd '/home/youssefsfeihi/crater_ws/install/crater_perception/lib/crater_perception/meteor_tracker --ros-args -r __node:=meteor_tracker --params-file /tmp/launch_params_2s059406'].
+[INFO] [mission_controller-19]: process has finished cleanly [pid 187667]
+[INFO] [bt_navigator-15]: process has finished cleanly [pid 187532]
+[INFO] [gazebo-1]: process has finished cleanly [pid 187209]
+[meteor_spawner.py-10] [ERROR] [1791686722.814629504] [meteor_spawner]: failed to spawn meteor_18 (service timeout)
+[meteor_spawner.py-10] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[INFO] [meteor_spawner.py-10]: process has finished cleanly [pid 187478]

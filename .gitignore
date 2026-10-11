@@ -1,0 +1,15 @@
+build/
+install/
+log/
+.venv-train/
+.venv-ai/
+*.pt
+__pycache__/
+.pytest_cache/
+build/
+install/
+log/
+.venv-train/
+.venv-ai/
+.pytest_cache/
+__pycache__/

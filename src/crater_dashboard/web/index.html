@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C.R.A.T.E.R Mission Control</title>
+<style>
+  :root {
+    --bg: #0a0d13; --panel: #11161f; --panel2: #161c27; --line: #232b39; --text: #d9dfe9; --muted: #7f8a9c;
+    --rover: #38bdf8; --station: #f5b942; --meteor: #ff7a1a; --threat: #ef4444; --safe: #f59e0b;
+    --live: #22c55e; --crater: #8b93a3;
+    --mono: ui-monospace, "SFMono-Regular", "DejaVu Sans Mono", Menlo, Consolas, monospace;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 14px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, "Ubuntu", sans-serif; }
+  header { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding: 10px 18px;
+           border-bottom: 1px solid var(--line); background: #0d1119; position: sticky; top: 0; z-index: 5; }
+  header h1 { font-size: 16px; letter-spacing: .14em; margin: 0; font-weight: 700; }
+  header h1 span { color: var(--muted); font-weight: 500; letter-spacing: .06em; }
+  .pill { font: 600 12px var(--mono); padding: 3px 10px; border-radius: 99px; border: 1px solid var(--line);
+          display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+  .live { color: var(--live); } .stale { color: var(--safe); } .lost { color: var(--threat); }
+  .clock { font: 600 13px var(--mono); color: var(--muted); }
+  .spacer { flex: 1; }
+  .counter { font: 12px var(--mono); color: var(--muted); }
+  .counter b { color: var(--text); font-weight: 600; }
+  .state { font: 700 12px var(--mono); padding: 3px 10px; border-radius: 4px; background: #1d2a3a; color: var(--rover); }
+  .state.EVADE { background: #3a1416; color: #ff8a8a; animation: blink 0.8s steps(2) infinite; }
+  .state.SHELTER { background: #3a2a10; color: var(--station); }
+  @keyframes blink { 50% { opacity: .55; } }
+
+  main { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 14px; padding: 14px 16px 24px; }
+  @media (max-width: 1100px) { main { grid-template-columns: 1fr; } }
+  .col { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  section { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; min-width: 0; }
+  section > h2 { margin: 0; padding: 9px 14px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+                 color: var(--muted); border-bottom: 1px solid var(--line); display: flex; gap: 12px; align-items: center; }
+  section > h2 .hint { margin-left: auto; letter-spacing: 0; text-transform: none; font-size: 11px; }
+  .body { padding: 12px 14px; }
+
+  #map { width: 100%; aspect-ratio: 1 / 1; max-height: 74vh; display: block; background: #0c1118; border-radius: 0 0 8px 8px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; color: var(--muted); padding: 8px 14px;
+            border-top: 1px solid var(--line); }
+  .legend i { display: inline-block; width: 18px; height: 0; border-top: 2px dashed; vertical-align: middle; margin-right: 6px; }
+  .legend .sw { width: 10px; height: 10px; border-radius: 50%; border: none; }
+
+  .rover-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+  @media (max-width: 560px) { .rover-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .stat { background: var(--panel2); border-radius: 6px; padding: 8px 10px; min-width: 0; }
+  .stat .k { font-size: 11px; color: var(--muted); }
+  .stat .v { font: 600 20px var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .stat .v small { font-size: 12px; color: var(--muted); font-weight: 500; }
+  .stat.big .v { font-size: 26px; color: var(--rover); }
+  .threat-banner { display: none; margin-top: 10px; padding: 9px 12px; border-radius: 6px; background: #2c0f12;
+                   border: 1px solid #6b1d22; color: #ffb4b4; font: 600 13px var(--mono); }
+  .threat-banner.on { display: block; }
+  .truth { margin-top: 8px; font-size: 11px; color: var(--muted); }
+  .tag { font: 600 10px var(--mono); padding: 1px 6px; border-radius: 3px; background: #2a2140; color: #c4b5fd; }
+
+  .radio-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+  @media (max-width: 560px) { .radio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .radio-grid .stat .v { font-size: 16px; }
+  .radio-foot { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 10px; font: 11.5px var(--mono); color: var(--muted); }
+  .radio-foot b { color: var(--text); font-weight: 600; }
+  #spark { height: 46px; margin-top: 10px; }
+  .good { color: var(--live) !important; } .warnc { color: var(--safe) !important; } .badc { color: var(--threat) !important; }
+  .table-wrap { overflow-x: auto; scrollbar-color: #2a3446 transparent; }
+  html { scrollbar-color: #2a3446 #0a0d13; }
+  table { width: 100%; border-collapse: collapse; font: 12px var(--mono); font-variant-numeric: tabular-nums; }
+  th, td { padding: 6px 6px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 500; font-size: 11px; position: sticky; top: 0; background: var(--panel); }
+  th.grp { text-align: center; color: var(--text); border-bottom: 1px solid #34405a; }
+  td:first-child, th:first-child, td:nth-child(2), th:nth-child(2), td:nth-child(3), th:nth-child(3) { text-align: left; }
+  tbody tr { cursor: pointer; }
+  tbody tr:hover { background: #18202d; }
+  tbody tr.sel { background: #1a2638; outline: 1px solid #2f4b70; }
+  tr.threat td { color: #ffb4b4; }
+  tr.threat td:first-child { box-shadow: inset 3px 0 0 var(--threat); }
+  td.robot { color: var(--rover); font-weight: 600; } td.station { color: var(--station); font-weight: 600; }
+  .badge { font: 600 10.5px var(--mono); padding: 1px 6px; border-radius: 3px; }
+  .b-THREAT { background: #4a1418; color: #ff9a9a; } .b-inbound { background: #3a2a10; color: var(--safe); }
+  .b-landed { background: #222a36; color: var(--crater); }
+  .empty { color: var(--muted); text-align: center; padding: 18px; font-family: inherit; }
+  .age { display: inline-flex; align-items: center; gap: 5px; }
+  .age .dot { width: 7px; height: 7px; }
+
+  .charts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 760px) { .charts { grid-template-columns: 1fr; } }
+  .chart h3 { margin: 0 0 4px; font-size: 12px; font-weight: 600; }
+  .chart h3.r { color: var(--rover); } .chart h3.s { color: var(--station); }
+  canvas { width: 100%; height: 190px; display: block; }
+  .chart-legend { display: flex; flex-wrap: wrap; gap: 4px 12px; font: 11px var(--mono); color: var(--muted); margin-top: 6px; }
+  .chart-legend span::before { content: ""; display: inline-block; width: 12px; height: 3px; margin-right: 5px;
+                               vertical-align: middle; background: var(--c); }
+
+  #events { list-style: none; margin: 0; padding: 0; max-height: 240px; overflow-y: auto; font: 12px var(--mono); }
+  #events li { padding: 5px 14px; border-bottom: 1px solid var(--line); display: flex; gap: 10px; }
+  #events li .t { color: var(--muted); flex: none; width: 62px; }
+  #events li.warn { color: #ffb4b4; }
+  #events li.truth { color: #c4b5fd; }
+</style>
+</head>
+<body>
+<header>
+  <h1>C.R.A.T.E.R <span>MISSION CONTROL</span></h1>
+  <span id="link" class="pill lost"><span class="dot"></span><span id="link-text">CONNECTING</span></span>
+  <span class="clock">MET <span id="met">--:--.-</span></span>
+  <span id="state" class="state">—</span>
+  <span class="spacer"></span>
+  <span class="counter">tracked <b id="c-tracked">0</b></span>
+  <span class="counter">threats <b id="c-threats">0</b></span>
+  <span class="counter">evasions <b id="c-evasions">0</b></span>
+  <span class="counter">craters <b id="c-craters">0</b></span>
+</header>
+
+<main>
+  <div class="col">
+    <section>
+      <h2>Surface map — station frame <span class="hint" id="map-hint">click an obstacle to select it</span></h2>
+      <svg id="map" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet"></svg>
+      <div class="legend">
+        <span><i class="sw" style="background:var(--rover);display:inline-block"></i>rover</span>
+        <span><i class="sw" style="background:var(--station);display:inline-block"></i>station</span>
+        <span><i class="sw" style="background:var(--meteor);display:inline-block"></i>meteor (live)</span>
+        <span><i style="border-color:var(--rover)"></i>obstacle ↔ robot</span>
+        <span><i style="border-color:var(--station)"></i>obstacle ↔ station</span>
+        <span><i class="sw" style="background:rgba(239,68,68,.45);display:inline-block"></i>predicted impact (blast + 2σ)</span>
+      </div>
+    </section>
+    <section>
+      <h2>Distance history — last 90 s</h2>
+      <div class="body charts">
+        <div class="chart"><h3 class="r">Obstacle → robot (m)</h3><canvas id="ch-robot"></canvas></div>
+        <div class="chart"><h3 class="s">Obstacle → station (m)</h3><canvas id="ch-station"></canvas></div>
+      </div>
+      <div class="body" style="padding-top:0"><div class="chart-legend" id="chart-legend"></div></div>
+    </section>
+  </div>
+
+  <div class="col">
+    <section>
+      <h2>Rover — position relative to station</h2>
+      <div class="body">
+        <div class="rover-grid">
+          <div class="stat big"><div class="k">distance to station</div><div class="v" id="r-dist">—</div></div>
+          <div class="stat"><div class="k">x (east)</div><div class="v" id="r-x">—</div></div>
+          <div class="stat"><div class="k">y (north)</div><div class="v" id="r-y">—</div></div>
+          <div class="stat"><div class="k">bearing from station</div><div class="v" id="r-bearing">—</div></div>
+          <div class="stat"><div class="k">heading</div><div class="v" id="r-heading">—</div></div>
+          <div class="stat"><div class="k">speed</div><div class="v" id="r-speed">—</div></div>
+          <div class="stat"><div class="k">nearest obstacle</div><div class="v" id="r-nearest">—</div></div>
+          <div class="stat"><div class="k">patrol target</div><div class="v" id="r-wp">—</div></div>
+        </div>
+        <div class="threat-banner" id="threat-banner"></div>
+        <div class="truth"><span class="tag">SIM TRUTH</span> navigation error of the rover's own estimate:
+          <b id="r-naverr">—</b></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Radio link — rover → Mission Control <span class="hint" id="radio-hint">UDP · binary · every datagram ACKed</span></h2>
+      <div class="body">
+        <div class="radio-grid">
+          <div class="stat"><div class="k">signal (last datagram)</div><div class="v" id="l-age">—</div></div>
+          <div class="stat"><div class="k">datagrams / s</div><div class="v" id="l-pps">—</div></div>
+          <div class="stat"><div class="k">throughput</div><div class="v" id="l-bps">—</div></div>
+          <div class="stat"><div class="k">telemetry frame</div><div class="v" id="l-frame">—</div></div>
+          <div class="stat"><div class="k">round-trip (SRTT)</div><div class="v" id="l-rtt">—</div></div>
+          <div class="stat"><div class="k">retransmitted (rover)</div><div class="v" id="l-retx">—</div></div>
+          <div class="stat"><div class="k">CRC-rejected (ground)</div><div class="v" id="l-crc">—</div></div>
+          <div class="stat"><div class="k">duplicates dropped</div><div class="v" id="l-dup">—</div></div>
+        </div>
+        <canvas id="spark"></canvas>
+        <div class="radio-foot" id="radio-foot"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Obstacles <span class="hint" id="tbl-hint"></span></h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th colspan="5"></th><th class="grp" colspan="2">distance now</th>
+                <th class="grp" colspan="4">predicted impact</th><th></th></tr>
+            <tr><th>ID</th><th>type</th><th>status</th><th>alt m</th><th>v m/s</th>
+                <th>→ robot</th><th>→ station</th>
+                <th>→ robot</th><th>→ station</th><th>in s</th><th>±σ m</th><th>data age</th></tr>
+          </thead>
+          <tbody id="tbl"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Event log</h2>
+      <ul id="events"></ul>
+    </section>
+  </div>
+</main>
+
+<script>
+"use strict";
+const PALETTE = ["#ff7a1a", "#a78bfa", "#34d399", "#f472b6", "#60a5fa", "#facc15", "#fb7185", "#2dd4bf", "#c084fc", "#4ade80"];
+const BLAST = 1.5;
+const $ = (id) => document.getElementById(id);
+let snap = null, lastSnapWall = 0, lastHeartbeat = null, connected = false, selected = null;
+const colorOf = {}; let colorNext = 0;
+const keyColor = (k) => colorOf[k] || (colorOf[k] = PALETTE[colorNext++ % PALETTE.length]);
+const fmt = (v, d = 1) => (v === null || v === undefined || !isFinite(v)) ? "—" : v.toFixed(d);
+const sign = (v, d = 2) => (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(d);
+
+// ------------------------------------------------------------------ stream
+function connect() {
+  const es = new EventSource("stream");
+  es.addEventListener("open", () => { connected = true; });
+  es.addEventListener("error", () => { connected = false; });
+  es.addEventListener("heartbeat", (e) => { lastHeartbeat = JSON.parse(e.data); });
+  es.addEventListener("snapshot", (e) => {
+    snap = JSON.parse(e.data); lastSnapWall = Date.now();
+    render();
+  });
+}
+
+// status pill: freshness of the rover's radio link (time since the last valid datagram),
+// or the dashboard server itself being unreachable
+setInterval(() => {
+  const el = $("link"), txt = $("link-text");
+  const pageAge = (Date.now() - lastSnapWall) / 1000;
+  let cls, label;
+  if (!lastSnapWall) { cls = "lost"; label = connected ? "WAITING FOR ROVER" : "CONNECTING"; }
+  else if (pageAge > 3) { cls = "lost"; label = `DASHBOARD OFFLINE ${pageAge.toFixed(0)} s`; }
+  else {
+    const a = (snap.link && snap.link.last_packet_age !== null) ? snap.link.last_packet_age + pageAge : 99;
+    if (a < 1.0) { cls = "live"; label = "RADIO LIVE"; }
+    else if (a < 5.0) { cls = "stale"; label = `RADIO STALE ${a.toFixed(1)} s`; }
+    else { cls = "lost"; label = `NO SIGNAL ${a.toFixed(0)} s`; }
+  }
+  el.className = "pill " + cls; txt.textContent = label;
+}, 200);
+
+// ------------------------------------------------------------------ render
+function render() {
+  if (!snap) return;
+  const m = snap.mission || {};
+  const t = snap.sim_time;
+  $("met").textContent = `${String(Math.floor(t / 60)).padStart(2, "0")}:${(t % 60).toFixed(1).padStart(4, "0")}`;
+  const st = $("state"); st.textContent = m.state || "—"; st.className = "state " + (m.state || "");
+  const obs = snap.obstacles;
+  const meteors = obs.filter(o => o.type === "meteor"), craters = obs.filter(o => o.type === "crater");
+  $("c-tracked").textContent = meteors.length;
+  $("c-threats").textContent = (m.counters || {}).threats ?? 0;
+  $("c-evasions").textContent = (m.counters || {}).evasions_completed ?? 0;
+  $("c-craters").textContent = craters.length;
+  if (selected && !obs.find(o => o.key === selected)) selected = null;
+  renderRover(obs, m);
+  renderRadio();
+  renderTable(obs);
+  renderMap(obs, m);
+  renderCharts();
+  renderEvents();
+}
+
+function renderRover(obs, m) {
+  const r = snap.rover;
+  $("r-dist").innerHTML = `${r.dist_station.toFixed(2)}<small> m</small>`;
+  $("r-x").innerHTML = `${sign(r.rel_x)}<small> m</small>`;
+  $("r-y").innerHTML = `${sign(r.rel_y)}<small> m</small>`;
+  $("r-bearing").innerHTML = `${r.bearing_deg.toFixed(0)}<small>°</small>`;
+  $("r-heading").innerHTML = `${(r.yaw * 180 / Math.PI).toFixed(0)}<small>°</small>`;
+  $("r-speed").innerHTML = `${(Math.abs(r.speed) < 0.005 ? 0 : r.speed).toFixed(2)}<small> m/s</small>`;
+  const near = obs.slice().sort((a, b) => a.d_robot - b.d_robot)[0];
+  $("r-nearest").innerHTML = near ? `${near.d_robot.toFixed(1)}<small> m ${near.key}</small>` : "—";
+  $("r-wp").innerHTML = m.waypoints ? `WP${m.wp_idx}<small> of ${m.waypoints.length}</small>` : "—";
+  const ne = snap.truth && snap.truth.nav_error;
+  $("r-naverr").textContent = ne === null || ne === undefined ? "n/a" : `${ne.toFixed(2)} m`;
+  const th = m.threat, b = $("threat-banner");
+  if (th && (m.state === "EVADE" || m.state === "SHELTER")) {
+    b.className = "threat-banner on";
+    b.textContent = `⚠ METEOR #${th.id} — impact in ${Math.max(0, th.time_to_impact).toFixed(1)} s at ` +
+      `(${th.impact[0].toFixed(1)}, ${th.impact[1].toFixed(1)}) ±${th.sigma.toFixed(2)} m · ` +
+      (m.state === "EVADE" ? `EVADING to (${th.escape[0].toFixed(1)}, ${th.escape[1].toFixed(1)})` : "SHELTERING");
+  } else b.className = "threat-banner";
+}
+
+function renderRadio() {
+  const L = snap.link; if (!L) return;
+  const age = L.last_packet_age, g = L.ground || {}, r = L.rover || {};
+  const ageEl = $("l-age");
+  ageEl.innerHTML = age === null ? "—" : `${(age * 1000).toFixed(0)}<small> ms ago</small>`;
+  ageEl.className = "v " + (age < 1 ? "good" : age < 5 ? "warnc" : "badc");
+  $("l-pps").innerHTML = `${L.rx_pps.toFixed(1)}<small> /s</small>`;
+  $("l-bps").innerHTML = L.rx_Bps >= 1024 ? `${(L.rx_Bps / 1024).toFixed(2)}<small> KiB/s</small>` : `${L.rx_Bps.toFixed(0)}<small> B/s</small>`;
+  $("l-frame").innerHTML = L.frame_bytes ? `${L.frame_bytes}<small> B (JSON ${L.frame_json_bytes} B)</small>` : "—";
+  $("l-rtt").innerHTML = r.srtt_ms ? `${r.srtt_ms.toFixed(0)}<small> ms</small>` : "—";
+  $("l-retx").innerHTML = `${r.retx ?? 0}<small> · gave up ${r.abandoned ?? 0}</small>`;
+  $("l-crc").innerHTML = `${g.corrupt ?? 0}<small> · bad hdr ${g.malformed ?? 0}</small>`;
+  $("l-dup").innerHTML = `${g.duplicates ?? 0}<small> · late ${g.stale_telemetry ?? 0}</small>`;
+  const e = L.emu_downlink, k = L.emu_ack;
+  const emu = (x) => x ? `loss ${(x.loss * 100).toFixed(0)}% · ${x.delay_ms.toFixed(0)}±${x.jitter_ms.toFixed(0)} ms · corrupt ${(x.corrupt * 100).toFixed(1)}%` : "?";
+  const c = L.counts || {};
+  $("radio-foot").innerHTML =
+    `<span>valid datagrams <b>${g.valid ?? 0}</b> · ACKs sent <b>${g.acks_tx ?? 0}</b></span>` +
+    `<span>TELEMETRY <b>${c.TELEMETRY ?? 0}</b> MISSION <b>${c.MISSION ?? 0}</b> EVENT <b>${c.EVENT ?? 0}</b> CRATER <b>${c.CRATER ?? 0}</b> HELLO <b>${c.HELLO ?? 0}</b></span>` +
+    `<span>emulated downlink: <b>${emu(e)}</b></span><span>emulated ACK uplink: <b>${emu(k)}</b></span>` +
+    `<span>session <b>${L.session === null ? "—" : "0x" + L.session.toString(16)}</b></span>`;
+  // throughput sparkline (bytes/s, last 60 s)
+  const cv = $("spark"), dpr = window.devicePixelRatio || 1, w = cv.clientWidth, h = cv.clientHeight;
+  if (cv.width !== w * dpr || cv.height !== h * dpr) { cv.width = w * dpr; cv.height = h * dpr; }
+  const ctx = cv.getContext("2d"); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, w, h);
+  const tp = L.throughput || []; if (tp.length < 2) return;
+  const mx = Math.max(100, ...tp);
+  ctx.strokeStyle = "#38bdf8"; ctx.fillStyle = "rgba(56,189,248,.12)"; ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  tp.forEach((v, i) => { const x = (i / 59) * w, y = h - 2 - (v / mx) * (h - 12); i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); });
+  ctx.stroke(); ctx.lineTo(((tp.length - 1) / 59) * w, h); ctx.lineTo(0, h); ctx.fill();
+  ctx.fillStyle = "#5b6576"; ctx.font = "10px monospace";
+  ctx.fillText(`throughput, last 60 s (max ${mx.toFixed(0)} B/s)`, 4, 10);
+}
+
+function ageCell(age, type) {
+  // freshness: meteors are tracked at ~10 Hz, so >0.5 s means the camera lost it (coasting)
+  let c = "var(--live)";
+  if (type === "meteor") { if (age > 2) c = "var(--threat)"; else if (age > 0.5) c = "var(--safe)"; }
+  else c = "var(--crater)";
+  const txt = age < 60 ? `${age.toFixed(1)} s` : `${(age / 60).toFixed(1)} min`;
+  return `<span class="age"><span class="dot" style="color:${c}"></span>${txt}</span>`;
+}
+
+function renderTable(obs) {
+  const rows = obs.slice().sort((a, b) =>
+    (a.type === b.type) ? (a.type === "meteor" ? (a.tti ?? 99) - (b.tti ?? 99) : a.d_robot - b.d_robot)
+                        : (a.type === "meteor" ? -1 : 1));
+  $("tbl-hint").textContent = `${obs.length} known · sorted by urgency`;
+  if (!rows.length) { $("tbl").innerHTML = `<tr><td colspan="12" class="empty">No obstacles yet — sky is clear.</td></tr>`; return; }
+  $("tbl").innerHTML = rows.map(o => `
+    <tr data-key="${o.key}" class="${o.is_threat ? "threat" : ""} ${o.key === selected ? "sel" : ""}">
+      <td style="color:${keyColor(o.key)}">${o.key}</td>
+      <td title="${o.source ? "source: " + o.source : "RGB-D track, " + o.n_obs + " observations"}">${o.type}</td>
+      <td><span class="badge b-${o.status}">${o.status}</span></td>
+      <td>${o.type === "meteor" ? fmt(o.alt) : "0"}</td>
+      <td>${o.type === "meteor" ? fmt(o.speed) : "—"}</td>
+      <td class="robot">${fmt(o.d_robot, 2)}</td>
+      <td class="station">${fmt(o.d_station, 2)}</td>
+      <td>${fmt(o.impact_d_robot, 2)}</td>
+      <td>${fmt(o.impact_d_station, 2)}</td>
+      <td>${fmt(o.tti)}</td>
+      <td>${fmt(o.sigma, 2)}</td>
+      <td>${ageCell(o.age, o.type)}</td>
+    </tr>`).join("");
+}
+$("tbl").addEventListener("click", (e) => {
+  const tr = e.target.closest("tr[data-key]"); if (!tr) return;
+  selected = (selected === tr.dataset.key) ? null : tr.dataset.key; render();
+});
+
+// ------------------------------------------------------------------ map (SVG, station-centred, y up)
+function renderMap(obs, m) {
+  const svg = $("map"), S = snap.station, R = snap.rover;
+  const pts = [[R.x, R.y], ...obs.map(o => [o.x, o.y]), ...(m.waypoints || [])];
+  let half = 14;
+  for (const [x, y] of pts) half = Math.max(half, Math.abs(x - S.x) + 3, Math.abs(y - S.y) + 3);
+  half = Math.ceil(half / 2) * 2;
+  const k = 500 / half;
+  const X = (x) => 500 + (x - S.x) * k, Y = (y) => 500 - (y - S.y) * k;
+  const out = [];
+  // grid every 2 m, labelled every 10 m
+  for (let g = -half; g <= half; g += 2) {
+    const major = g % 10 === 0;
+    out.push(`<line x1="${X(S.x + g)}" y1="0" x2="${X(S.x + g)}" y2="1000" stroke="${major ? "#243044" : "#161e2a"}" stroke-width="1"/>`,
+             `<line x1="0" y1="${Y(S.y + g)}" x2="1000" y2="${Y(S.y + g)}" stroke="${major ? "#243044" : "#161e2a"}" stroke-width="1"/>`);
+    if (major && g !== 0) out.push(`<text x="${X(S.x + g) + 4}" y="992" fill="#4b5668" font-size="14">${g} m</text>`);
+  }
+  // range rings around the station
+  for (const rr of [5, 10, 15, 20]) if (rr < half)
+    out.push(`<circle cx="${X(S.x)}" cy="${Y(S.y)}" r="${rr * k}" fill="none" stroke="#2a2416" stroke-dasharray="3 6"/>`);
+  // patrol loop
+  if (m.waypoints && m.waypoints.length) {
+    const p = m.waypoints.map(([x, y]) => `${X(x)},${Y(y)}`).join(" ");
+    out.push(`<polygon points="${p}" fill="none" stroke="#2b4a66" stroke-width="1.5" stroke-dasharray="2 6"/>`);
+    m.waypoints.forEach(([x, y], i) => out.push(
+      `<circle cx="${X(x)}" cy="${Y(y)}" r="5" fill="${i === m.wp_idx ? "#38bdf8" : "#2b4a66"}"/>`,
+      `<text x="${X(x) + 8}" y="${Y(y) - 8}" fill="#4f6c8a" font-size="14">WP${i}</text>`));
+  }
+  // rover trail
+  if (R.trail.length > 1)
+    out.push(`<polyline points="${R.trail.map(([x, y]) => `${X(x)},${Y(y)}`).join(" ")}" fill="none" stroke="#38bdf8" stroke-opacity=".35" stroke-width="2"/>`);
+  // craters
+  for (const o of obs.filter(o => o.type === "crater")) {
+    const sel = o.key === selected;
+    out.push(`<g class="ob" data-key="${o.key}" style="cursor:pointer">
+      <circle cx="${X(o.x)}" cy="${Y(o.y)}" r="${Math.max(6, 1.0 * k)}" fill="#1b1f27" stroke="${sel ? "#fff" : "#5b6474"}" stroke-width="${sel ? 2.5 : 1.5}"/>
+      <text x="${X(o.x)}" y="${Y(o.y) + 4}" fill="#9aa3b2" font-size="13" text-anchor="middle">${o.key}</text></g>`);
+  }
+  // predicted impact zones + ground tracks
+  for (const o of obs.filter(o => o.type === "meteor" && o.impact_x !== undefined)) {
+    const c = o.is_threat ? "239,68,68" : "245,158,11";
+    out.push(`<circle cx="${X(o.impact_x)}" cy="${Y(o.impact_y)}" r="${(BLAST + 2 * (o.sigma || 0)) * k}" fill="rgba(${c},.18)" stroke="rgba(${c},.9)" stroke-width="2"/>`,
+             `<line x1="${X(o.x)}" y1="${Y(o.y)}" x2="${X(o.impact_x)}" y2="${Y(o.impact_y)}" stroke="rgba(${c},.7)" stroke-width="1.5" stroke-dasharray="1 5"/>`,
+             `<text x="${X(o.impact_x)}" y="${Y(o.impact_y) + (BLAST * k) + 18}" fill="rgb(${c})" font-size="14" text-anchor="middle">impact ${fmt(o.tti)} s</text>`);
+  }
+  // distance lines: every live meteor + the selected obstacle
+  const lined = obs.filter(o => o.type === "meteor" || o.key === selected);
+  for (const o of lined) {
+    for (const [ax, ay, col, d] of [[R.x, R.y, "#38bdf8", o.d_robot], [S.x, S.y, "#f5b942", o.d_station]]) {
+      out.push(`<line x1="${X(ax)}" y1="${Y(ay)}" x2="${X(o.x)}" y2="${Y(o.y)}" stroke="${col}" stroke-width="2" stroke-dasharray="7 6" opacity=".9"/>`);
+      const mx = (X(ax) + X(o.x)) / 2, my = (Y(ay) + Y(o.y)) / 2;
+      out.push(`<rect x="${mx - 32}" y="${my - 12}" width="64" height="22" rx="4" fill="#0c1118" stroke="${col}" stroke-opacity=".6"/>`,
+               `<text x="${mx}" y="${my + 4}" fill="${col}" font-size="14" font-weight="600" text-anchor="middle" font-family="monospace">${d.toFixed(1)} m</text>`);
+    }
+  }
+  // station
+  out.push(`<rect x="${X(S.x) - 11}" y="${Y(S.y) - 11}" width="22" height="22" fill="#f5b942" stroke="#fff3" stroke-width="2" transform="rotate(45 ${X(S.x)} ${Y(S.y)})"/>`,
+           `<text x="${X(S.x)}" y="${Y(S.y) + 32}" fill="#f5b942" font-size="14" font-weight="700" text-anchor="middle">STATION</text>`);
+  // rover (triangle pointing along heading; SVG y is flipped)
+  const hx = Math.cos(R.yaw), hy = -Math.sin(R.yaw), px = -hy, py = hx;
+  const rx = X(R.x), ry = Y(R.y), L = 16;
+  out.push(`<polygon points="${rx + hx * L},${ry + hy * L} ${rx - hx * L * .7 + px * L * .7},${ry - hy * L * .7 + py * L * .7} ${rx - hx * L * .7 - px * L * .7},${ry - hy * L * .7 - py * L * .7}" fill="#38bdf8" stroke="#e0f2fe" stroke-width="1.5"/>`,
+           `<text x="${rx}" y="${ry - 22}" fill="#38bdf8" font-size="14" font-weight="700" text-anchor="middle">ROVER</text>`);
+  // meteors on top
+  for (const o of obs.filter(o => o.type === "meteor")) {
+    const sel = o.key === selected, col = o.is_threat ? "#ef4444" : "#ff7a1a";
+    out.push(`<g class="ob" data-key="${o.key}" style="cursor:pointer">
+      <circle cx="${X(o.x)}" cy="${Y(o.y)}" r="15" fill="${col}" fill-opacity=".25"/>
+      <circle cx="${X(o.x)}" cy="${Y(o.y)}" r="8" fill="${col}" stroke="${sel ? "#fff" : "#ffd8b0"}" stroke-width="${sel ? 3 : 1.5}"/>
+      <line x1="${X(o.x)}" y1="${Y(o.y)}" x2="${X(o.x + o.vx)}" y2="${Y(o.y + o.vy)}" stroke="${col}" stroke-width="2.5"/>
+      <text x="${X(o.x) + 14}" y="${Y(o.y) - 12}" fill="${col}" font-size="15" font-weight="700">${o.key} ↑${o.alt.toFixed(1)} m</text></g>`);
+  }
+  out.push(`<text x="14" y="26" fill="#4b5668" font-size="14">±${half} m around station · N ↑</text>`);
+  svg.innerHTML = out.join("");
+}
+$("map").addEventListener("click", (e) => {
+  const g = e.target.closest(".ob"); if (!g) return;
+  selected = (selected === g.dataset.key) ? null : g.dataset.key; render();
+});
+
+// ------------------------------------------------------------------ charts (canvas)
+function drawChart(canvas, idx, danger) {
+  const dpr = window.devicePixelRatio || 1, w = canvas.clientWidth, h = canvas.clientHeight;
+  if (canvas.width !== w * dpr || canvas.height !== h * dpr) { canvas.width = w * dpr; canvas.height = h * dpr; }
+  const ctx = canvas.getContext("2d");
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, w, h);
+  const now = snap.sim_time, span = 90, pad = { l: 34, r: 8, t: 8, b: 20 };
+  const series = Object.entries(snap.history);
+  let ymax = 10;
+  for (const [, pts] of series) for (const p of pts) ymax = Math.max(ymax, p[idx]);
+  ymax = Math.ceil(ymax / 5) * 5;
+  const X = (t) => pad.l + (1 - (now - t) / span) * (w - pad.l - pad.r);
+  const Y = (v) => h - pad.b - (v / ymax) * (h - pad.t - pad.b);
+  ctx.font = "10px monospace"; ctx.fillStyle = "#5b6576"; ctx.strokeStyle = "#1c2430"; ctx.lineWidth = 1;
+  for (let v = 0; v <= ymax; v += ymax / 5) {
+    ctx.beginPath(); ctx.moveTo(pad.l, Y(v)); ctx.lineTo(w - pad.r, Y(v)); ctx.stroke();
+    ctx.fillText(v.toFixed(0), 4, Y(v) + 3);
+  }
+  for (let s = 0; s <= span; s += 30) ctx.fillText(s === 0 ? "now" : `−${s}s`, X(now - s) - (s === 0 ? 18 : 12), h - 5);
+  if (danger) {
+    ctx.strokeStyle = "rgba(239,68,68,.8)"; ctx.setLineDash([5, 4]);
+    ctx.beginPath(); ctx.moveTo(pad.l, Y(danger)); ctx.lineTo(w - pad.r, Y(danger)); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = "rgba(239,68,68,.9)"; ctx.fillText(`danger ${danger} m`, w - pad.r - 70, Y(danger) - 4);
+  }
+  for (const [key, pts] of series) {
+    if (pts.length < 2) continue;
+    const sel = key === selected;
+    ctx.strokeStyle = keyColor(key); ctx.lineWidth = sel ? 3 : (key[0] === "M" ? 2 : 1.2);
+    ctx.globalAlpha = selected && !sel ? 0.35 : 1;
+    ctx.setLineDash(key[0] === "C" ? [4, 3] : []);
+    ctx.beginPath();
+    pts.forEach((p, i) => (i ? ctx.lineTo(X(p[0]), Y(p[idx])) : ctx.moveTo(X(p[0]), Y(p[idx]))));
+    ctx.stroke();
+  }
+  ctx.globalAlpha = 1; ctx.setLineDash([]);
+}
+function renderCharts() {
+  drawChart($("ch-robot"), 1, 3);
+  drawChart($("ch-station"), 2, null);
+  $("chart-legend").innerHTML = Object.keys(snap.history).map(k =>
+    `<span style="--c:${keyColor(k)}">${k}${k[0] === "C" ? " (crater)" : ""}</span>`).join("") ||
+    `<span style="--c:transparent">no obstacles in the last 90 s</span>`;
+}
+
+// ------------------------------------------------------------------ events
+function renderEvents() {
+  const evs = (snap.events || []).map(e => ({ t: e.t, cls: e.level === "warn" ? "warn" : "", text: e.text }));
+  for (const i of (snap.truth.impacts || []))
+    evs.push({ t: i.impact_time, cls: "truth", text: `[SIM TRUTH] ${i.name} hit (${i.impact[0].toFixed(1)}, ${i.impact[1].toFixed(1)}); rover ${i.rover_distance.toFixed(1)} m away → ${i.verdict}` });
+  evs.sort((a, b) => b.t - a.t);
+  $("events").innerHTML = evs.slice(0, 20).map(e =>
+    `<li class="${e.cls}"><span class="t">${e.t.toFixed(1)}s</span><span>${e.text.replace(/</g, "&lt;")}</span></li>`).join("") ||
+    `<li><span class="t"></span><span style="color:var(--muted)">waiting for events…</span></li>`;
+}
+
+window.addEventListener("resize", () => snap && renderCharts());
+connect();
+</script>
+</body>
+</html>
